@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Downloads\\dropShipping\\drop-shipping\\API\\API.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Downloads\\dropShipping\\drop-shipping\\API\\API.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Downloads\\dropShipping\\drop-shipping\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\User\\Downloads\\dropShipping\\drop-shipping\\API\\API.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Downloads\\dropShipping\\drop-shipping\\API\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
