@@ -39,15 +39,18 @@ namespace API
             
             services.AddApplicationServices(_config);
 
-            services.AddControllers();
            // services.AddSwaggerGen(c =>
           //  {
           //      c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
           //  });
 
-            services.AddCors();
+            services.AddCors(options =>
+            options.AddPolicy("EnableCors", builder =>
+                builder.SetIsOriginAllowed(origin => true).AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
 
             services.AddIdentityServices(_config);
+
+            services.AddControllers();
 
         }
 
@@ -56,22 +59,24 @@ namespace API
         {
             app.UseMiddleware<ExceptionMiddleware>();
             
-          //  if (env.IsDevelopment())
-          //  {
-                // app.UseDeveloperExceptionPage();
+           if (env.IsDevelopment())
+           {
+                app.UseDeveloperExceptionPage();
            //     app.UseSwagger();
             //    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
-            //}
+            }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("EnableCors");
             
-            app.UseCors(policy => 
-            policy
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .WithOrigins("https://drop-shipping-client.herokuapp.com"));
+            // app.UseCors(policy => 
+            // policy
+            // .AllowAnyHeader()
+            // .AllowAnyMethod()
+            // .WithOrigins("https://drop-shipping-client.herokuapp.com"));
 
             app.UseAuthentication();
             
