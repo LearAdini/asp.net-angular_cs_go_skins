@@ -1,0 +1,87 @@
+
+
+
+<form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off" >
+  <h2 class="text-center text-primary">Register</h2>
+  <br>
+
+<div class="form-group">
+  <input
+  type="text"
+  class="form-control"
+  formControlName="username"
+  placeholder="UserName"
+  [class.is-invalid]="registerForm.get('username')?.errors && registerForm.get('username')?.touched">
+<div class="invalid-feedback" style="font-size:15px;">Please enter a username</div>
+</div>
+<div class="form-group">
+<input
+type="password"
+class="form-control"
+formControlName="password"
+placeholder="Password"
+[class.is-invalid]="registerForm.get('password')?.errors && registerForm.get('password')?.touched">
+<div class="invalid-feedback" style="font-size:15px;">Please enter a password</div>
+<div *ngIf="registerForm.get('password')?.hasError('minLength')" class="invalid-feedback" style="font-size:15px;">Please enter atleast 6 charchters</div>
+</div>
+<div class="form-group">
+<input
+type="password"
+class="form-control"
+formControlName="confirmPassword"
+placeholder="Confirm Password"
+[class.is-invalid]="registerForm.get('confirmPassword')?.errors && registerForm.get('confirmPassword')?.touched">
+<div class="invalid-feedback" style="font-size:15px;">Please confirm password</div>
+</div>
+<div class="form-group">
+<input
+type="text"
+class="form-control"
+formControlName="fullName"
+placeholder="Full Name"
+[class.is-invalid]="registerForm.get('fullName')?.errors && registerForm.get('fullName')?.touched">
+<div class="invalid-feedback" style="font-size:15px;">Please enter your full name</div>
+</div>
+
+  <div class="form-group">
+      <input
+      type="text"
+      class="form-control"
+      formControlName="country"
+      placeholder="Country">
+  </div>
+  <div class="form-group">
+      <input
+      type="text"
+      class="form-control"
+      formControlName="city"
+      placeholder="City">
+  </div>
+
+  <div class="form-group">
+    <input
+    type="text"
+    class="form-control"
+    formControlName="address"
+    placeholder="Home Address">
+</div>
+
+<div class="form-group">
+  <input
+  type="number"
+  class="form-control"
+  formControlName="phoneNumber"
+  placeholder="Phone Number">
+</div>
+
+  <div class="row mt-2" *ngIf="validationErrors.length">
+    <ul class="text-danger">
+      <li *ngFor="let error of validationErrors">{{error}}</li>
+    </ul>
+  </div>
+
+  <div class="form-group text-center" style="margin-top:-25px;">
+    <button [disabled]="registerForm.invalid" class="btn btn-success " type="submit">Register</button>
+    <!-- <button class="btn btn-warning mr-2" type="button" (click)="cancel()"><span>Cancel</span></button> -->
+    </div>
+</form>

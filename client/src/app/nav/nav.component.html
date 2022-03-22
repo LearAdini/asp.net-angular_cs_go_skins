@@ -1,0 +1,29 @@
+
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">DropShipping</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ng-container *ngIf="currentUser$ | async">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Products</a>
+        </li>
+
+        <a routerLink="/cart" class="checkout"><i class="fa fa-shopping-cart">&nbsp;</i></a>&nbsp;
+        <a class="dropdown-item" id="dropdown-item-logout"(click)="logout()">Logout</a>
+
+      </ng-container>
+    </div>
+
+    <form *ngIf="!(currentUser$ | async)" #loginForm="ngForm" id="form"  class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off" >
+      <div class="user-input">
+      <input name="password" required [(ngModel)]="model.password" class="form-control mr-sm-2" id="username" type="password" placeholder="Password"> <!-- Banana[()] -->
+      <input name="username" required [(ngModel)]="model.username" class="form-control mr-sm-2" id="password" type="text" placeholder="Username">
+    </div>
+      <div class="login">
+      <button [disabled]="!loginForm.valid" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+    </div>
+    <button type="button" routerLink="/register" id="register" class="btn btn-warning pb-1">Sign-up</button>
+    </form>
+  </div>
+</nav>

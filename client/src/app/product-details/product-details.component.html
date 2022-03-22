@@ -1,0 +1,27 @@
+<br>
+<div class="card-wrapper">
+  <div *ngIf="product">
+    <h2 class="title">&nbsp;{{product.name}}&nbsp;</h2>
+    <br>
+    <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    <div class="wrapper">
+      <br>
+      <h5 class="details">DETAILS:</h5>
+      <p class="description">{{product.description}}</p>
+      <span id="strike"></span>
+      <br>
+      <div class="price-tab mr-5 ">
+        <h4 style="float:left">&nbsp;&nbsp;
+          Total Price: ${{(product.price - (product.price * product.sale /100)).toFixed(2)}} | Before Sale:</h4>
+        <h5 style="margin-top:3px;float:left; text-decoration:line-through"> ${{product.price}}</h5>
+        <p style="margin-top: -8px; float:left;">{{product.sale}}%&nbsp;&nbsp;</p>
+      </div><button class="add-cart" (click)="addToCart(product)">&nbsp;Add to cart</button>
+      <div id="myPaypalButtons"></div>
+      <div *ngIf="addedCart">
+        <button class="success">Added ✔</button>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<app-more-products></app-more-products>

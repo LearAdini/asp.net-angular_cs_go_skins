@@ -1,0 +1,14 @@
+<br>
+<table>
+  <div class="wrapper">
+   <div style="float:left;"  *ngFor="let product of products | randomOrder">
+    <td>
+      <div class ="card" >
+        <img [routerLink]="['/products', product.id]" class="card-img-top" src="{{product.imageUrl}}">
+      </div>
+      <p>{{product.name}}</p><div class="sale">&nbsp;&nbsp;&nbsp;&nbsp;-{{product.sale}}%</div>
+      </td>
+      <br>
+</div>
+</div>
+</table>

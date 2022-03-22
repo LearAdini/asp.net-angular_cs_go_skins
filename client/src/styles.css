@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Pacifico&family=Permanent+Marker&family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Pacifico&family=Permanent+Marker&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+@import '~font-awesome/css/font-awesome.css';
+
+body{
+  background: linear-gradient(90deg, rgb(226, 189, 189) 0%, rgb(233, 167, 167) 50%, rgb(226, 189, 189) 100%);
+}
+
+.btn{
+	box-shadow: none !important
+}
+
+

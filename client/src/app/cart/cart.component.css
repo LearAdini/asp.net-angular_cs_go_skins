@@ -1,0 +1,36 @@
+*{
+    display:block;
+}
+
+#myPaypalButtons{
+    max-width:250px;
+    margin: auto;
+  }
+
+  .remove{
+    border:none;
+    border-radius: 5px;
+    display:inline-block;
+    width:100px;
+    height:25px;
+  }
+
+  .wrapper{
+    background-color:White;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    width: 40%;
+  }
+
+@media (max-width:1000px){
+.wrapper{
+  width:400px;
+}
+}
+
+@media (max-width:600px){
+  .wrapper{
+    width:300px;
+  }
+}

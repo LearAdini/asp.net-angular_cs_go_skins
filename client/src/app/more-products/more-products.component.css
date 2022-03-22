@@ -1,0 +1,143 @@
+*{
+  display:block;
+}
+
+.card{
+  height:255px;
+  width: 248px;
+  cursor: pointer;
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: none;
+  margin-left: 4vh;
+  float:left;
+  background-repeat: no-repeat;
+  background-size: 250px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover img{
+  transform: scale(1.17);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  opacity: 1;
+  cursor:pointer;
+}
+
+.card img{
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  opacity: 0.88;
+  background-size: 100%;
+  height: 100%;
+}
+
+.sale{
+  cursor: pointer;
+  color:white;
+  border:solid 1px red;
+  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(129, 50, 255) 100%);
+  border-radius:0px 0px 5px 0px;
+  margin-left:215px;
+  margin-top:-42px;
+  width:70px;
+  overflow:hidden;
+  text-align: bottom;
+  font-family: 'Poiret One', cursive;
+}
+
+p{
+  cursor: pointer;
+  border-top: none;
+  background-color: white;
+  border-radius:5px;
+  width:248px;
+  margin-left: 4vh;
+  margin-top: 5px;
+  padding: 1px;
+  text-align: bottom;
+  height: 345px;
+  padding: 4px;
+}
+
+.similar-products{
+  cursor: default;
+  text-align:center;
+  background-color: rgba(255, 255, 255, 0.493);
+  width:20%;
+  margin:auto;
+  border-radius: 5px 5px 0 0;
+  font-family: 'Poiret One', cursive;
+  font-weight: bolder;
+  color:rgb(24, 24, 24);
+}
+
+.card-wrapper{
+  float:left;
+  background-color: rgba(255, 255, 255, 0.493);
+  border-radius: 5px;
+  width:101.2%;
+  height:24rem;
+}
+
+
+.wrapper{
+  margin: auto;
+  width: max-content;
+  padding-bottom: 20%;
+  height:0;
+}
+
+
+  @media  (max-width: 1280px) {
+    .wrapper{
+      width:550px;
+      display:inline-block;
+    }
+    .card-wrapper{
+      width:1470px;
+  }
+
+    .similar-products{
+      margin-left:505px;
+      width:250px;
+    }
+
+    .card,p{
+      margin-top: 13px;
+    }
+    .sale{
+      margin-left:213px;
+    }
+}
+
+  @media  (max-width: 1236px) {
+    .card-wrapper{
+      width:605px;
+      height:1275px;
+      margin-left:280px;
+  }
+  .similar-products{
+    margin-left:470px;
+  }
+}
+
+  @media(max-width: 1114px) {
+    .wrapper{
+      margin-left:-15px;
+  }
+}
+
+  @media (max-width: 1113px)  {
+  .wrapper{
+      margin-left: 60% !important;
+      position: relative;
+  }
+  .card-wrapper{
+    margin-left:-365px !important;
+  }
+  .similar-products{
+    margin-left:-175px;
+  }
+}

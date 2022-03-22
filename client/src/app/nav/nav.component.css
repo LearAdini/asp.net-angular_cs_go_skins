@@ -1,0 +1,255 @@
+*{
+  display:block;
+}
+
+nav{
+  border-radius: 0px 0px 10px 10px;
+  margin:auto;
+  width:98%;
+}
+
+.checkout{
+  overflow:block;
+  cursor:pointer;
+  text-align: center;
+  border-radius: 20px;
+  margin-left:86%;
+  padding:9px;
+  width:35px;
+  height:35px;
+  transition-duration: 0.3s;
+  text-decoration: none;
+}
+
+.navbar-brand{
+  font-family: 'Sedgwick Ave', cursive;
+  color:rgb(196, 1, 214);
+  text-shadow: 2px 2px #424242;
+
+}
+
+.navbar-brand:hover{
+  color:rgb(196, 1, 214);
+}
+
+.nav-link{
+  font-family: monospace;
+  font-size:17px;
+}
+
+.checkout::before{
+  position: absolute;
+  background: #ffee10;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.checkout:hover::before{
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+.checkout:hover{
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+nav
+{
+  border-radius: 0px 0px 10px 10px;
+  margin:auto;
+  background-color:rgba(27, 27, 27, 0.965);
+}
+
+.nav-link.active{
+  color: rgb(148, 148, 148);
+}
+
+.nav-link, .nav-item{
+  color:white;
+}
+
+#dropdown-item-logout{
+  /* margin-left:86%; */
+  color:white;
+}
+#dropdown-item-logout:hover{
+    color:red;
+    text-shadow: 0 0 5px rgb(255, 25, 25);
+}
+
+.dropdown-toggle, .dropdown-item
+{
+  color:black;
+  cursor: pointer;
+}
+
+.dropdown-item:hover
+{
+  background-color: rgba(0, 0, 0, 0);
+  transform: scale(1.02);
+  transition:transform 0.1s;
+  animation-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.dropdown-menu{
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(255, 255, 255);
+    background: faded;
+    box-shadow: 0 8px 15px 6px rgba(0, 0, 0, 0.2);
+    margin-left: -85px;
+}
+
+.btn.btn-outline-success:disabled {
+  background-color: rgb(19, 19, 19)
+}
+
+.btn.btn-outline-success{
+  background-color: rgb(5,5,5);
+  border: solid 0px;
+  transition:transform 0.2s;
+  animation-duration: 1.4s;
+  animation-delay:0.5s;
+  animation-timing-function:ease-in-out;
+}
+
+.btn.btn-outline-success:hover:disabled{
+  transform:scale(1);
+  background-color: rgb(25, 26, 25);
+  border: solid 0px;
+  cursor: default;
+}
+
+.btn.btn-outline-success:hover{
+  transform:scale(1.035);
+  cursor: pointer;
+  background-color:rgb(43, 251, 113);
+  color:rgb(25, 26, 25);
+}
+
+#bann{
+  color: rgb(223, 4, 4);
+  font-family:Brush Script MT;
+  font-style:cursive;
+}
+
+span{
+  border: 1px solid black;
+  display:inline-block;
+  width:100%;
+}
+
+.img {
+  max-height: 50px;
+  border:2px solid rgb(0, 53, 70);
+  display:inline;
+  margin-right: 1rem;
+  border-radius: 50px;
+}
+
+#username{
+margin-left:-20px;
+width:190px;
+}
+
+#password{
+  width:120px;
+  margin-top:-38px;
+  margin-left:-150px;
+}
+
+.login{
+
+  margin-top:-38px;
+  margin-left:185px;
+}
+
+.user-input{
+
+  margin-right:140px;
+}
+
+
+#register{
+  /* height:30px; */
+  margin-top:-36px;
+  margin-left:256px;
+  transition:transform 0.2s;
+  animation-duration: 1.4s;
+  animation-delay:0.5s;
+  animation-timing-function:ease-in-out;
+}
+
+#register:hover{
+  transform:scale(1.035);
+}
+
+@media (max-width:1800px){
+  .checkout{
+    margin-left:80%;
+  }
+  }
+
+@media (max-width:1200px){
+  .checkout{
+    margin-left:70%;
+  }
+  }
+
+
+  @media (max-width:840px){
+    .checkout{
+      margin-left:60%;
+    }
+  }
+
+  @media (max-width:740px){
+    .checkout{
+      margin-left:60%;
+    }
+  }
+
+  @media (max-width:730px){
+    .checkout{
+      margin-left:55%;
+    }
+  }
+
+  @media (max-width:730px){
+    .checkout{
+      margin-left:55%;
+    }
+  }
+
+  @media (max-width:660px){
+    .checkout{
+      margin-left:50%;
+    }
+  }
+
+  @media (max-width:620px){
+    .checkout{
+      margin-left:45%;
+    }
+  }
+
+
+  @media (max-width:580px){
+    .checkout{
+      margin-left:40%;
+    }
+  }
+  @media (max-width:560px){
+    .checkout{
+      margin-left:35%;
+    }
+  }
+
+
+
+
+
+
