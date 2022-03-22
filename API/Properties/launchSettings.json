@@ -22,7 +22,7 @@
       "dotnetRunMessages": "true",
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://drop-shipping-spa.herokuapp.com",
+      "applicationUrl": "https://drop-shipping-spa.herokuapp.com;",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
