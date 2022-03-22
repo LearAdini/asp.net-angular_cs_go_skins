@@ -46,12 +46,12 @@ namespace API
 
             services.AddCors(options =>
             options.AddPolicy("EnableCors", builder =>
-                builder.SetIsOriginAllowed(origin => true).AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
+                builder.SetIsOriginAllowed(origin => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials()));
 
-            services.AddIdentityServices(_config);
 
             services.AddControllers();
 
+            services.AddIdentityServices(_config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
