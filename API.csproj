@@ -2,11 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
-	    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
+   <ItemGroup>
+        <MySourceFiles Include="API.cs"/>
+    </ItemGroup>
+	    <Target Name="CopyFiles">
+        <Copy
+            SourceFiles="@(MySourceFiles)"
+            DestinationFolder="C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API"
+        />
+    </Target>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -16,14 +25,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.16.0" />
   </ItemGroup>
-  
-  <PropertyGroup>
-    <Company>Lear</Company>
-    <Authors>Lear Adini</Authors>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-</PropertyGroup>
-
-
 </Project>
