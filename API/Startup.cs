@@ -40,10 +40,10 @@ namespace API
             services.AddApplicationServices(_config);
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
-            });
+           // services.AddSwaggerGen(c =>
+          //  {
+          //      c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+          //  });
 
             services.AddCors();
 
@@ -56,12 +56,12 @@ namespace API
         {
             app.UseMiddleware<ExceptionMiddleware>();
             
-            if (env.IsDevelopment())
-            {
+          //  if (env.IsDevelopment())
+          //  {
                 // app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
-            }
+           //     app.UseSwagger();
+            //    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
+            //}
 
             app.UseHttpsRedirection();
 
