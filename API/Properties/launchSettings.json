@@ -1,10 +1,10 @@
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
-    "windowsAuthentication": false,
+    "windowsAuthentication": true,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:6397",
+      "applicationUrl": "http://localhost:5001",
       "sslPort": 44368
     }
   },
@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "api",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       }
@@ -20,7 +20,9 @@
     "API": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
-      "applicationUrl": "https://drop-shipping-spa.herokuapp.com",
+      "launchBrowser": true,
+      "launchUrl": "api",
+      "applicationUrl": "https://drop-shipping-spa.herokuapp.com/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       }
