@@ -183,9 +183,6 @@ width:190px;
   animation-timing-function:ease-in-out;
 }
 
-#register:hover{
-  transform:scale(1.035);
-}
 
 @media (max-width:1800px){
   .checkout{
