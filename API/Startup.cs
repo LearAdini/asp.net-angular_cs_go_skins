@@ -71,7 +71,7 @@ namespace API
             policy
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .WithOrigins("https://localhost:4200"));
+            .WithOrigins("https://drop-shipping-spa.herokuapp.com"));
 
             app.UseAuthentication();
             

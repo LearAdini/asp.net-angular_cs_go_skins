@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://drop-shipping-spa.herokuapp.com/api/'
+  apiUrl: 'https://drop-shipping-spa.herokuapp.com'
 };
 
 /*
