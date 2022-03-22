@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'api/'
+  apiUrl: 'https://drop-shipping-spa.herokuapp.com/'
 };
