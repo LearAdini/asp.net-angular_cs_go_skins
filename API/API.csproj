@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    	<!-- <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute> -->
-	    <!-- <GenerateAssemblyInfo>false</GenerateAssemblyInfo> -->
+    	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
-<Target Name="PrePublishTarget" AfterTargets="Publish">
-  <Exec Command="dotnet ef database update"/>
-</Target>
+<!-- <Target Name="PrePublishTarget" AfterTargets="Publish">
+  <Exec Command="dotnet-ef database update"/>
+</Target> -->
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.13" />
