@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
-	    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    	<!-- <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute> -->
+	    <!-- <GenerateAssemblyInfo>false</GenerateAssemblyInfo> -->
   </PropertyGroup>
 
 <Target Name="PrePublishTarget" AfterTargets="Publish">
-  <Exec Command="dotnet-ef database update"/>
+  <Exec Command="dotnet ef database update"/>
 </Target>
 
   <ItemGroup>
