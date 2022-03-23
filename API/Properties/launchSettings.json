@@ -14,17 +14,18 @@
       "launchBrowser": false,
       "launchUrl": "api/account",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "API": {
       "commandName": "Project",
+      "dotnetRunMessages": "true",
       "launchBrowser": false,
       "launchUrl": "api/account",
+      "applicationUrl": "https://drop-shipping-spa.herokuapp.com;",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Production"
-      },
-      "applicationUrl": "https://drop-shipping-spa.herokuapp.com"
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }
