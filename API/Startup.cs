@@ -23,6 +23,7 @@ namespace API
         {
             
             services.AddApplicationServices(_config);
+            services.AddControllers();
 
            // services.AddSwaggerGen(c =>
           //  {
@@ -33,7 +34,7 @@ namespace API
 
             services.AddIdentityServices(_config);
 
-            services.AddControllers();
+            
 
         }
 
