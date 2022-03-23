@@ -7,10 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-	"client": "cd client && npm start",
-    "api": "cd API && nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run api\" \"npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
