@@ -6,9 +6,6 @@
 	    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
-<!-- <Target Name="PrePublishTarget" AfterTargets="Publish">
-  <Exec Command="dotnet-ef database update"/>
-</Target> -->
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.13" />

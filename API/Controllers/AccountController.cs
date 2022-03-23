@@ -22,8 +22,7 @@ namespace API.Controllers
             _context = context;
         }
 
-
-        [Authorize]      
+ 
         [HttpPost("register")] //api/account/register
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
@@ -33,15 +32,14 @@ namespace API.Controllers
 
             var user = new UserEntity
             {
-                UserName = registerDto.Username.ToLower(),
+                UserName = registerDto.Username,
                 PasswordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(registerDto.Password)),
-                PasswordSalt = hmac.Key
-                // FullName = registerDto.FullName,
-                // DateOfBirth = registerDto.Age,
-                // City = registerDto.City,
-                // Country = registerDto.Country,
-                // Address = registerDto.Address,
-                // PhoneNumber = registerDto.PhoneNumber
+                PasswordSalt = hmac.Key,
+                FullName = registerDto.FullName,
+                City = registerDto.City,
+                Country = registerDto.Country,
+                Address = registerDto.Address,
+                PhoneNumber = registerDto.PhoneNumber
             };
 
             _context.Users.Add(user);
@@ -51,14 +49,13 @@ namespace API.Controllers
             
             return new UserDto {
                 Username = user.UserName,
-                Token = _tokenService.CreateToken(user)
-                // FullName = user.FullName
+                Token = _tokenService.CreateToken(user),
+                FullName = user.FullName
                 // Country = user.Country,
                 // City = user.City
             };
         }
 
-        [Authorize]
         [HttpPost("login")] //api/account/login
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
@@ -78,7 +75,7 @@ namespace API.Controllers
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user)
                 // PhotoUrl = user.Photos?.FirstOrDefault(x=> x.IsMain)?.Url,
-                // FullName = user.FullName
+                // FullName = usser.FullName
             };
         }
 
