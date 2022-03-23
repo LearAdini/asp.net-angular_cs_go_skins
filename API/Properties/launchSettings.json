@@ -12,19 +12,19 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/values",
+      "launchUrl": "api",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       }
     },
     "API": {
       "commandName": "Project",
-      "launchBrowser": false,
-      "launchUrl": "api/values",
+      "launchBrowser": true,
+      "launchUrl": "api/account",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       },
-      "applicationUrl": "https://drop-shipping-spa.herokuapp.com"
+      "applicationUrl": "https://localhost:5001"
     }
   }
 }
