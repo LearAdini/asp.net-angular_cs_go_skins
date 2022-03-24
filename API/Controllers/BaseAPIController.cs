@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [EnableCors(origins: "http://https://drop-shipping-spa.herokuapp.com", headers: "*", methods: "*")]
+    [EnableCors(origins: "https://https://drop-shipping-spa.herokuapp.com", headers: "*", methods: "*")]
     [ApiController]
     [Route("api/[controller]")]
 
