@@ -58,7 +58,6 @@ namespace API
             
             app.UseCors(policy => 
             policy
-            .AllowAnyHeader()
             .AllowAnyMethod()
             .WithOrigins("https://drop-shipping-client.herokuapp.com"));
 
