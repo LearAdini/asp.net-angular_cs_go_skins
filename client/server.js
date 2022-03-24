@@ -2,12 +2,12 @@ const express = require('express');
 const Datastore = require('sqlite3');
 const path = require('path');
 const app = express();
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "*");
-//   res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-//   next();
-// });
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
+  next();
+});
 app.listen(process.env.PORT || 8080);
 
 app.use(express.static(__dirname + '/dist/client'));
@@ -20,12 +20,6 @@ app.get('/api', function(req,res) {
     if(err){ response.end();
     return;
     }
-    response.json(data);
-  });
-
-  app.post('/api', (request, response) => {
-    const data = request.body;
-    database.insert(data);
     response.json(data);
   });
 
