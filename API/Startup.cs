@@ -60,7 +60,7 @@ namespace API
             policy
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .WithOrigins("https://drop-shipping-spa.herokuapp.com"));
+            .WithOrigins("https://drop-shipping-client.herokuapp.com"));
 
             app.UseAuthentication();
             
