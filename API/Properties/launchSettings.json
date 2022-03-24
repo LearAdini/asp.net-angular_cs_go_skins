@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": false,
-      "launchUrl": "",
+      "launchUrl": "https://drop-shipping-spa.herokuapp.com/api",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -21,8 +21,7 @@
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": false,
-      "launchUrl": "",
-      "applicationUrl": "https://drop-shipping-spa.herokuapp.com",
+      "applicationUrl": "https://drop-shipping-spa.herokuapp.com/api",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
