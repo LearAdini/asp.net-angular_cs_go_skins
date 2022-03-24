@@ -1,5 +1,5 @@
 const express = require('express');
-const Datastore = require('sqlite3').Datastore;
+const Datastore = require('sqlite3');
 const path = require('path');
 const app = express();
 // app.use(function(req, res, next) {
@@ -11,9 +11,9 @@ const app = express();
 app.listen(process.env.PORT || 8080);
 
 app.use(express.static(__dirname + '/dist/client'));
-app.use(express.json({limit: '50mb'}));
+// app.use(express.json({limit: '50mb'}));
 
-const database = new Datastore ('../API/dropshipping.db')
+const database = new Datastore ('/dist/API/dropshipping.db')
 database.loadDatabase();
 app.get('/api', function(req,res) {
   database.find({}, function(err, docs) {
