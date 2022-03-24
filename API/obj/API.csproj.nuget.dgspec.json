@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {}
+    "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {
+    "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
+        "projectUniqueName": "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
+        "projectPath": "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\obj\\",
+        "outputPath": "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,7 +25,6 @@
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +43,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Cors": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.13, )"
