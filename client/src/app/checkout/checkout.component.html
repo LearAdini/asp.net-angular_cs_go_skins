@@ -1,0 +1,115 @@
+<br><br>
+<div class="wrapper">
+  <h3 style="font-family: 'Poiret One', cursive; font-weight: bold; font-size: 20px;">My Cart</h3>
+
+  <div class="cart-item" *ngFor="let item of items let i = index">
+    <span>{{item.name}}</span>
+    <span style="color:crimson;">&nbsp; Price: ${{ (item.price - (item.price * item.sale / 100)).toFixed(2)}}</span>
+    <button class="remove" (click)="removeItem(i)"> <i class="fa fa-trash"></i></button><br>
+  </div>
+  <br>
+  <h5 style="font-family: 'Poiret One', cursive; font-weight: bolder; font-size: 18px;">Total: ${{this.totalPrice}}</h5>
+  <!-- <div *ngIf="member">
+    <div class="user">
+      <div id="title"> First Name:</div> {{member.firstName}} <div id="title">Last Name:</div> {{member.lastName}} <br>
+      <div id="title">Country:</div> {{member.country}} <div id="title">City:</div> {{member.city}}
+      <div id="title">Address:</div> {{member.address}}<br>
+      <div id="title">Phone:</div> {{member.phoneNumber}}<br>
+      <button id="edit" (click)="editFunc()">edit</button>
+      <div class="credit-info" *ngIf="haveCard">
+        <hr class="dropdown-divider">
+        <div id="title">Card Number:</div><br><input disabled type="password" id="passw"
+          value="{{card?.cardNumber}}"><br>
+        <div id="title">Expiration Date:</div><br> <input disabled type="password" id="passw"
+          value="{{card?.cardDate}}"><br>
+        <div id="title">CVV:</div> {{card?.cardCVV}}
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div *ngIf="member">
+    <form #editForm="ngForm" (ngSubmit)="updateMember()" *ngIf="edit == true" id="editForm" class="form-inline">
+      <label for="country">Country:&nbsp;</label>
+      <textarea [(ngModel)]="member.country" name="country" class="form-control" rows="1"></textarea>
+
+      <label for="city">&nbsp;City:&nbsp;</label>
+      <textarea [(ngModel)]="member.city" name="city" class="form-control" rows="1"></textarea>
+
+      <label for="address">&nbsp;Address:&nbsp;</label>
+      <textarea [(ngModel)]="member.address" name="address" class="form-control" rows="1"></textarea>
+
+      <label for="phoneNumber">&nbsp;Phone Number:&nbsp;</label>
+      <textarea [(ngModel)]="member.phoneNumber" name="phoneNumber" class="form-control" rows="1"></textarea>
+
+      <div class="card-footer">
+        <button form="editForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
+      </div>
+    </form>
+  </div> -->
+  <app-account-edit></app-account-edit>
+
+  <div *ngIf="next" #paymentTitle>
+    <div *ngIf="haveCard == false">
+
+      <div class="payment-title">
+        <h1>Secure Payment Section</h1>
+        <h4 style="color:crimson">Please Use Only English</h4>
+      </div>
+
+      <form [formGroup]="creditForm" (ngSubmit)="addCreditCard()" autocomplete="off">
+        <div class="form-container">
+          <div class="field-container">
+            <label for="fullName">Full Name:</label>
+            <input class='req' id="fullName" maxlength="50" type="text" formControlName="fullName"
+              onkeyup="enableSubmit()" required>
+          </div>
+
+          <div class="field-container">
+            <label for="cardNumber">Card Number:</label>
+            <input class='req' id="cardNumber" type="number" formControlName="cardNumber" oninput="javascript: if (this.value.length > this.maxLength)
+          this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="16" onkeyup="enableSubmit()"
+              required>
+          </div>
+
+          <div class="field-container">
+            <label for="cardDate">Valid (mm/yy):</label>
+            <input #cardDate class='req' id="cardDate" type="text" formControlName="cardDate" placeholder="/"
+              minlength="5" maxlength="5" oninput="getKeyPress()" onkeyup="enableSubmit()" required>
+          </div>
+
+          <div class="field-container">
+            <label for="cardCVV">CVV:</label>
+            <input class='req' id="cardCVV" type="number" formControlName="cardCVV" oninput="javascript: if (this.value.length > this.maxLength)
+        this.value = this.value.slice(0, this.maxLength);" minlength="3" maxlength="3" onkeyup="enableSubmit()"
+              required>
+          </div>
+
+          <div class="field-container">
+            <label for="idNumber">Id Number:</label>
+            <input class='req' id="idNumber" formControlName="idNumber" type="number" oninput="javascript: if (this.value.length > this.maxLength)
+        this.value = this.value.slice(0, this.maxLength);" maxlength="9" onkeyup="enableSubmit()" required>
+          </div>
+
+          <br>
+          <div class="send">
+            <input class="add-card" #addCard type="submit" value="All Fields Required" disabled>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div *ngIf="haveCard == false">
+    <button routerLink="/checkout" class="checkout" *ngIf="!next" (click)="nextFunc()">Next</button>
+  </div>
+
+  <div *ngIf="haveCard">
+    <div *ngIf="this.totalPrice > 0">
+      <button class="pay" #payed (click)="finishedFunc()"> Pay Now !</button>
+    </div>
+
+  </div>
+  <div #payed2></div>
+  <br>
+</div>

@@ -8,15 +8,10 @@ import { products } from '../models/products';
 })
 export class ProductsComponent implements OnInit {
   products = products;
+  searchText : any;
 
-  constructor(private spinner: NgxSpinnerService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    // this.spinner.show();
-
-    // setTimeout(() => {
-    //   this.spinner.hide();
-    // }, 1000);
-  }
+  ngOnInit(): void { }
 
 }

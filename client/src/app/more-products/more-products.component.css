@@ -1,6 +1,6 @@
-*{
+/* *{
   display:block;
-}
+} */
 
 .card{
   height:255px;
@@ -39,8 +39,8 @@
   border:solid 1px red;
   background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(129, 50, 255) 100%);
   border-radius:0px 0px 5px 0px;
-  margin-left:215px;
-  margin-top:-42px;
+  margin-left:13.46rem;
+  margin-top:-2.1rem;
   width:70px;
   overflow:hidden;
   text-align: bottom;
@@ -69,8 +69,10 @@ p{
   margin:auto;
   border-radius: 5px 5px 0 0;
   font-family: 'Poiret One', cursive;
+  font-size: 20px;
   font-weight: bolder;
   color:rgb(24, 24, 24);
+  height:25px;
 }
 
 .card-wrapper{

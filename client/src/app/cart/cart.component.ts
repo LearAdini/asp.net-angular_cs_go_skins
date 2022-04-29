@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Product } from '../models/products';
 import { CartService } from '../service/cart.service';
 import { render } from 'creditcardpayments/creditCardPayments';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cart',
@@ -10,48 +11,45 @@ import { render } from 'creditcardpayments/creditCardPayments';
 })
 export class CartComponent implements OnInit {
   items = this.cartService.getItems();
-  item: Product[] = [];
+  // item: Product[] = [];
   totalPrice?: any;
 
-  constructor(private cartService: CartService) {
-    setTimeout(() => {
-      render({
-        id: "#myPaypalButtons",
-        currency: "USD",
-        value: this.cartService.getPrice(),
-        onApprove: () => {
-          alert('Success');
-        }
-      });
-    }, 5);
-
-  }
+  constructor(private cartService: CartService,private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.totalPrice = this.cartService.getPrice();
-
+    this.totalPrice = this.cartService.getTotalPrice();
+    this.payPalButton();
   }
 
   removeItem(index: number) {
     this.cartService.clearProduct(index);
-    this.totalPrice = this.cartService.getPrice();
+    this.totalPrice = this.cartService.getTotalPrice();
 
+    let pay = window.document.querySelector('#myPaypalButtons');
+    pay!.innerHTML = '';
     this.payPalButton();
   }
 
   payPalButton() {
-    let pay = window.document.querySelector('#myPaypalButtons');
-    pay!.innerHTML = '';
 
     setTimeout(() => {
       render({
         id: "#myPaypalButtons",
         currency: "USD",
-        value: this.cartService.getPrice(),
+        value: this.cartService.getTotalPrice(),
+
+
         onApprove: () => {
-          alert('Success');
-        }
+          if(this.totalPrice == 0) {
+            this.toastr.error('Your cart is empty');
+          }
+          this.toastr.success('Payment Successful');
+        },
       });
     }, 5);
+
+    if(this.totalPrice == 0) {
+      this.toastr.error('Your cart is empty');
   }
+}
 }

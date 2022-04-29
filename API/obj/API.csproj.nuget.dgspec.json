@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\API.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\New folder (4)\\DropShippingSPA\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,6 +25,7 @@
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,11 +44,19 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.AspNet.WebApi.Cors": {
               "target": "Package",
               "version": "[5.2.7, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
               "version": "[5.0.13, )"
             },

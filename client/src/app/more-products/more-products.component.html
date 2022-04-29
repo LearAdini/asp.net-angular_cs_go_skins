@@ -1,7 +1,7 @@
 <br>
 <div class="wrapper">
 <table>
-  <h5 class="similar-products">SIMILAR PROUDCTS</h5>
+  <h5 class="similar-products mt-2">SIMILAR PROUDCTS</h5>
   <div class="card-wrapper">
     <br>
   <div style="float:left" [routerLink]="['/products', product.id]" *ngFor="let product of products | randomOrder | slice:0:5; let i=index">

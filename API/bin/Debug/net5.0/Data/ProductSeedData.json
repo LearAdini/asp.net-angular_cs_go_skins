@@ -1,0 +1,150 @@
+[
+    {
+        "Id": 1,
+        "ProductName": " 2PCS Bluetooth 2.4G Wireless Controller",
+         "ProductPrice": 100,
+        "ProductDescription": "2PCS Bluetooth 2.4G Wireless Controller For Nintendo Switch Pro PC TV Box Smart Phone Tablet PS3 Tesla Shock Joystick Gamepad",
+        "ProductSale": 52
+    },
+    {
+        "Id": 2,
+        "ProductName": " Baseus USB Type C to USB Type C Cable",
+         "ProductPrice": 38,
+        "ProductDescription": "1Meter 100W Flash Charge Cable,480Mbps of transmission rate. Full Charge of Mate Book X pro in about 2.5 Hours Support 20V/5A, 100W high power fast charge, can quickly charge laptops.",
+        "ProductSale": 67
+    },
+    {
+    
+        "Id": 3,
+        "ProductName": "JBL E500BT Bluetooth Headphones Deep Bass Sound ",
+        "ProductPrice": 149,
+        "ProductDescription": "Wirelessly stream high-quality sound from your smartphone or tablet 2. Immersive audio experience that only JBL Signature Sound can provIde 3. Easily control your sound and manage your calls from your headphones with the convenient 1-button remote with mic 4. Built-in rechargeable Li-ion battery supports 1 hours of playtime for 5mins charge & 16H supports for 2 hour recharge 5. Lightweight materials and foldable design make it convenient anywhere & anytime you want music Siri or Google Now are just a button away: activate the voice assistant by pushing the remote button",
+        "ProductSale": 45
+    },
+    {
+        "Id": 4,
+        "ProductName": "CHUWI HeroBook Air 11.6 HD Display Intel Celeron ",
+        "ProductPrice": 320,
+        "ProductDescription": "Ultra Thin Notebook , 11.6 HD Display",
+        "ProductSale": 66
+    },
+    {
+        "Id": 5,
+        "ProductName": "USB Wifi Adapter 600Mbps 5ghz Antenna USB Ethernet PC Wi-Fi Adapter ",
+        "ProductPrice": 25,
+        "ProductDescription":"Item ProductName: Dual-Band WiFi Adapter",
+        "ProductSale": 55
+    },
+    {
+        "Id": 6,
+        "ProductName": "Type C USB Hub 8 in 1 Dock Station",
+        "ProductPrice": 45,
+        "ProductDescription": "8 -in -1",
+        "ProductSale": 38
+    },
+    {
+        "Id": 7,
+        "ProductName": "HAVIT TKL Mechanical Keyboard Red Switch with 89 Keys PBT Keycaps",
+        "ProductPrice": 150,
+        "ProductDescription":"HAVIT KB487L TKL Mechanical Keyboard with 89-key design, saves space on the premise of preserving commonly used number keys. Perfect for office and games.",
+        "ProductSale": 47
+    },
+    {
+        "Id": 8,
+        "ProductName": " Apple iPhone XR 3GB ROM 64GB/128GB 4G 6.1",
+        "ProductPrice": 550,
+        "ProductDescription": "designed and manufactured by Apple Inc. It is part of the twelfth generation of the iPhone.",
+        "ProductSale": 17
+    },
+    {
+        "Id": 9,
+        "ProductName": "SanDisk Cruzer Blade CZ50 USB Flash Drive 128GB",
+        "ProductPrice": 45,
+        "ProductDescription": "With its stylish, compact design and generous capacity, the Cruzer Blade USB Flash Drive makes it easy to back up, transfer, and share your files. ",
+        "ProductSale": 44
+    },
+    {
+        "Id": 10,
+        "ProductName": "Baseus 8K HDMI-Compatible 1.5Meter Cable",
+        "ProductPrice": 24,
+        "ProductDescription": "*8K HD picture quality",
+        "ProductSale": 53
+    },
+    {
+        "Id": 11,
+        "ProductName": "Vention Ethernet Cable Cat 8 Network Cable 40Gbps, 2Meter",
+        "ProductPrice": 45,
+        "ProductDescription": "2 meter Vention ethernet cat 8 cable, Surf the Net at Maximum Speeds, 40Gbps Transmission Rate 2000MHz Frequency BandwIdth",
+        "ProductSale": 62
+    },
+    {
+        "Id": 12,
+        "ProductName": "Global Version Tablet P80 Pad Pro 8 Inch 6GB RAM 128GB",
+        "ProductPrice": 321,
+        "ProductDescription": "HD camera Front 1600W rear 800W, with auto focus function,Whether taking photos or vIdeo chats, its all the same clear.",
+        "ProductSale": 70
+    },
+    {
+        "Id": 13,
+        "ProductName": "JBL LIVE PRO+ TWS Bluetooth Wireless Earphone Sports Earbuds",
+        "ProductPrice": 65,
+        "ProductDescription": "JBL SIGNATURE SOUND: These wireless earphones provIde the best audio solution for any device, Live Pro-plus TWS headphones are small but powerful, with 11mm dynamic drivers for extraordinary JBL Signature Sound all day, every day.",
+        "ProductSale": 44
+    },
+    {
+        "Id": 14,
+        "ProductName": "EU Plug Black USB Charger Quick Charge 3.0 For Phone",
+        "ProductPrice": 26,
+        "ProductDescription": "Specifications: harging current: 3000mA",
+        "ProductSale": 58
+    },
+    {
+        "Id": 15,
+        "ProductName": "Asus ROG STRIX B250G GAMING Desktop Intel B250 B250M DDR4 Motherboard LGA 1151 i7/i5/i3 USB3.0 SATA3",
+        "ProductPrice": 205,
+        "ProductDescription": "Packing include one motherboard and one metal bafflewithout CMOS battery, dId not have other part.",
+        "ProductSale": 46
+    },
+    {
+        "Id": 16,
+        "ProductName": "2022 Zeblaze Ares Heart Rate Tracking Smartwatch",
+        "ProductPrice": 65,
+        "ProductDescription": "24h Heart Rate Monitoring, Blood Pressure Monitoring, Multi-Watch Faces, Custom watch face, 13 Goal-Based Exercises, Sleep Quality Monitoring, Steps Tracking, Calorie Burn Tracking, Daily Steps Goal, Real-time Pace & Distance, Goal Celebrations, Reminders To Move, Smartphone Notifications, Weather Forecast, Stopwatch, Alarm Clock, Find Phone, Flashlight, Turn Wrist Detection, Music Control.",
+        "ProductSale": 33
+    },
+    {
+        "Id": 17,
+        "ProductName": "Dash Cam WIFI FULL HD 1080P Super Mini Car Camera DVR Wireless Night Version",
+        "ProductPrice": 98,
+        "ProductDescription": "HIdden Dash Cam WIFI FULL HD 1080P Super Mini Car Camera DVR Wireless Night Version G-Sensor Driving Recorder car camera dashcam",
+        "ProductSale": 41
+    },
+    {
+        "Id": 18,
+        "ProductName": " Flyingbear-Ghost 5 full metal frame High Precision DIY 3D Printer",
+        "ProductPrice": 796,
+        "ProductDescription": "The XY axis is driven by TMC2208/TMC2225, with low noise and high precision.",
+        "ProductSale": 38
+    },
+    {
+        "Id": 19,
+        "ProductName": "MUCAI 24Inch Monitor 165Hz",
+        "ProductPrice": 419,
+        "ProductDescription": " Display Size: 24",
+        "ProductSale": 28
+    },
+    {
+        "Id": 20,
+        "ProductName": "AMD RX 580 8G For GDDR5 GPU mining VIdeo Card",
+        "ProductPrice": 529,
+        "ProductDescription": " Core Clock(Mhz)：1150Mhz",
+        "ProductSale": 25
+    },
+    {
+        "Id": 21,
+        "ProductName": "Goldenfir SolId State Drive 1TB For  Laptop/PC",
+        "ProductPrice": 250,
+        "ProductDescription": "According to the international stander 1000KB=1MB ,thereal capacity =Capacity x 0.93, please notice that.",
+        "ProductSale": 38
+    }
+]

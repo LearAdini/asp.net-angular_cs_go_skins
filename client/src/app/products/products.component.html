@@ -1,5 +1,25 @@
 <br>
+<div class="search">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search" autocomplete="off">
+
+    </div>
+    <i class="fa fa-search" style="font-size:20px;"></i>
 <table>
+  <div class="wrapper">
+   <div style="float:left;"  *ngFor="let product of products | filter:searchText">
+    <td>
+      <div class ="card" >
+        <img [routerLink]="['/products', product.id]" class="card-img-top" src="{{product.imageUrl}}">
+      </div>
+      <p>{{product.name}}</p><div class="sale">&nbsp;&nbsp;&nbsp;&nbsp;-{{product.sale}}%</div>
+      </td>
+      <br>
+</div>
+</div>
+</table>
+
+
+<!-- <table>
   <div class="wrapper">
    <div style="float:left;"  *ngFor="let product of products | randomOrder">
     <td>
@@ -11,4 +31,4 @@
       <br>
 </div>
 </div>
-</table>
+</table> -->

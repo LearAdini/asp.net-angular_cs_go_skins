@@ -11,7 +11,7 @@ import { CartService } from '../service/cart.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product | undefined;
-  @Input() productItem: Product;
+  // @Input() productItem: Product;
   galleryOptions!: NgxGalleryOptions[];
   galleryImages!: NgxGalleryImage[];
   addedCart : any;
@@ -65,9 +65,6 @@ export class ProductDetailsComponent implements OnInit {
       setTimeout(() => {
         this.addedCart = false;
        },3000);
-
-
-    // this.cartService.setCartItems(product);
   }
 
   getImages(): NgxGalleryImage[] {

@@ -22,6 +22,12 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { AuthGuard } from './guards/auth.guard';
 import { ToastrModule } from 'ngx-toastr';
 import { RegisterComponent } from './register/register.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { DateInputComponent } from './register/date-input/date-input.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { AccountEditComponent } from './account-edit/account-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,10 @@ import { RegisterComponent } from './register/register.component';
     MoreProductsComponent,
     RandomOrderPipe,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    DateInputComponent,
+    CheckoutComponent,
+    AccountEditComponent
    ],
   imports: [
     BrowserModule,
@@ -42,16 +51,19 @@ import { RegisterComponent } from './register/register.component';
     NgxGalleryModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
+    Ng2SearchPipeModule,
+    BsDropdownModule.forRoot(),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right'
     }),
+    BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
     FormsModule,
     HttpClientModule,
     RouterModule
 
   ],
-  exports: [AppComponent, ToastrModule, NgxSpinnerModule],
+  exports: [AppComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

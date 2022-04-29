@@ -4,9 +4,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/*Disable Input Arrows  Firefox */
+
 input[type=number] {
   -moz-appearance: textfield;
+
 }
 
 h2{
@@ -42,53 +43,3 @@ transform: scale(1.05);
 .invalid-feedback{
  text-align: center;
 }
-
-
-/* .btn-warning{
-  background-color:rgb(248, 136, 159);
-  margin-top:35px;
-  color:black;
-  border:solid 1px black;
-  text-shadow: 1px 1px  rgba(0, 0, 0, 0.267);
-}
-
-.btn-warning:hover span {
-  display:none;
-}
-
-.btn-warning:hover:before{
-  content:'☹';
-} */
-
-/* label{
-  color:white;
-  font-weight: strong;
-  font-size: 18px;
-margin-left: 30px;
-}
-.text-primary {
-  color: rgb(255, 145, 0) !important;
-  font-size: 63px;
-}
-.btn-success{
-  width:250px;
-  transition:transform 0.2s;
-  animation-duration: 1.4s;
-  animation-delay:0.5s;
-  animation-timing-function:ease-in-out;
-}
-.btn-success:hover
-{
-  background-color: rgb(255, 0, 119) !important;
-  border: solid 1px rgb(255, 0, 119);
-  transform:scale(1.055);
-  cursor: pointer;
-}
-#btn-back
-{
-  width: 50px;
-  height: 37px;
-}
-.radio-inline{
-  cursor: pointer;
-} */

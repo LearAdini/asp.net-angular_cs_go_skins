@@ -33,6 +33,7 @@
    margin-left:7px;
    font-family: 'Poiret One', cursive;
    font-weight: bolder;
+   font-size: 20px;
 }
 
 .description{
@@ -118,6 +119,7 @@
   padding-left: -4px;
   font-family: 'Poiret One', cursive;
   font-weight: bolder;
+  font-size: 30px;
 }
 
 .title,#add-cart,#des{

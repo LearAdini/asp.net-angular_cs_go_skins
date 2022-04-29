@@ -24,12 +24,12 @@ namespace API
         {
             
             services.AddApplicationServices(_config);
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
 
-        //    services.AddSwaggerGen(c =>
-        //    {
-        //        c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
-        //    });
+           services.AddSwaggerGen(c =>
+           {
+               c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+           });
 
             services.AddCors();
 
@@ -60,7 +60,7 @@ namespace API
             policy
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .WithOrigins("https://drop-shipping-client.herokuapp.com"));
+            .WithOrigins("https://localhost:4200"));
 
             app.UseAuthentication();
             

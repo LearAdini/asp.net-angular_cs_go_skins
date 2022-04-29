@@ -12,6 +12,7 @@ import { AccountService } from '../service/account.service';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   validationErrors: string[] = [];
+  maxDate: Date;
   @Output() cancelRegister = new EventEmitter<boolean>();
 
   constructor(private accountService: AccountService,
@@ -21,6 +22,8 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.initializeForm();
+    this.maxDate = new Date();
+    this.maxDate.setFullYear(this.maxDate.getFullYear() - 18);
   }
 
   initializeForm() {
@@ -28,7 +31,10 @@ export class RegisterComponent implements OnInit {
       username: new FormControl('', Validators.required),
       password: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]),
       confirmPassword: new FormControl('', [Validators.required, this.matchValues('password')]),
-      fullName: new FormControl(''),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      age: new FormControl(''),
+      firstName: new FormControl('',Validators.required),
+      lastName: new FormControl('',Validators.required),
       country: new FormControl(''),
       city: new FormControl(''),
       address: new FormControl(''),
@@ -47,7 +53,7 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(['/products']);
           this.cancel();
         },
-        error => {
+        (error) => {
           if (Array.isArray(error)) {
             this.validationErrors = error;
           }

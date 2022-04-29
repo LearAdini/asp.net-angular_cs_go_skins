@@ -4,10 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
-@import '~font-awesome/css/font-awesome.css';
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 body{
-  background: linear-gradient(90deg, rgb(226, 189, 189) 0%, rgb(233, 167, 167) 50%, rgb(226, 189, 189) 100%);
+  background: linear-gradient(90deg, rgb(21, 35, 32) 0%, rgb(12, 21, 19) 50%, rgb(21, 35, 32) 100%);
 }
 
 .btn{
@@ -15,3 +14,6 @@ body{
 }
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

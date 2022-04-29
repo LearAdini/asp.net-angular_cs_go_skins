@@ -1,14 +1,16 @@
 // import { Photo } from "./photo";
 
 export interface User {
-
+  id: number | string;
   username:     string;
-  // password:     string;
   token: string;
-  fullName:      string;
-
-  // photos:       Photo[];
-  // liked:boolean;
+  firstName:      string;
+  lastName:      string;
+  email:      string;
+  country:      string;
+  city:      string;
+  address:      string;
+  phoneNumber:      string;
 }
 
 

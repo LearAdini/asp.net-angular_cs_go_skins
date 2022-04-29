@@ -1,15 +1,18 @@
 
 <br><br>
 <div class="wrapper">
-<h3 style="font-family: 'Poiret One', cursive;">My Cart</h3>
+<h3 style="font-family: 'Poiret One', cursive; font-weight: bold; font-size: 20px;">My Cart</h3>
 
 <div class="cart-item" *ngFor="let item of items let i = index ">
-  <span>{{ item.name }}</span>
-  <span style="color:crimson;">&nbsp; Price: ${{ (item.price - (item.price * item.sale / 100)).toFixed(2) }}</span><button class="remove" (click)="removeItem(i)"> <i class="fa fa-trash"></i></button><br>
+  <span>{{item.name}}</span>
+  <span style="color:crimson;">&nbsp; Price: ${{ (item.price - (item.price * item.sale / 100)).toFixed(2) }}</span>
+  <button class="remove" (click)="removeItem(i)"> <i class="fa fa-trash"></i></button><br>
 </div>
 
 <br>
-<h5 style="font-family: 'Poiret One', cursive; font-weight: bolder;">Total: ${{this.totalPrice}}</h5>
-<div id="myPaypalButtons"></div>
+<h5 style="font-family: 'Poiret One', cursive; font-weight: bolder; font-size: 15px;">Total: ${{this.totalPrice}}</h5>
+<div id="myPaypalButtons" ></div>or
 <br>
+<br>
+<button routerLink="/checkout" class="checkout">Checkout</button>
 </div>

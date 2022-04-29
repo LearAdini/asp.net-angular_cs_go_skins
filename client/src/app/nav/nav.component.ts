@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
@@ -14,6 +15,7 @@ import { AccountService } from '../service/account.service';
 export class NavComponent implements OnInit {
   model: any = {};
   currentUser$: Observable<User | null>;
+  @ViewChild('awaaw') awaaw: ElementRef;
   constructor(
     private accountService: AccountService,
     private router: Router,
@@ -38,6 +40,7 @@ logout() {
     this.spinner.hide();
   }, 1500);
 }
+
 
 
 }

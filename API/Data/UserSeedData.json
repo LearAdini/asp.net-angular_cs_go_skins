@@ -1,10 +1,12 @@
 [
     {
         "UserName": "lisa",
-        "FullName": "Lisa",
+        "FullName": "Lisa Doe",
         "City": "Greenbush",
         "Country": "Martinique",
         "Address": "Somewhere",
-        "PhoneNumber": 454545
+        "Email":"lisa123@gmail.com",
+        "DateOfBirth": "1996-07-22",
+        "PhoneNumber": 5212341
     }
 ]

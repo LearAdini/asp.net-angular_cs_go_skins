@@ -4,9 +4,11 @@ using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Interfaces;
-using Microsoft.AspNetCore.Authorization;
+using System.Net;
+using System.Net.Mail;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace API.Controllers
 {
@@ -16,13 +18,19 @@ namespace API.Controllers
 
         private readonly DataContext _context;
         private readonly ITokenService _tokenService;
-        public AccountController(DataContext context, ITokenService tokenService)
+
+        private readonly IUserRepository _userRepository;
+
+      
+        public AccountController(IUserRepository userRepository, DataContext context, ITokenService tokenService)
         {
             _tokenService = tokenService;
             _context = context;
+            _userRepository = userRepository;
+    
         }
 
- 
+
         [HttpPost("register")] //api/account/register
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
@@ -35,24 +43,31 @@ namespace API.Controllers
                 UserName = registerDto.Username,
                 PasswordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(registerDto.Password)),
                 PasswordSalt = hmac.Key,
-                FullName = registerDto.FullName,
+                FirstName = registerDto.FirstName,
+                LastName = registerDto.LastName,
+                Email = registerDto.Email,
                 City = registerDto.City,
                 Country = registerDto.Country,
                 Address = registerDto.Address,
-                PhoneNumber = registerDto.PhoneNumber
+                PhoneNumber = registerDto.PhoneNumber,
             };
 
             _context.Users.Add(user);
 
             await _context.SaveChangesAsync();
 
-            
-            return new UserDto {
+
+            return new UserDto
+            {
+                Id = user.Id,
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
-                FullName = user.FullName
-                // Country = user.Country,
-                // City = user.City
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Country = user.Country,
+                City = user.City,
+                Address = user.Address,
+                PhoneNumber = user.PhoneNumber
             };
         }
 
@@ -71,14 +86,16 @@ namespace API.Controllers
                 if (computedHash[i] != user.PasswordHash[i]) return Unauthorized("invalid password");
             }
 
-            return new UserDto {
+            return new UserDto
+            {
+                Id = user.Id,
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
-                FullName = user.FullName
+                FirstName = user.FirstName,
+                LastName = user.LastName,
                 // PhotoUrl = user.Photos?.FirstOrDefault(x=> x.IsMain)?.Url,
             };
         }
-
 
         private async Task<bool> UserExists(string username)
         {

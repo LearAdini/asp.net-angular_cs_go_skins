@@ -1,10 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, ReplaySubject } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { CartItem } from '../models/CartItem';
-
-
 import { Product } from '../models/products';
 
 @Injectable({
@@ -18,18 +14,23 @@ export class CartService {
   private currentItems$ = new ReplaySubject<Product | null>(1);
   currentItem$ = this.currentItems$.asObservable();
 
-  constructor() { }
-
-  addToCart(product: Product){
-    return this.items.push(product);
+  constructor() {
+    // this.items = this.getItems();
   }
 
-  setCartItems(product: Product) {
-    localStorage.setItem('product', JSON.stringify(product));
+  addToCart(product: Product) {
+    localStorage.setItem(product.name, JSON.stringify(product));
     this.currentItems$.next(product);
+    this.items.push(product);
   }
 
-  getPrice() {
+  // setCartItems(product: Product) {
+
+  //   localStorage.setItem(product.name, JSON.stringify(product));
+  //   this.currentItems$.next(product);
+  // }
+
+  getTotalPrice() {
     let total = 0;
     for (let item of this.items) {
       total += (item.price - (item.price * item.sale / 100));
@@ -43,13 +44,31 @@ export class CartService {
   }
 
   getItems() {
-    const itemFromLS: any = localStorage.getItem('product');
-    const item = JSON.parse(itemFromLS);
-    this.setCartItems(item);
+    this.getCartData();
     return this.items;
+  }
+
+  // try using get cartData
+  getCartData() {
+    let obj = Object.values(this.items).forEach(val => {
+      const itemFromLS: any = localStorage.getItem(val.name);
+      const item = JSON.parse(itemFromLS);
+      console.log(item);
+    });
+    // return obj;
+
   }
 
   clearProduct(index: number) {
     this.items.splice(index, 1);
+    this.currentItems$.next(null);
+    // localStorage.removeItem(this.items[index].name);
+  }
+
+  clearCart() {
+    this.items.splice(0, this.items.length);
+    this.currentItems$.next(null);
+    // localStorage.removeItem(this.items);
+    // localStorage.clear();
   }
 }
