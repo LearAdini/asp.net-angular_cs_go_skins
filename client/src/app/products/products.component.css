@@ -40,7 +40,7 @@
   background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(129, 50, 255) 100%);
   border-radius:0px 0px 3px 0px;
   margin-left:188px;
-  margin-top:-42px;
+  margin-top:-34px;
   width:70px;
   overflow:block;
   text-align: bottom;
@@ -76,6 +76,7 @@ p{
   border:none;
   width: 20%;
   margin-left: 2.9rem;
+font-family:Arial, FontAwesome;
 }
 
 

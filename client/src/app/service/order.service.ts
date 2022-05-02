@@ -15,8 +15,12 @@ export class OrderService {
   constructor(private http: HttpClient) { }
 
   addOrder(order: any) {
-        return this.http.post<any>(this.baseUrl + 'order/addorder/',order);
-    }
+    return this.http.post<any>(this.baseUrl + 'order/addorder/', order);
+  }
+
+  getOrders(order: any) {
+    return this.http.get<any>(this.baseUrl + 'order/getorder/', order);
+  }
 
 }
 

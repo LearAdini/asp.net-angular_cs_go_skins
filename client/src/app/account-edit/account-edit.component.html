@@ -82,7 +82,7 @@
         <input type="password" class="form-control" #checkPass placeholder="Confirm Password" name="confirmPassword">
         <br>
         <div class="card-footer">
-          <button form="resetForm" type="submit" class="btn btn-success btn-block">Update Password</button>
+          <button  [disabled]="resetForm.invalid" class="btn btn-success" type="submit" class="btn btn-success btn-block">Update Password</button>
         </div>
       </div>
     </form>
@@ -112,3 +112,5 @@
   </div>
 </form> -->
   </div>
+
+

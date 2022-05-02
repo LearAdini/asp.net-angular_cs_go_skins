@@ -1,7 +1,8 @@
 [
     {
         "UserName": "lisa",
-        "FullName": "Lisa Doe",
+        "FirstName": "Lisa",
+        "LastName": "Doe",
         "City": "Greenbush",
         "Country": "Martinique",
         "Address": "Somewhere",

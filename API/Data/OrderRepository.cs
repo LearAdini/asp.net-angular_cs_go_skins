@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.DTOs;
@@ -24,12 +25,9 @@ namespace API.Data
             _context.Orders.Add(order);
         }
 
-        public async Task<ProductDto> GetOrderAsync(int orderId)
+        public Task<ProductDto> GetOrdersByUserIdAsync(int userId)
         {
-            return await _context.Orders
-                .Where(x => x.OrderId == orderId)
-                .ProjectTo<ProductDto>(_mapper.ConfigurationProvider)
-                .SingleOrDefaultAsync();
+            throw new System.NotImplementedException();
         }
 
         public async Task<bool> SaveAllAsync()
@@ -41,5 +39,6 @@ namespace API.Data
         {
             _context.Entry<ProductEntity>(order).State = EntityState.Modified;
         }
+
     }
 }

@@ -5,7 +5,10 @@
   margin: auto;
   width: 40%;
 }
+.nav-tab{
+  margin-right:-50%;
 
+}
 .user{
   border:solid 1px black;
   width: 400px;

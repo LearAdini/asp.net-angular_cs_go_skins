@@ -32,11 +32,13 @@ namespace API.Controllers
             _userRepository = userRepository;
         }
 
+
         [HttpPost("addorder")]
         public async Task<ActionResult<ProductEntity>> AddOrder(ProductDto productDTO)
         {
             var user = User.GetUsername();
             var userId = _userRepository.GetUserByUserNameAsync(user).Result.Id;
+
 
             var order = new ProductEntity
             {
@@ -46,12 +48,29 @@ namespace API.Controllers
                 Description = productDTO.Description,
             };
 
-
-        _context.Orders.Add(order);
+            _context.Orders.Add(order);
 
             await _context.SaveChangesAsync();
 
             return Ok(order);
+        }
+
+        [HttpGet("getorders")]
+        public async Task<ActionResult<ProductEntity>> GetOrders()
+        {
+            var user = User.GetUserId();
+            // var userId = _userRepository.GetUserByUserNameAsync(user).Result.Id;
+
+            var orders = await _orderRepository.GetOrdersByUserIdAsync(user);
+
+            // var order = new ProductEntity{ 
+            //     UserId = userId,
+            // };
+            
+            
+            // var orders = await _orderRepository.GetOrdersByUserIdAsync(order.UserId);
+
+            return Ok(orders);
+        }
     }
-}
 }

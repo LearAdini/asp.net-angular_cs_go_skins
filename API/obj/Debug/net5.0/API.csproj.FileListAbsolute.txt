@@ -331,3 +331,5 @@ C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5
 C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\Npgsql.dll
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

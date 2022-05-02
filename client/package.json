@@ -33,6 +33,7 @@
     "ngx-bootstrap": "^8.0.0",
     "ngx-dropdown": "0.0.22",
     "ngx-spinner": "^13.1.1",
+    "ngx-tabset": "^2.2.0",
     "ngx-toastr": "^14.2.2",
     "rxjs": "^7.5.5",
     "tslib": "^2.3.0",

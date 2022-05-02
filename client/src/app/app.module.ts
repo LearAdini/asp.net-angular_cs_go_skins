@@ -28,6 +28,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { AccountEditComponent } from './account-edit/account-edit.component';
+import { TabsModule } from 'ngx-tabset';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { AccountEditComponent } from './account-edit/account-edit.component';
     }),
     BsDatepickerModule.forRoot(),
     PaginationModule.forRoot(),
+    TabsModule.forRoot(),
     FormsModule,
     HttpClientModule,
     RouterModule

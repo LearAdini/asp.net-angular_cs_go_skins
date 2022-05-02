@@ -1,9 +1,8 @@
 <br>
 <div class="search">
-      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="Search" autocomplete="off">
-
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="&#xF002;  Search..." autocomplete="off">
+<br>
     </div>
-    <i class="fa fa-search" style="font-size:20px;"></i>
 <table>
   <div class="wrapper">
    <div style="float:left;"  *ngFor="let product of products | filter:searchText">

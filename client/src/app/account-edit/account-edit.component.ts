@@ -10,6 +10,7 @@ import { CartService } from '../service/cart.service';
 import { CreditService } from '../service/credit.service';
 import { MembersService } from '../service/members.service';
 import '../../assets/smtp.js';
+import { TabDirective, TabsetComponent } from 'ngx-bootstrap/tabs';
 declare let Email: any;
 
 @Component({
@@ -26,6 +27,7 @@ export class AccountEditComponent implements OnInit {
   inputCode: boolean = false;
   resetPassword: boolean = false;
   completeReset: boolean = false;
+  activeTab: TabDirective;
   code = this.generateCode(5);
 
 
@@ -41,6 +43,7 @@ export class AccountEditComponent implements OnInit {
   @ViewChild('codeEdit') codeEdit: ElementRef;
   @ViewChild('passwordEdit') passwordEdit: ElementRef;
 
+  @ViewChild('memberTabs', { static: true }) memberTabs: TabsetComponent;
   constructor(
     private accountService: AccountService,
     private membersService: MembersService,
@@ -88,6 +91,7 @@ export class AccountEditComponent implements OnInit {
   editFunc() {
     this.edit = !this.edit;
     this.editCard = false;
+    this.completeReset = false
     this.resetPassword = false;
     this.passFunc();
   }
@@ -96,6 +100,7 @@ export class AccountEditComponent implements OnInit {
     this.editCard = !this.editCard;
     this.edit = false;
     this.resetPassword = false;
+    this.completeReset = false
     this.passFunc();
   }
 
@@ -109,7 +114,6 @@ export class AccountEditComponent implements OnInit {
     this.creditService.updateCard(this.card).subscribe(() => {
       this.toastr.success("Updated your card information successfully");
       this.cardForm.reset(this.card);
-
     });
   }
 
@@ -133,10 +137,11 @@ export class AccountEditComponent implements OnInit {
     }
     this.inputCode = true;
     this.toastr.success("Check spam mail for code, May take up to 2 minutes");
+    console.log(this.code);
   }
 
   codeCheck() {
-    console.log(this.codeEdit.nativeElement.value + " and: " + this.code)
+    // console.log(this.codeEdit.nativeElement.value + " and: " + this.code)
     if (this.codeEdit.nativeElement.value.toString() != this.code.toString()) {
       this.toastr.error("Code is not valid, Check email");
       return;
@@ -147,11 +152,18 @@ export class AccountEditComponent implements OnInit {
   }
 
   updatePassword() {
+  //  let reg = [{x:'!'},{x:'@'},{x:'#'},{x:'$'},{x:'%'},{x:'^'},{x:'&'},{x:'*'}];
+  //  const iter = reg.map(a=>a.x);
 
+  let reg = [/!@*&%/];
     if (this.pass.nativeElement.value != this.checkPass.nativeElement.value) {
       this.toastr.error("Password does not match");
       return;
     }
+    // else if (this.pass.nativeElement.value != iter) {
+    //   this.toastr.error("Password must contain special characters");
+    //   return;
+    // }
     else {
       this.membersService.updateMember(this.member).subscribe(() => {
         this.toastr.success("Updated Password Successfully");
@@ -175,5 +187,9 @@ export class AccountEditComponent implements OnInit {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     return result;
+  }
+
+  selectTab(tabId: number) {
+    this.memberTabs.tabs[tabId].active = true;
   }
 }

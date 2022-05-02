@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand navbar-dark bg-dark">
+<nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/home">DropShipping</a>
 
@@ -11,9 +11,9 @@
 
         <a routerLink="/cart" class="checkout"><i class="fa fa-shopping-cart" >&nbsp;</i></a>&nbsp;
         <div class="dropdown"  dropdown >
-          <a class="dropdown-toggle mt-3" dropdownToggle><i style="color:white; margin-left:2.5px;" class="fa fa-user mt-3"></i></a>
+          <a class="dropdown-toggle " style="color:rgba(0, 115, 255, 0.886); margin-top:12.5px;" dropdownToggle><i style="color:rgba(0, 115, 255, 0.886); margin-left:2.4px; " class="fa fa-user"></i></a>
 
-          <div class="dropdown-menu mt-2" *dropdownMenu>
+          <div class="dropdown-menu mt-2"  style="margin-left:-110px;" *dropdownMenu>
           <a class="dropdown-item" routerLink="/account">Edit Profile</a>
           <span></span>
           <a class="dropdown-item" id="dropdown-item-logout" (click)="logout()">Logout</a>
