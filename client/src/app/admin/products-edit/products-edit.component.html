@@ -1,0 +1,36 @@
+<br>
+<div class="card-wrapper">
+  <div *ngIf="product">
+    <form #editForm="ngForm" (ngSubmit)="updateProduct()" id="editForm">
+      <textarea [(ngModel)]="product.productName" name="productName" class="title">&nbsp;{{product.productName}}&nbsp;</textarea>
+      <br>
+    <img class="image" src="{{product.imageUrl}}">
+    <textarea style="position:absolute; display:flex; margin-left:15px; width:400px;" [(ngModel)]="product.imageUrl" name="imageUrl" rows="1">{{product.imageUrl}}</textarea>
+    <div class="wrapper">
+      <br>
+      <h5 class="details">DETAILS:</h5>
+      <textarea [(ngModel)]="product.productDescription" name="productDescription" class="description" rows="6">{{product.productDescription}}</textarea>
+     <br>
+      <!-- <span id="strike"></span> -->
+      <br>
+      <div class="price-tab mr-5 ">
+        <h4>&nbsp;&nbsp;
+          Total Price: ${{(product.productPrice - (product.productPrice * product.productSale /100)).toFixed(2)}} | Before Sale:</h4>
+        <h5 style="margin-top:3px;float:left; text-decoration:line-through"> ${{product.productPrice}}</h5>
+        <p style="margin-top: -8px; float:left;">{{product.productSale}}%&nbsp;&nbsp;</p>
+        <br>
+        <br>
+        <br>
+        <label style="margin-left:15px;">Product Price:&nbsp;</label><input type="number" [(ngModel)]="product.productPrice" name="productPrice" rows="1">
+        <br>
+        <br>
+        <label style="margin-left:15px; padding-left:1px;">Product Sale:&nbsp;</label><input type="number" [(ngModel)]="product.productSale" name="productSale" rows="1">
+      </div>
+      <br>
+      <button [disabled]="editForm.pristine" form="editForm" type="submit" class="btn btn-success save">Save Changes</button>
+    </div>
+  </form>
+  <button (click)="deleteProduct()" class="btn btn-danger delete">Delete Product</button>
+  </div>
+</div>
+

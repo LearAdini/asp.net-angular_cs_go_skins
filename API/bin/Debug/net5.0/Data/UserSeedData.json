@@ -9,5 +9,16 @@
         "Email":"lisa123@gmail.com",
         "DateOfBirth": "1996-07-22",
         "PhoneNumber": 5212341
+    },
+    {
+        "UserName": "Admin",
+        "FirstName": "Admin",
+        "LastName": "Admin",
+        "City": "NA",
+        "Country": "NA",
+        "Address": "NA",
+        "Email":"learhoudini@gmail.com",
+        "DateOfBirth": "1999-01-27",
+        "PhoneNumber": 522228951
     }
 ]

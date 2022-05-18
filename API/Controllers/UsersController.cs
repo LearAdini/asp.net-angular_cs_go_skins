@@ -7,10 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using API.Extensions;
 using API.Data;
-using System;
-using System.Net.Mail;
-using System.Net;
-using API.Entities;
 using System.Security.Cryptography;
 
 namespace API.Controllers
@@ -57,15 +53,12 @@ namespace API.Controllers
             return BadRequest("Failed to update user");
         }
 
-
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetUsers()
         {
             var usersToREturn = await _userRepository.GetMembersAsync();
-
             return Ok(usersToREturn);
         }
-
 
 
         [HttpGet("{username}", Name = "GetUser")]
@@ -78,3 +71,5 @@ namespace API.Controllers
 
     }
 }
+
+

@@ -19,7 +19,7 @@ namespace API.Helpers
                 opt => opt.MapFrom(src => src.UserId)
             );
 
-            CreateMap<ProductEntity, ProductDto>().ForMember(
+            CreateMap<OrderEntity, OrderDto>().ForMember(
                 dest => dest.OrderId,
                 opt => opt.MapFrom(src => src.OrderId)
             );

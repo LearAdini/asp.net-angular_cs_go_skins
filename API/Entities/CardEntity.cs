@@ -16,6 +16,5 @@ namespace API.Entities
         public int CardCVV { get; set; }
 
         public int IdNumber { get; set; }
-
     }
 }

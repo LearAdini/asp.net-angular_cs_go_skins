@@ -1,22 +1,18 @@
 import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {  Observable, of, ReplaySubject } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import {  Observable, of } from 'rxjs';
+import {  tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-
 import { Member } from '../models/member';
-import { User } from '../models/user';
-import { AccountService } from './account.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class MembersService {
+  baseUrl = environment.apiUrl;
   members: Member[] = [];
   users: Member[] = [];
-
-  baseUrl = environment.apiUrl;
 
 
   constructor(private http: HttpClient) { }
@@ -29,7 +25,6 @@ export class MembersService {
     return this.http.get<Member>(`${this.baseUrl}users/${username}`)
   }
 
-
   updateMember(user: Member) {
     return this.http.put(`${this.baseUrl}users`, user).pipe(
       tap(_ => {
@@ -40,7 +35,6 @@ export class MembersService {
   }
 
   sendEmail(email: string) {
-    console.log(email);
     return this.http.post<string>(this.baseUrl +'users/sendmail/', email);
   }
 }

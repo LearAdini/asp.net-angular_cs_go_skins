@@ -1,19 +1,17 @@
 
 using System.Threading.Tasks;
-using API.DTOs;
 using API.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using API.Extensions;
 using API.Entities;
 using API.Data;
-using System.Text.Json;
 using System.Collections.Generic;
-using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
-    // [Authorize]
+    [Authorize]
     public class OrderController : BaseApiController
     {
 
@@ -34,18 +32,18 @@ namespace API.Controllers
 
 
         [HttpPost("addorder")]
-        public async Task<ActionResult<ProductEntity>> AddOrder(ProductDto productDTO)
+        public async Task<ActionResult<OrderEntity>> AddOrder(ProductEntity productEntity)
         {
             var user = User.GetUsername();
             var userId = _userRepository.GetUserByUserNameAsync(user).Result.Id;
 
 
-            var order = new ProductEntity
+            var order = new OrderEntity
             {
                 UserId = userId,
-                Name = productDTO.Name,
-                Price = productDTO.Price,
-                Description = productDTO.Description,
+                Name = productEntity.ProductName,
+                Price = productEntity.ProductPrice,
+                Description = productEntity.ProductDescription,
             };
 
             _context.Orders.Add(order);
@@ -56,21 +54,14 @@ namespace API.Controllers
         }
 
         [HttpGet("getorders")]
-        public async Task<ActionResult<ProductEntity>> GetOrders()
+        public async Task<ActionResult<List<OrderEntity>>> GetOrders()
         {
-            var user = User.GetUserId();
-            // var userId = _userRepository.GetUserByUserNameAsync(user).Result.Id;
+            var user = User.GetUsername();
+            var  userId = _userRepository.GetUserByUserNameAsync(user).Result.Id;
 
-            var orders = await _orderRepository.GetOrdersByUserIdAsync(user);
-
-            // var order = new ProductEntity{ 
-            //     UserId = userId,
-            // };
-            
-            
-            // var orders = await _orderRepository.GetOrdersByUserIdAsync(order.UserId);
+            var orders = await _orderRepository.GetOrdersByUserIdAsync(userId);
 
             return Ok(orders);
-        }
+        }   
     }
 }

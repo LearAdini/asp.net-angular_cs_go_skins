@@ -1,7 +1,5 @@
 using System.Net;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
@@ -28,7 +26,6 @@ namespace API.Middleware
             _env = env;
         }
 
-
         public async Task InvokeAsync(HttpContext context)
         {
             try
@@ -53,6 +50,5 @@ namespace API.Middleware
                 await context.Response.WriteAsync(json);
             }
         }
-
     }
 }

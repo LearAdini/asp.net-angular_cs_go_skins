@@ -10,15 +10,21 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  items = this.cartService.getItems();
+  items:any;
+
   // item: Product[] = [];
   totalPrice?: any;
 
-  constructor(private cartService: CartService,private toastr: ToastrService) { }
+  constructor(private cartService: CartService,private toastr: ToastrService) {
+
+   }
 
   ngOnInit(): void {
+    this.items = this.cartService.getItems();
     this.totalPrice = this.cartService.getTotalPrice();
     this.payPalButton();
+    // this.cartService.getCartData();
+    // this.cartService.getCartData();
   }
 
   removeItem(index: number) {

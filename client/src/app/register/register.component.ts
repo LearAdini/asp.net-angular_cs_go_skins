@@ -48,8 +48,7 @@ export class RegisterComponent implements OnInit {
     }
     else {
       this.accountService.register(this.registerForm.value).subscribe(
-        (data) => {
-          console.log(data);
+        () => {
           this.router.navigate(['/products']);
           this.cancel();
         },
@@ -60,7 +59,7 @@ export class RegisterComponent implements OnInit {
 
         }
       )
-      console.log(this.registerForm.value);
+      // console.log(this.registerForm.value);
     }
   }
 

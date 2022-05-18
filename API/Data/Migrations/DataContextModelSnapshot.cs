@@ -46,7 +46,7 @@ namespace API.Data.Migrations
                     b.ToTable("Cards");
                 });
 
-            modelBuilder.Entity("API.Entities.ProductEntity", b =>
+            modelBuilder.Entity("API.Entities.OrderEntity", b =>
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
@@ -68,6 +68,33 @@ namespace API.Data.Migrations
                     b.HasKey("OrderId");
 
                     b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("API.Entities.ProductEntity", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProductDescription")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("text");
+
+                    b.Property<long>("ProductPrice")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("ProductSale")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ProductId");
+
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("API.Entities.UserEntity", b =>

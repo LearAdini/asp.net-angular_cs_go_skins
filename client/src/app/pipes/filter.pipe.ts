@@ -6,25 +6,13 @@ import { Pipe, PipeTransform, Injectable } from "@angular/core";
 })
 @Injectable()
 export class Ng2SearchPipe implements PipeTransform {
-
-  /**
-     * @param items object from array
-     * @param term term's search
-     * @param excludes array of strings which will ignored during search
-     */
   transform(items: any, term: string, excludes: any = []): any {
     if (!term || !items) return items;
 
     return Ng2SearchPipe.filter(items, term, excludes);
   }
 
-  /**
-   *
-   * @param items List of items to filter
-   * @param term  a string term to compare with every property of the list
-   * @param excludes List of keys which will be ignored during search
-   *
-   */
+
   static filter(items: Array<{ [key: string]: any }>, term: string, excludes: any): Array<{ [key: string]: any }> {
 
     const toCompare = term.toLowerCase();

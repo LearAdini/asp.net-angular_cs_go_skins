@@ -18,9 +18,5 @@ namespace API.Entities
         public string City { get; set; }
         public string Address { get; set; }
         public int PhoneNumber { get; set; }
-
-        // public ICollection<Photo> Photos { get; set; }
-        // public ICollection<UserLike> LikedByUsers { get; set; }
-        // public ICollection<UserLike> LikedUsers { get; set; } = new List<UserLike>();
     }
 }

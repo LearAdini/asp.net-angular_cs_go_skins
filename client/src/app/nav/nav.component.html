@@ -1,36 +1,30 @@
 
-<nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand navbar-dark  sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/home">DropShipping</a>
-
+    <a class="navbar-brand mt-1" href="/home">Cs:Skins</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
         <ng-container *ngIf="currentUser$ | async as user">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/products">Products</a>
+          <a class="nav-link" [routerLink]="'/products'">Products</a>
         </li>
-
-        <a routerLink="/cart" class="checkout"><i class="fa fa-shopping-cart" >&nbsp;</i></a>&nbsp;
-        <div class="dropdown"  dropdown >
-          <a class="dropdown-toggle " style="color:rgba(0, 115, 255, 0.886); margin-top:12.5px;" dropdownToggle><i style="color:rgba(0, 115, 255, 0.886); margin-left:2.4px; " class="fa fa-user"></i></a>
-
-          <div class="dropdown-menu mt-2"  style="margin-left:-110px;" *dropdownMenu>
-          <a class="dropdown-item" routerLink="/account">Edit Profile</a>
+        <a *ngIf="!admin" routerLink="/cart" class="checkout"><i class="fa fa-shopping-cart" >&nbsp;</i></a>&nbsp;
+        <div *ngIf="!admin" class="dropdown" dropdown>
+        <i data-toggle="dropdown" dropdownToggle class="fa fa-user"></i>
+          <div class="dropdown-menu mt-4" style="margin-left:-120px;" *dropdownMenu>
+          <a class="dropdown-item" routerLink="/account">My Profile</a>
           <span></span>
           <a class="dropdown-item" id="dropdown-item-logout" (click)="logout()">Logout</a>
           </div>
         </div>
-        <!-- <a  class="account"><i class="fa fa-user"></i></a>
-        <a class="dropdown-item" id="dropdown-item-logout"(click)="logout()">Logout</a> -->
-
+        <a class="dropdown-item" style="margin-left:99rem" *ngIf="admin" id="dropdown-item-logout-admin" (click)="logout()">Logout</a>
       </ng-container>
     </div>
 
-
-
     <form *ngIf="!(currentUser$ | async)" #loginForm="ngForm" id="form"  class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off" >
       <div class="user-input">
-      <input name="password" required [(ngModel)]="model.password" class="form-control mr-sm-2" id="username" type="password" placeholder="Password"> <!-- Banana[()] -->
-      <input name="username" required [(ngModel)]="model.username" class="form-control mr-sm-2" id="password" type="text" placeholder="Username">
+        <input name="username" required [(ngModel)]="model.username" class="form-control mr-sm-2" id="username" type="text" placeholder="Username">
+        <input name="password" required [(ngModel)]="model.password" class="form-control mr-sm-2" id="password" type="password" placeholder="Password">
     </div>
       <div class="login">
       <button [disabled]="!loginForm.valid" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>

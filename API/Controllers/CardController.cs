@@ -1,19 +1,16 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using API.DTOs;
 using API.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using API.Extensions;
 using API.Entities;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 
 namespace API.Controllers
 {
-    // [Authorize]
+    [Authorize]
     public class CardController : BaseApiController
     {
   

@@ -1,0 +1,29 @@
+<br>
+<div class="card-wrapper">
+  <div *ngIf="product">
+    <h2 class="title">&nbsp;{{product.productName}}&nbsp;</h2>
+    <br>
+    <img class="image" src="{{product.imageUrl}}" alt="">
+    <div class="wrapper">
+      <br>
+      <h5 class="details">DETAILS:</h5>
+      <p class="description">{{product.productDescription}}</p>
+      <hr class="dropdown-divider">
+      <br>
+      <div class="price-tab mr-5 ">
+        <h4>&nbsp;&nbsp;
+          Total Price: ${{(product.productPrice - (product.productPrice * product.productSale /100)).toFixed(2)}} | Before Sale:</h4>
+        <h5 style="margin-top:3px;float:left; text-decoration:line-through"> ${{product.productPrice}}</h5>
+        <p style="margin-top: -8px; float:left;">{{product.productSale}}%&nbsp;&nbsp;</p>
+      </div><button *ngIf="!admin" class="add-cart" (click)="addToCart(product)">Add to cart</button>
+      <div *ngIf="!admin" id="myPaypalButtons"></div>
+      <button *ngIf="admin" class="btn btn-danger edit-product" [routerLink]="['/edit/', product.productId]">Edit Product {{product.productId}}</button>
+      <button *ngIf="admin" class="btn btn-danger edit-product" (click)="deleteProduct()">Delete Product {{product.productId}}</button>
+      <div *ngIf="addedCart">
+        <button class="success">Added ✔</button>
+      </div>
+      <br>
+    </div>
+    <app-similar-products></app-similar-products>
+  </div>
+</div>

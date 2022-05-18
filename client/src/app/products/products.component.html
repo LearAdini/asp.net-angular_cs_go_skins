@@ -1,33 +1,32 @@
 <br>
+<div class="wrap">
 <div class="search">
-      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="&#xF002;  Search..." autocomplete="off">
+<input class="form-control" style="color:white" type="text" name="search" [(ngModel)]="searchText" placeholder="&#xF002; Search..." autocomplete="off">
+</div>
+ <div class="price-range">
+	<div class="custom-slider">
+    <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+  </div>
+ </div>
+ <div class="add-product">
+  <button *ngIf="admin" type="button" class="btn btn-primary" [routerLink]="['/addproduct']">Add Product</button>
+ </div>
 <br>
-    </div>
 <table>
   <div class="wrapper">
-   <div style="float:left;"  *ngFor="let product of products | filter:searchText">
+   <div style="float:left;" *ngFor="let product of products | priceMin:value | priceMax:highValue | filter:searchText | paginate: {itemsPerPage:21, currentPage:p}; let i = index">
     <td>
-      <div class ="card" >
-        <img [routerLink]="['/products', product.id]" class="card-img-top" src="{{product.imageUrl}}">
+      <div class ="card">
+        <img [routerLink]="['/products', product.productId]"  class="card-img-top" src="{{product.imageUrl}}">
       </div>
-      <p>{{product.name}}</p><div class="sale">&nbsp;&nbsp;&nbsp;&nbsp;-{{product.sale}}%</div>
+      <p>{{product.productName}} <a *ngIf="admin" style="display:flex;" [routerLink]="['/edit', product.productId]"> Edit Item</a></p><div class="sale">-{{product.productSale}}%</div>
       </td>
       <br>
 </div>
 </div>
 </table>
-
-
-<!-- <table>
-  <div class="wrapper">
-   <div style="float:left;"  *ngFor="let product of products | randomOrder">
-    <td>
-      <div class ="card" >
-        <img [routerLink]="['/products', product.id]" class="card-img-top" src="{{product.imageUrl}}">
-      </div>
-      <p>{{product.name}}</p><div class="sale">&nbsp;&nbsp;&nbsp;&nbsp;-{{product.sale}}%</div>
-      </td>
-      <br>
+<div class="d-flex justify-content-center">
+<pagination-controls class="pag" (pageChange)="p = $event"></pagination-controls>
 </div>
 </div>
-</table> -->
+

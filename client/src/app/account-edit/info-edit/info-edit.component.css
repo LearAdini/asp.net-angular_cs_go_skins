@@ -1,0 +1,83 @@
+.wrapper{
+  background-color:White;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+.nav-tab{
+  margin-right:-50%;
+
+}
+.user{
+  border:solid 1px black;
+  width: 400px;
+  /* height: 100px; */
+  margin: auto;
+  cursor:default;
+}
+
+#edit{
+  border:none;
+  text-decoration: underline;
+  color:red;
+  background-color:transparent;
+}
+
+#title{
+  text-decoration: underline;
+  display:inline;
+  font: bold 100% "Lucida Sans Unicode",sans-serif;
+}
+
+
+
+.form-control{
+  width:350px;
+  margin:0 auto;
+}
+
+.edit-password{
+  display:flex;
+  flex-direction:row;
+  width:350px;
+  margin:0 auto;
+  padding:2px;
+}
+
+#send-email{
+  border-radius: 0px 3px 3px 0px;
+  /* margin-top:1px; */
+  height:37.5px;
+  /* margin-top:1px; */
+  /* padding-top:1px; */
+  margin-left:-42px;
+
+}
+
+input{
+	box-shadow: none !important;
+  flex-grow:2;
+  cursor:default;
+}
+
+#passw{
+  background-color:transparent;
+  border:none;
+  text-align: center;
+  margin:0;
+}
+
+/* #cardForm,#editForm{
+  border:solid 1px black;
+  border-radius:3px;
+  width:80%;
+  margin:0;
+} */
+.card-footer{
+
+  margin:0;
+}
+
+
+

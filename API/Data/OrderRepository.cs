@@ -20,14 +20,21 @@ namespace API.Data
             _mapper = mapper;
             _context = context;
         }
-        public void AddOrder(ProductEntity order)
+
+        public void AddOrder(OrderEntity order)
         {
             _context.Orders.Add(order);
         }
 
-        public Task<ProductDto> GetOrdersByUserIdAsync(int userId)
+        public  Task<List<OrderEntity>> GetOrdersByUserIdAsync(int userId)
         {
-            throw new System.NotImplementedException();
+             IQueryable<OrderEntity> query;
+            query = from Subjects in _context.Orders.Where(v => v.UserId == userId) select Subjects;
+            return  query.ToListAsync();
+            // var query =  _context.Orders.AsQueryable();
+            // var result =  query.Where(x => x.UserId == userId).ToList();
+            // return  result;
+                // return await _context.Orders.FirstOrDefaultAsync(p => p.UserId == userId);
         }
 
         public async Task<bool> SaveAllAsync()
@@ -35,10 +42,9 @@ namespace API.Data
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public void Update(ProductEntity order)
+        public void Update(OrderEntity order)
         {
-            _context.Entry<ProductEntity>(order).State = EntityState.Modified;
+            _context.Entry<OrderEntity>(order).State = EntityState.Modified;
         }
-
     }
 }

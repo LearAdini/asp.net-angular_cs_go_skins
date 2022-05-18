@@ -1,116 +1,106 @@
 <br><br>
 <div class="wrapper">
-  <div *ngIf="member">
-    <br>
-    <div class="user">
-      <div id="title"> First Name:</div> {{member.firstName}} <div id="title">Last Name:</div> {{member.lastName}} <br>
-      <div id="title">Email:</div> {{member.email}} <br>
-      <div id="title">Country:</div> {{member.country}} <div id="title">City:</div> {{member.city}}
-      <div id="title">Address:</div> {{member.address}} <br>
-      <div id="title">Phone:</div> {{member.phoneNumber}} <br>
-      <button id="edit" (click)="editFunc()">edit</button>
-
-      <div class="credit-info" *ngIf="card">
-        <hr class="dropdown-divider">
-        <div id="title">Card Number:</div><br><input disabled type="password" id="passw"
-          value="{{card?.cardNumber}}"><br>
-        <div id="title">Expiration Date:</div><br> <input disabled type="password" id="passw"
-          value="{{card?.cardDate}}"><br>
-        <div id="title">CVV:</div> {{card?.cardCVV}} <br>
-        <button id="edit" (click)="editCardFunc()">edit card</button>
-      </div>
-    </div>
-  </div>
-  <br>
-
-  <div *ngIf="member">
-    <form #editForm="ngForm" (ngSubmit)="updateMember()" *ngIf="edit == true" id="editForm" class="form-inline">
-      <label for="country">Country:&nbsp;</label>
-      <input [(ngModel)]="member.country" name="country" class="form-control">
-
-      <label for="city">&nbsp;City:&nbsp;</label>
-      <input [(ngModel)]="member.city" name="city" class="form-control">
-
-      <label for="address">&nbsp;Address:&nbsp;</label>
-      <input [(ngModel)]="member.address" name="address" class="form-control">
-
-      <label for="phoneNumber">&nbsp;Phone Number:&nbsp;</label>
-      <input [(ngModel)]="member.phoneNumber" name="phoneNumber" class="form-control">
-
-      <br>
-      <div class="card-footer">
-        <button form="editForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
-      </div>
-    </form>
-
-    <form *ngIf="editCard == true" #cardForm="ngForm" (ngSubmit)="updateCard()" id="cardForm" class="form-inline">
-      <label for="country">Card Number:&nbsp;</label>
-      <input type="password" [(ngModel)]="card.cardNumber" name="country" class="form-control">
-
-      <label for="city">&nbsp;Card Date:&nbsp;</label>
-      <input type="password" [(ngModel)]="card.cardDate" name="city" class="form-control">
-
-      <label for="address">&nbsp;Card CVV:&nbsp;</label>
-      <input type="text" [(ngModel)]="card.cardCVV" name="address" class="form-control">
-
-      <label for="phoneNumber">&nbsp;Holder Id:&nbsp;</label>
-      <input [(ngModel)]="card.idNumber" name="phoneNumber" class="form-control">
-
-      <br>
-      <div class="card-footer">
-        <button form="editCard" type="submit" class="btn btn-success btn-block">Save Changes</button>
-      </div>
-
-    </form>
-    <button #passBtn id="edit" class="pb-3" (click)="editPassword()">change password</button>
-    <div *ngIf="resetPassword" class="edit-password pb-3">
-      <input type="email" placeholder="{{member.email}}" name="emailEdit" #emailEdit class="form-control"
-        autocomplete="off">
-      <button class="btn btn-primary" id="send-email" (click)="sendEmail()"><i class="fa fa-paper-plane"></i></button>
-    </div>
-
-    <div *ngIf="inputCode" class="edit-password mb-1">
-      <input type="text" autocomplete="off" name="codeEdit" #codeEdit class="form-control" placeholder="code">
-      <button class="btn btn-primary" id="send-email" (click)="codeCheck()"><i class="fa fa-paper-plane"></i></button>
-    </div>
-
-    <form #resetForm="ngForm" (ngSubmit)="updatePassword()" *ngIf="completeReset" id="editForm" class="form-inline">
-      <div class="reset-password">
-        <input type="password" [(ngModel)]="member.password" #pass placeholder="Password" name="password"
-          class="form-control" autocomplete="off">
-
-        <input type="password" class="form-control" #checkPass placeholder="Confirm Password" name="confirmPassword">
+  <ngx-tabset customNavClass="nav-test-class" customTabsClass="container">
+    <ngx-tab tabTitle="Edit Info">
+      <div *ngIf="member">
         <br>
-        <div class="card-footer">
-          <button  [disabled]="resetForm.invalid" class="btn btn-success" type="submit" class="btn btn-success btn-block">Update Password</button>
+        <div class="user">
+          <div id="title"> First Name:</div> {{member.firstName}} <div id="title">Last Name:</div> {{member.lastName}} <br>
+          <div id="title">Email:</div> {{member.email}} <br>
+          <div id="title">Country:</div> {{member.country}} <div id="title">City:</div> {{member.city}}
+          <div id="title">Address:</div> {{member.address}} <br>
+          <div id="title">Phone:</div> {{member.phoneNumber}} <br>
+          <button id="edit" (click)="editFunc()">edit</button>
+
+          <div class="credit-info" *ngIf="card">
+            <hr class="dropdown-divider">
+            <div id="title">Card Number:</div><br><input disabled type="password" id="passw"
+              value="{{card?.cardNumber}}"><br>
+            <div id="title">Expiration Date:</div><br> <input disabled type="text" id="passw"
+              value="{{card?.cardDate}}"><br>
+            <div id="title">CVV:</div> {{card?.cardCVV}} <br>
+            <button id="edit" (click)="editCardFunc()">edit card</button>
+          </div>
         </div>
       </div>
-    </form>
-    <!-- <form *ngIf="completeReset" class="mt-5" [formGroup]="resetForm" (ngSubmit)="updatePassword()" autocomplete="off" >
-<div class="edit-password">
-  <div class="form-group">
-    <input
-    type="password"
-    class="form-control"
-    formControlName="password"
-    [(ngModel)]="member.password"
-    placeholder="Password"
-    [class.is-invalid]="resetForm?.get('password')?.errors && resetForm?.get('password')?.touched">
-    <div class="invalid-feedback" style="font-size:15px;">Please enter a password</div>
-    <div *ngIf="resetForm?.get('password')?.hasError('minLength')" class="invalid-feedback" style="font-size:15px;">Please enter atleast 6 charchters</div>
-    </div>
-    <div class="form-group">
-    <input
-    type="password"
-    class="form-control"
-    formControlName="confirmPassword"
-    placeholder="Confirm Password"
-    [class.is-invalid]="resetForm?.get('confirmPassword')?.errors && resetForm?.get('confirmPassword')?.touched">
-    <div class="invalid-feedback" style="font-size:15px;">Please confirm your password</div>
-    </div>
-    <button [disabled]="resetForm.invalid" class="btn btn-success" type="submit">Update Password</button>
-  </div>
-</form> -->
-  </div>
+      <br>
 
+      <div *ngIf="member">
+        <form #editForm="ngForm" (ngSubmit)="updateMember()" *ngIf="edit == true" id="editForm" class="form-inline">
+          <label for="country">Country:&nbsp;</label>
+          <input [(ngModel)]="member.country" name="country" class="form-control">
 
+          <label for="city">&nbsp;City:&nbsp;</label>
+          <input [(ngModel)]="member.city" name="city" class="form-control">
+
+          <label for="address">&nbsp;Address:&nbsp;</label>
+          <input [(ngModel)]="member.address" name="address" class="form-control">
+
+          <label for="phoneNumber">&nbsp;Phone Number:&nbsp;</label>
+          <input [(ngModel)]="member.phoneNumber" name="phoneNumber" class="form-control">
+
+          <br>
+          <div class="card-footer">
+            <button form="editForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
+          </div>
+        </form>
+        <form *ngIf="editCard" #cardForm="ngForm" (ngSubmit)="updateCard()" id="cardForm" class="form-inline">
+          <label for="country">Card Number:&nbsp;</label>
+          <input type="password" [(ngModel)]="card.cardNumber" name="cardNumber" class="form-control" oninput="javascript: if (this.value.length > this.maxLength)
+          this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="16" onkeyup="enableSubmit()">
+
+          <label for="city">&nbsp;Card Date:&nbsp;</label>
+          <input type="text" [(ngModel)]="card.cardDate" id="cardDate" name="cardDate" class="form-control" minlength="1" maxlength="5" oninput="getKeyPress()" onkeyup="enableSubmit()">
+
+          <label for="address">&nbsp;Card CVV:&nbsp;</label>
+          <input type="text" [(ngModel)]="card.cardCVV" name="cardCVV" class="form-control" oninput="javascript: if (this.value.length > this.maxLength)
+          this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="3" onkeyup="enableSubmit()">
+
+          <label for="phoneNumber">&nbsp;Holder Id:&nbsp;</label>
+          <input [(ngModel)]="card.idNumber" name="idNumber" class="form-control" oninput="javascript: if (this.value.length > this.maxLength)
+          this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="9" onkeyup="enableSubmit()">
+
+          <br>
+          <div class="card-footer">
+            <button form="cardForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </ngx-tab>
+    <ngx-tab tabTitle="Change Password" [bypassDOM]="true">
+      <ng-template>
+      <div *ngIf="member">
+        <button #passBtn id="edit" class="pb-3" (click)="editPassword()">change password</button>
+        <div *ngIf="resetPassword" class="edit-password pb-3">
+          <input type="email" placeholder="{{member.email}}" name="emailEdit" #emailEdit class="form-control"
+            autocomplete="off">
+          <button class="btn btn-primary" id="send-email" (click)="sendEmail()"><i class="fa fa-paper-plane"></i></button>
+        </div>
+
+        <div *ngIf="inputCode" class="edit-password mb-1">
+          <input type="text" autocomplete="off" name="codeEdit" #codeEdit class="form-control" placeholder="code">
+          <button class="btn btn-primary" id="send-email" (click)="codeCheck()"><i class="fa fa-paper-plane"></i></button>
+          <br>
+        </div>
+        <qrcode *ngIf="inputCode" [qrdata]="'Your code is: '+ code" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+        <form #resetForm="ngForm" (ngSubmit)="updatePassword()" *ngIf="completeReset" id="editForm" class="form-inline">
+          <div class="reset-password">
+            <input type="password" [(ngModel)]="member.password" #pass placeholder="Password" name="password"
+              class="form-control mb-2" autocomplete="off">
+
+            <input type="password" class="form-control" #checkPass placeholder="Confirm Password" name="confirmPassword">
+            <br>
+            <div class="card-footer">
+              <button  [disabled]="resetForm.invalid" class="btn btn-success" type="submit" class="btn btn-success btn-block">Update Password</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      </ng-template>
+    </ngx-tab>
+    <ngx-tab tabTitle="My Orders">
+      <app-account-orders></app-account-orders>
+    </ngx-tab>
+  </ngx-tabset>
+  <br>

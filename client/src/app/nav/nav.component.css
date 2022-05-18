@@ -6,8 +6,12 @@ nav {
   border-radius: 0px 0px 10px 10px;
   margin: auto;
   width: 98%;
-  /* box-shadow: 0px 4px 15px 0px rgba(151, 151, 151, 0.138); */
+  background-color: rgba(39, 39, 39, 0.785);
 }
+
+.form-control:focus {
+  box-shadow: none;
+  }
 
 .checkout {
   overflow: block;
@@ -21,11 +25,14 @@ nav {
   transition-duration: 0.3s;
   text-decoration: none;
 }
+.dropdown-menu:disabled {
+  display: none;
+}
 
 .navbar-brand {
   font-family: 'Sedgwick Ave', cursive;
-  color: rgb(196, 1, 214);
-  text-shadow: 2px 2px #424242;
+  color: #c800be;
+  text-shadow: 1px 3px #424242;
 
 }
 
@@ -34,7 +41,6 @@ nav {
 }
 
 .nav-link {
-  /* font-family: monospace; */
   font-size: 17px;
 }
 
@@ -53,14 +59,28 @@ nav {
 
 .checkout:hover {
   color: #ffee10;
-  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+.fa-user::before {
+  position: absolute;
+  transform: scale(.9);
+
+}
+.fa-user:hover::before {
+  transform: scale(1.1);
+}
+
+.fa-user:hover{
+  color: #ffee10;
   text-shadow: 0 0 5px #ffee10;
 }
 
-nav {
-  border-radius: 0px 0px 10px 10px;
-  margin: auto;
-  background-color: rgba(27, 27, 27, 0.965);
+.fa-user{
+  color:rgba(0, 115, 255, 0.886);
+   margin-left:5px;
+   margin-top:-7.7px;
+  cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .nav-link.active {
@@ -72,8 +92,12 @@ nav {
   color: white;
 }
 
-#dropdown-item-logout:hover {
+#dropdown-item-logout:hover,#dropdown-item-logout-admin:hover{
   color: red;
+}
+
+#dropdown-item-logout-admin{
+  color:white;
 }
 
 .dropdown-toggle,
@@ -115,7 +139,6 @@ nav {
 }
 
 .btn.btn-outline-success:hover {
-  transform: scale(1.035);
   cursor: pointer;
   background-color: rgb(43, 251, 113);
   color: rgb(25, 26, 25);
@@ -142,30 +165,27 @@ span {
 }
 
 #username {
+  width: 120px;
+  margin-bottom: -38px;
+  margin-left: -150px;
+}
+
+#password {
   margin-left: -20px;
   width: 190px;
 }
 
-#password {
-  width: 120px;
-  margin-top: -38px;
-  margin-left: -150px;
-}
-
 .login {
-
   margin-top: -38px;
   margin-left: 185px;
 }
 
 .user-input {
-
   margin-right: 140px;
 }
 
 
 #register {
-  /* height:30px; */
   margin-top: -36px;
   margin-left: 256px;
   transition: transform 0.2s;

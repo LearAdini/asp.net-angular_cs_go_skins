@@ -7,39 +7,37 @@ import { Product } from '../models/products';
   providedIn: 'root'
 })
 export class CartService {
+   items: Product[] =[];
   [x: string]: any;
-  items: Product[] = [];
   product!: Product;
   baseUrl = environment.apiUrl;
-  private currentItems$ = new ReplaySubject<Product | null>(1);
+  private currentItems$ = new ReplaySubject<Product | null>();
   currentItem$ = this.currentItems$.asObservable();
 
-  constructor() {
-    // this.items = this.getItems();
-  }
+  constructor() { }
 
   addToCart(product: Product) {
-    localStorage.setItem(product.name, JSON.stringify(product));
-    this.currentItems$.next(product);
+    this.setCurrentItems(product);
     this.items.push(product);
   }
 
-  // setCartItems(product: Product) {
-
-  //   localStorage.setItem(product.name, JSON.stringify(product));
-  //   this.currentItems$.next(product);
-  // }
+  setCurrentItems(product: Product) {
+    Object.values(product).forEach(val => {
+      localStorage.setItem('items', JSON.stringify(val));
+      this.currentItems$.next(val);
+    });
+  }
 
   getTotalPrice() {
     let total = 0;
     for (let item of this.items) {
-      total += (item.price - (item.price * item.sale / 100));
+      total += (item.productPrice - (item.productPrice * item.productSale / 100));
     }
     return total.toFixed(2).toString();
   }
 
   getProudctPrice() {
-    const total = (this.product?.price - (this.product?.price * this.product?.sale / 100)).toFixed(2);
+    const total = (this.product?.productPrice - (this.product?.productPrice * this.product?.productSale / 100)).toFixed(2);
     return total;
   }
 
@@ -48,27 +46,22 @@ export class CartService {
     return this.items;
   }
 
-  // try using get cartData
   getCartData() {
-    let obj = Object.values(this.items).forEach(val => {
-      const itemFromLS: any = localStorage.getItem(val.name);
+    Object.values(this.items).forEach(val => {
+      const itemFromLS: any = localStorage.getItem(val.productName);
       const item = JSON.parse(itemFromLS);
-      console.log(item);
     });
-    // return obj;
 
   }
 
   clearProduct(index: number) {
     this.items.splice(index, 1);
     this.currentItems$.next(null);
-    // localStorage.removeItem(this.items[index].name);
   }
 
   clearCart() {
     this.items.splice(0, this.items.length);
     this.currentItems$.next(null);
-    // localStorage.removeItem(this.items);
-    // localStorage.clear();
+    localStorage.removeItem('items');
   }
 }

@@ -30,7 +30,7 @@ namespace API
 
                 await Seed.SeedUsers(context);
 
-                // await Seed.SeedProducts(context);
+                await Seed.SeedProducts(context);
 
             }
             catch (Exception ex)

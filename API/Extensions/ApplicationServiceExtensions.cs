@@ -13,11 +13,12 @@ namespace API.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
         {
 
-            // services.AddScoped<LogUserActivity>();
+            services.AddScoped<LogUserActivity>();
          services.AddScoped<ITokenService, TokenService>();
          services.AddScoped<IUserRepository, UserRepository>();
          services.AddScoped<ICardRepository, CardRepository>();
          services.AddScoped<IOrderRepository, OrderRepository>();
+         services.AddScoped<IProductRepository, ProductRepository>();
             
             services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             

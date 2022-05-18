@@ -1,84 +1,202 @@
-*{
-  display:block;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.wrap{
+  background-color: rgba(54, 54, 54, 0.493);
+  width: 98%;
+  margin-left: 1%;
+  border-radius:5px;
+  margin: auto;
+  padding-top:5px;
+  padding-bottom:5px;
 }
 
 .card{
   border:none;
-  height:255px;
   width: 248px;
+  height: 80%;
   border-radius: 5px 5px 0px 0px;
-  border-bottom: none;
-  margin-left: 10px;
-  float:left;
+  background-color: rgba(101, 101, 101, 0);
+  margin-left: 5px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card:hover img{
-  transform: scale(1.17);
-  transition-duration: 0.5s;
+.card:hover img {
+  transform: scale(1.09);
+  transition-duration: 0.4s;
   transition-timing-function: ease-out;
-  opacity: 1;
+  opacity: 0.7;
   cursor:pointer;
+}
+
+.pag /deep/ .ngx-pagination .current {
+  background: transparent;
+  color:red;
+}
+.pag /deep/ .ngx-pagination :hover {
+  background: transparent;
+  color:white;
+}
+.pag /deep/ {
+  background-color: rgba(70, 70, 70, 0.671);
+  border-radius: 3px;
+  height:26px;
+
 }
 
 .card img{
   transform: scale(1);
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
-  opacity: 0.88;
+  opacity: 1;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 100%;
+  border:none;
+  background: rgb(60, 59, 59);
+  height: 175px;
+  /* height: 185px; */
+  /* object-fit: cover; */
 }
 
 .sale{
   cursor: default;
   color:white;
-  border:solid 1px red;
+  border:none;
   background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(129, 50, 255) 100%);
-  border-radius:0px 0px 3px 0px;
-  margin-left:188px;
-  margin-top:-34px;
-  width:70px;
+  border-radius:0px 0px 5px 0px;
+  margin-left:193px;
+  margin-top:-32px;
+  width:60px;
   overflow:block;
   text-align: bottom;
   font-family: 'Poiret One', cursive;
+  /* font-weight: border; */
+  padding-left: 20px;
 }
 
 p{
   cursor: default;
-  border-top: none;
-  background-color: white;
-  border-radius:3px;
-  width:248px;
-  margin-left: 10px;
-  margin-top: 5px;
-  padding: 1px;
+  background-color: rgb(42, 42, 42);
+  border-radius:5px;
+  border:none;
+  width: 248px;
+  margin-left: 5px;
+  margin-top: -5px;
   text-align: bottom;
-  height: 345px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 4px;
+  height: 45px;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px;
+  padding-top:5px;
+  color:white;
   font-family: 'Kosugi Maru', sans-serif;
 }
 
 .wrapper{
   margin: auto;
   width: 98%;
-  margin-left: 35px;
+  margin-left: 2.85rem;
+  margin-top:1rem;
+
 }
 
 .form-control
 {
-  box-shadow: 0px 3px rgba(0, 0, 0, 0.267);
-  border-radius:5px;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.267);
   border:none;
-  width: 20%;
-  margin-left: 2.9rem;
-font-family:Arial, FontAwesome;
+  width: 26.7%;
+  margin-left: 3.3rem;
+ height:40px;
+  font-family:Arial, FontAwesome;
+  background-color: rgba(29, 29, 29, 0.599);
 }
 
+.price-range{
+  margin-top:-2.5rem;
+  background-color: rgba(29, 29, 29, 0.599);
+  border-radius:5px;
+  width:505px;
+  height:40px;
+  color:white;
+  margin-left:29.8%;
+  margin-bottom:1rem;
+  box-shadow: 0px 2px rgba(0, 0, 0, 0.267);
+}
+.custom-slider{
+  width:450px;
+  margin-left:5%;
+}
+
+.add-product{
+  display:flex;
+  justify-content:center;
+  margin-left:31.8rem;
+  margin-top:-3.45rem;
+  margin-bottom:1rem;
+}
+
+.add-product > .btn-primary {
+width:247px;
+}
+
+::ng-deep .custom-slider .ngx-slider .ngx-slider-bar {
+  background: #ffe4d1;
+  height: 2px;
+  margin-top:-5px;
+
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-selection {
+  background: orange;
+
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer {
+  width: 8px;
+  height: 16px;
+  top: auto;
+
+  bottom: 0;
+  background-color: #333;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-pointer:after {
+  display: none;
+
+
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-bubble {
+  bottom: 14px;
+
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-limit {
+  font-size:0px;
+}
+
+::ng-deep .custom-slider .ngx-slider .ngx-slider-tick {
+  width: 1px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0;
+  background: #ffe4d1;
+
+  top: -1px;
+}
+::ng-deep .custom-slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+  background: orange;
+
+}
 
 
 

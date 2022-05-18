@@ -7,7 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 @import "~ngx-tabset/ngx-tabset";
 body{
-  background: linear-gradient(90deg, rgb(21, 35, 32) 0%, rgb(12, 21, 19) 50%, rgb(21, 35, 32) 100%);
+  background: linear-gradient(90deg, rgb(13, 21, 20) 0%, rgb(12, 21, 19) 50%, rgb(13, 21, 20) 100%);
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%;
 }
 
 .btn{
@@ -15,8 +17,13 @@ body{
 }
 
 
+html { height: 100%; }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.hiddenText{ font-size: 0}             /* this makes span real content zero size width & height */
+.hiddenText::before{ content: '∗∗∗∗∗'; font-size: initial}
+
+.HiddenText{ color: transparent; }    /* span will be as long as real content + ::before */
+.HiddenText::before{ content: '∗∗∗∗∗'; color: initial}
 
 

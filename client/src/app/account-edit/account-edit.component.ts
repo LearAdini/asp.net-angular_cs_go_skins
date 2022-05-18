@@ -1,12 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, NgForm, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { NgForm} from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs';
 import { Card } from '../models/card';
 import { Member } from '../models/member';
 import { User } from '../models/user';
 import { AccountService } from '../service/account.service';
-import { CartService } from '../service/cart.service';
 import { CreditService } from '../service/credit.service';
 import { MembersService } from '../service/members.service';
 import '../../assets/smtp.js';
@@ -19,6 +18,7 @@ declare let Email: any;
   styleUrls: ['./account-edit.component.css']
 })
 export class AccountEditComponent implements OnInit {
+
   member!: Member;
   user!: User;
   card!: Card;
@@ -29,7 +29,6 @@ export class AccountEditComponent implements OnInit {
   completeReset: boolean = false;
   activeTab: TabDirective;
   code = this.generateCode(5);
-
 
 
   @ViewChild('editForm') editForm: NgForm;
@@ -44,13 +43,14 @@ export class AccountEditComponent implements OnInit {
   @ViewChild('passwordEdit') passwordEdit: ElementRef;
 
   @ViewChild('memberTabs', { static: true }) memberTabs: TabsetComponent;
+
   constructor(
     private accountService: AccountService,
     private membersService: MembersService,
     private creditService: CreditService,
-    private toastr: ToastrService,
-    private fb: FormBuilder
-  ) {
+    private toastr: ToastrService
+  )
+  {
     this.accountService.currentUser$.pipe(take(1)).subscribe(user => {
       this.user = user as User;
     });
@@ -58,14 +58,12 @@ export class AccountEditComponent implements OnInit {
     this.creditService.currentCard$.pipe(take(1)).subscribe(card => {
       this.card = card as Card;
     });
-
   }
 
   ngOnInit(): void {
     this.loadMember();
     this.loadCard();
   }
-
 
   loadMember() {
     this.membersService.getMember(this.user.username).subscribe(member => {
@@ -74,7 +72,7 @@ export class AccountEditComponent implements OnInit {
   }
 
   loadCard() {
-    this.creditService.getCardId(this.user.id as number).subscribe(card => {
+    this.creditService.getCard(this.user.id as number).subscribe(card => {
       this.card = card;
     });
   }
@@ -113,7 +111,7 @@ export class AccountEditComponent implements OnInit {
   updateCard(){
     this.creditService.updateCard(this.card).subscribe(() => {
       this.toastr.success("Updated your card information successfully");
-      this.cardForm.reset(this.card);
+      this.editCard = false;
     });
   }
 
@@ -124,7 +122,6 @@ export class AccountEditComponent implements OnInit {
         this.toastr.error("Email is not valid");
         return;
       }
-
       Email.send({
         Host: "smtp.elasticemail.com",
         Username: "midtermiaf@gmail.com",
@@ -136,12 +133,10 @@ export class AccountEditComponent implements OnInit {
       });
     }
     this.inputCode = true;
-    this.toastr.success("Check spam mail for code, May take up to 2 minutes");
-    console.log(this.code);
+    this.toastr.info("Check spam mail for code, or scan the QR for code");
   }
 
   codeCheck() {
-    // console.log(this.codeEdit.nativeElement.value + " and: " + this.code)
     if (this.codeEdit.nativeElement.value.toString() != this.code.toString()) {
       this.toastr.error("Code is not valid, Check email");
       return;
@@ -152,18 +147,11 @@ export class AccountEditComponent implements OnInit {
   }
 
   updatePassword() {
-  //  let reg = [{x:'!'},{x:'@'},{x:'#'},{x:'$'},{x:'%'},{x:'^'},{x:'&'},{x:'*'}];
-  //  const iter = reg.map(a=>a.x);
-
-  let reg = [/!@*&%/];
     if (this.pass.nativeElement.value != this.checkPass.nativeElement.value) {
       this.toastr.error("Password does not match");
       return;
     }
-    // else if (this.pass.nativeElement.value != iter) {
-    //   this.toastr.error("Password must contain special characters");
-    //   return;
-    // }
+
     else {
       this.membersService.updateMember(this.member).subscribe(() => {
         this.toastr.success("Updated Password Successfully");
