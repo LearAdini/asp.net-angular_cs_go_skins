@@ -1,27 +1,28 @@
 
 <nav class="navbar navbar-expand navbar-dark  sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand mt-1" href="/home">Cs:Skins</a>
+    <a class="navbar-brand mt-1"  href="/home">Cs:Skins</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <ng-container *ngIf="currentUser$ | async as user">
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/products'">Products</a>
         </li>
-        <a *ngIf="!admin" routerLink="/cart" class="checkout"><i class="fa fa-shopping-cart" >&nbsp;</i></a>&nbsp;
-        <div *ngIf="!admin" class="dropdown" dropdown>
+        <a *ngIf="!admin" routerLink="/cart" class="checkout"><i class="fa fa-shopping-cart">&nbsp;</i></a>&nbsp;
+
+        <div *ngIf="!admin" class="dropdown mt-3" dropdown>
         <i data-toggle="dropdown" dropdownToggle class="fa fa-user"></i>
-          <div class="dropdown-menu mt-4" style="margin-left:-120px;" *dropdownMenu>
+          <div class="dropdown-menu" style="margin-left:-130px;" *dropdownMenu>
           <a class="dropdown-item" routerLink="/account">My Profile</a>
           <span></span>
           <a class="dropdown-item" id="dropdown-item-logout" (click)="logout()">Logout</a>
           </div>
         </div>
-        <a class="dropdown-item" style="margin-left:99rem" *ngIf="admin" id="dropdown-item-logout-admin" (click)="logout()">Logout</a>
+        <a class="dropdown-item" style="margin-left:90rem" *ngIf="admin" id="dropdown-item-logout-admin" routerLink="/admin-panel">Admin Panel</a>
+        <a class="dropdown-item" style="margin-top:-3px;" *ngIf="admin" id="dropdown-item-logout-admin" (click)="logout()">Logout</a>
       </ng-container>
     </div>
-
-    <form *ngIf="!(currentUser$ | async)" #loginForm="ngForm" id="form"  class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off" >
+    <form *ngIf="!(currentUser$ | async)" #loginForm="ngForm" id="form"  class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
       <div class="user-input">
         <input name="username" required [(ngModel)]="model.username" class="form-control mr-sm-2" id="username" type="text" placeholder="Username">
         <input name="password" required [(ngModel)]="model.password" class="form-control mr-sm-2" id="password" type="password" placeholder="Password">
@@ -29,7 +30,8 @@
       <div class="login">
       <button [disabled]="!loginForm.valid" class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
     </div>
-    <button type="button" routerLink="/register" id="register" class="btn btn-warning pb-1">Register</button>
+    <button type="button" routerLink="/register" id="register" class="btn btn-warning">Register</button>
+
     </form>
   </div>
 </nav>

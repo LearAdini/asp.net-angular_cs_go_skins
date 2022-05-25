@@ -14,7 +14,6 @@ export class MembersService {
   members: Member[] = [];
   users: Member[] = [];
 
-
   constructor(private http: HttpClient) { }
 
   getMember(username: string): Observable<Member> {
@@ -25,13 +24,21 @@ export class MembersService {
     return this.http.get<Member>(`${this.baseUrl}users/${username}`)
   }
 
-  updateMember(user: Member) {
-    return this.http.put(`${this.baseUrl}users`, user).pipe(
-      tap(_ => {
-        const index = this.members.findIndex(x => x.id === user.id);
-        this.members[index] = user;
+  getMembers(): Observable<Member[]> {
+    return this.http.get<Member[]>(this.baseUrl + 'users').pipe(
+      tap(members => {
+        this.members = members;
       })
-    )
+    );
+  }
+
+  updateMember(user: Member) {
+    return this.http.put(`${this.baseUrl}users`, user);
+  }
+
+
+  deleteMember(id: number) {
+    return this.http.delete(`${this.baseUrl}users/${id}`);
   }
 
   sendEmail(email: string) {

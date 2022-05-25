@@ -137,8 +137,8 @@ namespace API.Data.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("bytea");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("integer");
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
 
                     b.Property<string>("UserName")
                         .HasColumnType("text");

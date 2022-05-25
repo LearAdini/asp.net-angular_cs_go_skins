@@ -64,11 +64,11 @@ namespace API.Data.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    UserName = table.Column<string>(type: "text", nullable: true),
-                    PasswordHash = table.Column<byte[]>(type: "bytea", nullable: true),
-                    PasswordSalt = table.Column<byte[]>(type: "bytea", nullable: true),
-                    FirstName = table.Column<string>(type: "text", nullable: true),
-                    LastName = table.Column<string>(type: "text", nullable: true),
+                    UserName = table.Column<string>(type: "text", nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "bytea", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "bytea", nullable: false),
+                    FirstName = table.Column<string>(type: "text", nullable: false),
+                    LastName = table.Column<string>(type: "text", nullable: false),
                     Email = table.Column<string>(type: "text", nullable: true),
                     DateOfBirth = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Created = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
@@ -76,7 +76,7 @@ namespace API.Data.Migrations
                     Country = table.Column<string>(type: "text", nullable: true),
                     City = table.Column<string>(type: "text", nullable: true),
                     Address = table.Column<string>(type: "text", nullable: true),
-                    PhoneNumber = table.Column<int>(type: "integer", nullable: false)
+                    PhoneNumber = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {

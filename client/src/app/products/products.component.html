@@ -1,15 +1,13 @@
 <br>
 <div class="wrap">
-<div class="search">
-<input class="form-control" style="color:white" type="text" name="search" [(ngModel)]="searchText" placeholder="&#xF002; Search..." autocomplete="off">
-</div>
+<input class="form-control" type="text" name="search" [(ngModel)]="searchText" placeholder="&#xF002; Search..." autocomplete="off">
  <div class="price-range">
 	<div class="custom-slider">
     <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
   </div>
  </div>
- <div class="add-product">
-  <button *ngIf="admin" type="button" class="btn btn-primary" [routerLink]="['/addproduct']">Add Product</button>
+ <div *ngIf="admin" class="add-product">
+  <button type="button" class="btn btn-primary" [routerLink]="['/addproduct']">Add Product</button>
  </div>
 <br>
 <table>

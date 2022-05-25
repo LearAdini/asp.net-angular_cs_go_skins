@@ -3,7 +3,8 @@
 
   <h2 class="text-center text-primary mt-5">Register</h2>
   <br>
-<form class="mt-5" [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off" >
+
+<form class="mt-5" [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
 <div class="form-group">
   <input
   type="text"
@@ -38,6 +39,7 @@ type="text"
 class="form-control"
 formControlName="firstName"
 placeholder="First Name"
+autocomplete="off"
 [class.is-invalid]="registerForm.get('firstName')?.errors && registerForm.get('firstName')?.touched">
 <div class="invalid-feedback" style="font-size:15px;">Please enter your first name</div>
 </div>
@@ -47,6 +49,7 @@ placeholder="First Name"
   class="form-control"
   formControlName="lastName"
   placeholder="Last Name"
+  autocomplete="off"
   [class.is-invalid]="registerForm.get('lastName')?.errors && registerForm.get('lastName')?.touched">
   <div class="invalid-feedback" style="font-size:15px;">Please enter your last name</div>
   </div>
@@ -56,18 +59,19 @@ placeholder="First Name"
   class="form-control"
   formControlName="email"
   placeholder="Email"
+  autocomplete="off"
   [class.is-invalid]="registerForm.get('email')?.errors && registerForm.get('email')?.touched">
   <div class="invalid-feedback" style="font-size:15px;">Please enter a valid email</div>
   </div>
 
   <app-date-input formControlName="age" label="Date Of Birth" [maxDate]="maxDate"></app-date-input>
-
   <div class="form-group">
       <input
       type="text"
       class="form-control"
       formControlName="country"
-      placeholder="Country">
+      placeholder="Country"
+      autocomplete="off">
   </div>
   <div class="form-group">
       <input
@@ -90,16 +94,17 @@ placeholder="First Name"
   type="tel"
   class="form-control"
   formControlName="phoneNumber"
-  placeholder="Phone Number">
+  placeholder="0000000000"
+  maxlength="10">
 </div>
-
   <div class="row mt-2" *ngIf="validationErrors.length">
     <ul class="text-danger">
       <li *ngFor="let error of validationErrors">{{error}}</li>
     </ul>
   </div>
 
-  <div class="form-group text-center" style="margin-top:-25px;">
-    <button [disabled]="registerForm.invalid" class="btn btn-success " type="submit">Register</button>
+  <div class="form-group text-center">
+    <button [disabled]="registerForm.invalid" class="btn btn-success mt-3" type="submit">Register</button>
     </div>
 </form>
+<!-- <img class="img-cover" src="../assets/y-smoke.png"> -->

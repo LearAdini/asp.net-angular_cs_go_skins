@@ -6,7 +6,7 @@ nav {
   border-radius: 0px 0px 10px 10px;
   margin: auto;
   width: 98%;
-  background-color: rgba(39, 39, 39, 0.785);
+  background-color: rgba(31, 31, 31, 0.785);
 }
 
 .form-control:focus {
@@ -14,26 +14,18 @@ nav {
   }
 
 .checkout {
-  overflow: block;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 2px;
-  margin-left: 89%;
+  margin-left: 90%;
   padding: 9px;
   width: 35px;
   height: 35px;
   transition-duration: 0.3s;
   text-decoration: none;
 }
-.dropdown-menu:disabled {
-  display: none;
-}
 
 .navbar-brand {
   font-family: 'Sedgwick Ave', cursive;
-  color: #c800be;
+  color: rgb(232, 133, 241) !important;
   text-shadow: 1px 3px #424242;
-
 }
 
 .navbar-brand:hover {
@@ -96,26 +88,30 @@ nav {
   color: red;
 }
 
-#dropdown-item-logout-admin{
-  color:white;
-}
 
+#dropdown-item-logout-admin,
 .dropdown-toggle,
 .dropdown-item {
-  color: black;
+  color:white;
   cursor: pointer;
 }
 
+.dropdown{
+  margin-bottom:18px;
+}
+
 .dropdown-item:hover {
-  background-color: rgba(0, 0, 0, 0);
+background-color: transparent;
+color:white;
 }
 
 .dropdown-menu {
   border-radius: 0px 0px 10px 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(31, 31, 31, 0.785);
   background: faded;
   box-shadow: 0 8px 15px 6px rgba(0, 0, 0, 0.2);
   margin-left: -85px;
+  margin-top:25px;
 }
 
 .btn.btn-outline-success:disabled {
@@ -186,12 +182,31 @@ span {
 
 
 #register {
-  margin-top: -36px;
+  margin-top: -35px;
   margin-left: 256px;
+  height:34px;
   transition: transform 0.2s;
   animation-duration: 1.4s;
   animation-delay: 0.5s;
   animation-timing-function: ease-in-out;
+}
+
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropdown.open .dropdown-menu {
+  max-height: 300px;
+  opacity: 1;
 }
 
 

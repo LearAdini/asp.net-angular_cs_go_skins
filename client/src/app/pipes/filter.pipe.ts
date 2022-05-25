@@ -11,8 +11,6 @@ export class Ng2SearchPipe implements PipeTransform {
 
     return Ng2SearchPipe.filter(items, term, excludes);
   }
-
-
   static filter(items: Array<{ [key: string]: any }>, term: string, excludes: any): Array<{ [key: string]: any }> {
 
     const toCompare = term.toLowerCase();

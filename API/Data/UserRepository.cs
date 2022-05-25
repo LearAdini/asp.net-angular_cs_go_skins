@@ -55,9 +55,6 @@ namespace API.Data
 
         public async Task<bool> SaveAllAsync()
         {
-            // var changes = _context.ChangeTracker.Entries<AppUser>().Count();
-            // var numOfChanges = await _context.SaveChangesAsync(); 
-            // return numOfChanges == changes;
             return await _context.SaveChangesAsync() > 0;
         }
 
@@ -66,6 +63,9 @@ namespace API.Data
             _context.Entry<UserEntity>(user).State = EntityState.Modified;
         }
 
-      
+        public void DeleteUser(UserEntity user)
+        {
+            _context.Users.Remove(user);
+        }
     }
 }

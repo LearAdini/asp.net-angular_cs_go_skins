@@ -38,7 +38,8 @@ export class RegisterComponent implements OnInit {
       country: new FormControl(''),
       city: new FormControl(''),
       address: new FormControl(''),
-      phoneNumber: new FormControl('')});
+      phoneNumber: new FormControl('')
+    });
   }
 
   register() {
@@ -59,7 +60,6 @@ export class RegisterComponent implements OnInit {
 
         }
       )
-      // console.log(this.registerForm.value);
     }
   }
 

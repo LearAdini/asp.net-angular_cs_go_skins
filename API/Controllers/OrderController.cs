@@ -53,6 +53,21 @@ namespace API.Controllers
             return Ok(order);
         }
 
+        [HttpDelete("deleteorder/{id}")]
+        public async Task<ActionResult<OrderEntity>> DeleteOrder(int id)
+        {
+            var order = await _orderRepository.GetOrderAsync(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            _context.Orders.Remove(order);
+            await _context.SaveChangesAsync();
+
+            return Ok(order);
+        }
+
         [HttpGet("getorders")]
         public async Task<ActionResult<List<OrderEntity>>> GetOrders()
         {
@@ -63,5 +78,13 @@ namespace API.Controllers
 
             return Ok(orders);
         }   
+
+        [HttpGet("getallorders")]
+        public async Task<ActionResult<List<OrderEntity>>> GetAllOrders()
+        {
+            var orders = await _orderRepository.GetAllOrdersAsync();
+
+            return Ok(orders);
+        }
     }
 }

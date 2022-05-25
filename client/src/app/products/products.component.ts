@@ -52,7 +52,6 @@ export class ProductsComponent implements OnInit {
   loadProducts() {
     this.productService.getProducts().subscribe(x => {
       this.products = x;
-
       this.products.forEach(product => {
         product.productPrice = product.productPrice - (product.productPrice * product.productSale / 100);
         // console.log(Math.min(...this.products.map(x => x.productPrice)));

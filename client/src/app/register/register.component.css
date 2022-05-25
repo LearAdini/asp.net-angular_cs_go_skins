@@ -11,7 +11,7 @@ input[type=number] {
 }
 
 h2{
-  font-size:110px;
+  font-size:110px !important;
   text-shadow: 3px 3px  rgba(0, 0, 0, 0.267);
   color:crimson !important;
 }
@@ -34,6 +34,14 @@ input{
   animation-duration: 1s;
 }
 
+.img-cover{
+  width:100%;
+  height: 670px;
+  /* overflow:hidden; */
+  position:relative;
+  margin-top:-200px;
+}
+
 .btn-success:hover {
 transform: scale(1.05);
 }
@@ -42,4 +50,8 @@ transform: scale(1.05);
 }
 .invalid-feedback{
  text-align: center;
+}
+
+.text-danger{
+  text-align: center;
 }

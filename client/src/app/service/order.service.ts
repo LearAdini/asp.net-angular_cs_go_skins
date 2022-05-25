@@ -16,7 +16,15 @@ export class OrderService {
     return this.http.post<any>(this.baseUrl + 'order/addorder/', order);
   }
 
+  deleteOrder(orderId: number) {
+    return this.http.delete(`${this.baseUrl}order/deleteorder/${orderId}`);
+  }
+
   getOrders() {
     return this.http.get<Order[]>(this.baseUrl + `order/getorders`);
+  }
+
+  getAllOrders(){
+    return this.http.get<Order[]>(this.baseUrl + `order/getallorders`);
   }
 }

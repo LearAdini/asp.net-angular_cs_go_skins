@@ -21,10 +21,10 @@ export class AdminGuard implements CanActivate  {
   canActivate(): Observable<boolean> {
     return this.accountService.currentUser$.pipe(
       map(user => {
-        if (user!.username == 'Admin') return true;
+        if (user!.username === 'Admin') return true;
 
         this.toastr.error('Woopsie, you are not an admin 🔐');
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/products');
         return false;
       })
     )

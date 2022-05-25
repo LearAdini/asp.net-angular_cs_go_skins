@@ -3,7 +3,6 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgxGalleryModule } from "@kolkov/ngx-gallery";
 import { QRCodeModule } from "angularx-qrcode";
 import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
@@ -24,7 +23,6 @@ import { PipesModule } from "./pipe.module";
     FormsModule,
     QRCodeModule,
     NgxPaymentCardModule,
-    NgxGalleryModule,
     NgxSliderModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
@@ -35,17 +33,14 @@ import { PipesModule } from "./pipe.module";
     NgxPaginationModule,
     PipesModule
   ],
-  declarations: [
+  declarations: [],
 
-
-  ],
   exports: [
     BsDatepickerModule,
     TabsModule,
     FormsModule,
     QRCodeModule,
     NgxPaymentCardModule,
-    NgxGalleryModule,
     NgxSliderModule,
     BrowserAnimationsModule,
     BsDropdownModule,

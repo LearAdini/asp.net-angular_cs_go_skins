@@ -21,10 +21,7 @@ namespace API.Extensions
 
             response.Headers.Add("Pagination",JsonSerializer.Serialize(paginationHeader, options));
 
-            // We want to add this header as early as possible
-            // It's a security header
-            response.Headers.Add("Access-Control-Expose-Headers", "Pagination"); // Pagination header is okay for cors
-
+            response.Headers.Add("Access-Control-Expose-Headers", "Pagination"); 
         }
     }
 }

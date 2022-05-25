@@ -4,12 +4,10 @@ using API.Data;
 using API.Entities;
 using API.Interfaces;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    [Authorize]
     public class ProductsController : BaseApiController
     {
         private readonly IProductRepository _productRepository;
@@ -93,12 +91,6 @@ namespace API.Controllers
                 return Ok();
             }
             return BadRequest("Failed to delete product");
-        }
-        [HttpGet("getmarketplace")]
-        public ActionResult<string> GetMarketplace(string url)
-        {   
-            // var html = url.GetHtmlFromUrl();
-            return Ok(url);
         }
     }
 }

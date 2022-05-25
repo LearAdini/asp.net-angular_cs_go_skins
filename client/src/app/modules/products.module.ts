@@ -2,20 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductDetailsComponent } from '../products/product-details/product-details.component';
 import { ProductsComponent } from '../products/products.component';
-import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from './shared.module';
 import { SimilarProductsComponent } from '../products/similar-products/similar-products.component';
+import { RouterModule } from '@angular/router';
 
-
-const routes: Routes = [
-  { path: '', component: ProductsComponent },
-  { path: ':productId', component: ProductDetailsComponent},
+const routes = [
+     { path: 'products/:productId', component: ProductDetailsComponent}
 ]
 
 @NgModule({
   imports: [
+    RouterModule.forRoot(routes),
     CommonModule,
-    RouterModule.forChild(routes),
     SharedModule,
   ],
   declarations: [
@@ -24,10 +22,12 @@ const routes: Routes = [
     SimilarProductsComponent,
   ],
   exports: [
+    RouterModule,
     ProductsComponent,
     ProductDetailsComponent,
     SimilarProductsComponent,
     SharedModule
   ]
 })
+
 export class ProductsModule { }

@@ -14,8 +14,10 @@ import { DateInputComponent } from './register/date-input/date-input.component';
 import { SharedModule } from './modules/shared.module';
 import { AdminModule } from './modules/admin.module';
 import { ProductsModule } from './modules/products.module';
-import { AccountModule } from './modules/account.module';
-
+import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './cart/checkout/checkout.component';
+import { AccountEditComponent } from './account/account-edit/account-edit.component';
+import { AccountOrdersComponent } from './account/account-orders/account-orders.component';
 
 @NgModule({
   declarations: [
@@ -24,16 +26,19 @@ import { AccountModule } from './modules/account.module';
     HomeComponent,
     RegisterComponent,
     DateInputComponent,
-    ],
+    CartComponent,
+    CheckoutComponent,
+    AccountEditComponent,
+    AccountOrdersComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
     SharedModule,
-    AccountModule,
     AdminModule,
-    ProductsModule,
+    ProductsModule
   ],
   exports: [AppComponent],
   providers: [
@@ -51,7 +56,7 @@ import { AccountModule } from './modules/account.module';
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingInterceptor,
       multi: true
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })

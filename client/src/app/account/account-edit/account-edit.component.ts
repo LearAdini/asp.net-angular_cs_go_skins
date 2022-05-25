@@ -2,13 +2,13 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm} from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs';
-import { Card } from '../models/card';
-import { Member } from '../models/member';
-import { User } from '../models/user';
-import { AccountService } from '../service/account.service';
-import { CreditService } from '../service/credit.service';
-import { MembersService } from '../service/members.service';
-import '../../assets/smtp.js';
+import { Card } from '../../models/card';
+import { Member } from '../../models/member';
+import { User } from '../../models/user';
+import { AccountService } from '../../service/account.service';
+import { CreditService } from '../../service/credit.service';
+import { MembersService } from '../../service/members.service';
+import '../../../assets/smtp.js';
 import { TabDirective, TabsetComponent } from 'ngx-bootstrap/tabs';
 declare let Email: any;
 
@@ -167,6 +167,12 @@ export class AccountEditComponent implements OnInit {
     });
   }
 
+  deleteCard(){
+    this.creditService.deleteCard(this.card.userId as number).subscribe(() => {
+      this.toastr.info("Deleted your card successfully");
+      this.editCard = false;
+    });
+}
   generateCode(length: number) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';

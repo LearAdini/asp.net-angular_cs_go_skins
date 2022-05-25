@@ -13,7 +13,7 @@ namespace API.Interfaces
         Task<UserEntity> GetUserByIdAsync(int id);
         Task<UserEntity> GetUserByUserNameAsync(string username);
         Task<IEnumerable<UserDto>> GetMembersAsync();
-         Task<UserDto> GetMemberAsync(string username);
-
+        Task<UserDto> GetMemberAsync(string username);
+        void DeleteUser(UserEntity user);
     }
 }

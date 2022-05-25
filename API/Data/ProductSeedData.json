@@ -2,7 +2,7 @@
     [
         {
             "Id": 1,
-            "ProductName": "AK-47 Neon Revolution",
+            "ProductName": "AK 47 Neon Revolution",
             "ProductPrice": 100,
             "ProductDescription":"AK-47 | Neon Revolution was added to the game on August 18, 2016, as part of The Gamma 2 Collection, which was released alongside the “Double Exposure” update. The skin was created by Coridium and Gamersbook.",
             "ImageUrl":"https://cs.money/img/main/slider-items/cs/5.png",
@@ -19,7 +19,7 @@
           {
         
             "Id":3,
-            "ProductName": "AK-47 Neon RIder",
+            "ProductName": "AK 47 Neon RIder",
             "ProductPrice": 149,
             "ProductDescription": "AK-47 | Neon Rider was added to the game on August 2, 2018, as part of The Horizon Collection, which was released alongside “A New Horizon” update. The skin was created by Puffin (•⌔• ), SIR, and Medic!",
             "ImageUrl": "https://cs.money/img/main/slider-items/cs/3.png",
@@ -35,7 +35,7 @@
           },
           {
             "Id":5,
-            "ProductName": "AK-47 Redline",
+            "ProductName": "AK 47 Redline",
             "ProductPrice": 25,
             "ProductDescription":"AK-47 | Redline was added to the game on February 20, 2014, as part of The Phoenix Collection, which was released alongside the start of Operation Phoenix. The skin was created by EmKay.",
             "ImageUrl": "https://cs.money/img/main/slider-items/cs/1.png",
@@ -51,7 +51,7 @@
           },
           {
             "Id":7,
-            "ProductName": "AK-47 Bloodsport",
+            "ProductName": "AK 47 Bloodsport",
             "ProductPrice": 150,
             "ProductDescription":"AK-47 | Bloodsport was added to the game on March 15, 2017, as part of The Spectrum Collection, which was released alongside the “Take a trip to the Canals” update. The skin was created by SLIMEface.",
             "ImageUrl": "https://cs.money/img/main/slider-items/cs/9.png",
@@ -67,7 +67,7 @@
           },
           {
             "Id":9,
-            "ProductName": "AK-47 Asiimov",
+            "ProductName": "AK 47 Asiimov",
             "ProductPrice": 45,
             "ProductDescription":"With its stylish, compact design and generous capacity, the Cruzer Blade USB Flash Drive makes it easy to back up, transfer, and share your files.",
             "ImageUrl": "https://cs.money/img/main/slider-items/cs/2.png",
@@ -139,7 +139,7 @@
           },
           {
             "Id":18,
-            "ProductName": "AK-47 The Empress",
+            "ProductName": "AK 47 The Empress",
             "ProductPrice": 796,
             "ProductDescription":"AK-47 | The Empress was added to the game on September 14, 2017, as part of The Spectrum 2 Collection, which was released along side the “China, are you ready?” update. The skin was created by OniLolz, Zaphk, and 2Minds.",
             "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09m7hJKOhOTLP7LWnn8f7p0gjrnDpdvxi1Xn80JqYGygLI_DdQJsMgyC_AO4xb_p0ce66ZXImmwj5Hei5N5mVw",
@@ -187,9 +187,9 @@
           },
           {
             "Id":24,
-            "ProductName": "AUG Akihabara Accept",
+            "ProductName": "AUG Akihabara",
             "ProductPrice": 8500,
-            "ProductDescription":"AUG | Akihabara Accept was added to the game on May 26, 2015, as part of The Rising Sun Collection, which was released alongside the start of Operation Bloodhound.",
+            "ProductDescription":"AUG | Akihabara was added to the game on May 26, 2015, as part of The Rising Sun Collection, which was released alongside the start of Operation Bloodhound.",
             "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLGeDBH092jk7-HnvD8J_XXxj8IuJIkib-VoNSi2VGx_UQ-Yzv3I4SQcVA7aAvS_FC6wru51pK1ot2XnmtK7ev7",
             "ProductSale":14
           },
@@ -227,7 +227,7 @@
           },
           {
             "Id":29,
-            "ProductName": "AK-47 Case Hardened",
+            "ProductName": "AK 47 Case Hardened",
             "ProductPrice": 565,
             "ProductDescription":"AK-47 | Case Hardened was added to the game on August 13, 2013, as part of The Arms Deal Collection, which was released alongside “The Arms Deal” update.",
             "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO6nYeDg7mtYbiJkjoDvcAlj7yVotmtjAfjrkpoZW36IoaWclM3MFnY8lK9k-vnm9bi67lSw9Es",

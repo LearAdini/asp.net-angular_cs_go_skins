@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using API.Extensions;
 using API.Data;
 using System.Security.Cryptography;
+using API.Entities;
 
 namespace API.Controllers
 {
@@ -17,9 +18,7 @@ namespace API.Controllers
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly ICardRepository _cardRepository;
-
         private readonly DataContext _context;
-
 
         public UsersController(DataContext context, IUserRepository userRepository, ICardRepository cardRepository, IMapper mapper)
         {
@@ -35,12 +34,14 @@ namespace API.Controllers
             var username = User.GetUsername();
             var user = await _userRepository.GetUserByUserNameAsync(username);
 
-               using var hmac = new HMACSHA512();
+            using var hmac = new HMACSHA512();
 
-                if(userUpdateDTO.Password != null){
+            if (userUpdateDTO.Password != null)
+            {
                 user.PasswordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(userUpdateDTO.Password));
                 user.PasswordSalt = hmac.Key;
-                }
+            }
+
             _mapper.Map(userUpdateDTO, user);
 
             _userRepository.Update(user);
@@ -64,9 +65,29 @@ namespace API.Controllers
         [HttpGet("{username}", Name = "GetUser")]
         public async Task<ActionResult<UserDto>> GetUser(string username)
         {
-
             var userToReturn = await _userRepository.GetMemberAsync(username);
             return userToReturn;
+        }
+
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUser(int id)
+        {
+            var userToDelete = await _userRepository.GetUserByIdAsync(id);
+
+            if (userToDelete == null)
+            {
+                return NotFound();
+            }
+
+            _userRepository.DeleteUser(userToDelete);
+
+            if (await _userRepository.SaveAllAsync())
+            {
+                return Ok();
+            }
+
+            return BadRequest("Failed to delete user");
         }
 
     }

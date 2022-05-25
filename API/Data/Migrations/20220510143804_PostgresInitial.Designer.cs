@@ -4,7 +4,6 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace API.Data.Migrations
@@ -139,8 +138,8 @@ namespace API.Data.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("bytea");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("integer");
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
 
                     b.Property<string>("UserName")
                         .HasColumnType("text");

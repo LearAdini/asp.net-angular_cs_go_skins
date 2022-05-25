@@ -20,7 +20,7 @@
   margin-bottom: -0.5px;
   height:37px;
   padding-left: -4px;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', cursive !important;
   font-weight: bolder;
   font-size: 30px;
   color:rgb(0, 0, 0);
@@ -42,7 +42,7 @@
 
 .details{
   cursor: default;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', cursive !important;
   font-weight: bolder;
   font-size: 30px;
   color:white;
@@ -76,7 +76,7 @@
   color:white;
   overflow: auto;
   margin-left:4px;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', cursive !important;
   font-size: 15px;
 }
 .edit-product,.price-tab,.details,.description{
@@ -84,8 +84,8 @@
 }
 
 h4{
-  font-family: 'Poiret One', cursive;
-  font-size: 22px;
+  font-family: 'Poiret One', cursive !important;
+  font-size: 22px !important;
   float:left
 }
 

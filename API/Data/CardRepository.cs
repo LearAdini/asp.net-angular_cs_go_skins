@@ -55,5 +55,11 @@ namespace API.Data
             .ProjectTo<CardDTO>(_mapper.ConfigurationProvider)
             .SingleOrDefaultAsync();
         }
+
+        public void Delete(CardEntity user)
+        {
+            _context.Cards.Remove(user);
+        }
+
     }
 }

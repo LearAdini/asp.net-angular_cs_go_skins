@@ -51,4 +51,9 @@ export class CreditService {
       })
     )
   }
+
+  deleteCard(id: number) {
+    return this.http.delete(`${this.baseUrl}card/${id}`);
+  }
+
 }

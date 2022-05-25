@@ -26,15 +26,26 @@ namespace API.Data
             _context.Orders.Add(order);
         }
 
+        public void Delete(OrderEntity order)
+        {
+            _context.Orders.Remove(order);
+        }
+
+        public async Task<List<OrderEntity>> GetAllOrdersAsync()
+        {
+            return await _context.Orders.ToListAsync();
+        }
+
+        public Task<OrderEntity> GetOrderAsync(int orderId)
+        {
+            return _context.Orders.FirstOrDefaultAsync(o => o.OrderId == orderId);
+        }
+
         public  Task<List<OrderEntity>> GetOrdersByUserIdAsync(int userId)
         {
              IQueryable<OrderEntity> query;
             query = from Subjects in _context.Orders.Where(v => v.UserId == userId) select Subjects;
             return  query.ToListAsync();
-            // var query =  _context.Orders.AsQueryable();
-            // var result =  query.Where(x => x.UserId == userId).ToList();
-            // return  result;
-                // return await _context.Orders.FirstOrDefaultAsync(p => p.UserId == userId);
         }
 
         public async Task<bool> SaveAllAsync()

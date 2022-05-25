@@ -66,8 +66,7 @@
   border:none;
   background: rgb(60, 59, 59);
   height: 175px;
-  /* height: 185px; */
-  /* object-fit: cover; */
+  object-fit: fill;
 }
 
 .sale{
@@ -76,30 +75,29 @@
   border:none;
   background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgb(129, 50, 255) 100%);
   border-radius:0px 0px 5px 0px;
-  margin-left:193px;
+  margin-left:192px;
   margin-top:-32px;
   width:60px;
   overflow:block;
   text-align: bottom;
   font-family: 'Poiret One', cursive;
-  /* font-weight: border; */
   padding-left: 20px;
 }
 
 p{
   cursor: default;
   background-color: rgb(42, 42, 42);
-  border-radius:5px;
+  border-radius:0px 0px 5px 5px;
   border:none;
   width: 248px;
-  margin-left: 5px;
   margin-top: -5px;
+  margin-left:5px !important;
   text-align: bottom;
   height: 45px;
   text-shadow: 1px 1px 2px #000;
   box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 5px;
-  padding-top:5px;
+  padding-top:2px;
   color:white;
   font-family: 'Kosugi Maru', sans-serif;
 }
@@ -107,9 +105,8 @@ p{
 .wrapper{
   margin: auto;
   width: 98%;
-  margin-left: 2.85rem;
+  margin-left: 45px;
   margin-top:1rem;
-
 }
 
 .form-control
@@ -117,21 +114,20 @@ p{
   box-shadow: 0px 2px rgba(0, 0, 0, 0.267);
   border:none;
   width: 26.7%;
-  margin-left: 3.3rem;
- height:40px;
+  margin-left: 3.35rem;
   font-family:Arial, FontAwesome;
   background-color: rgba(29, 29, 29, 0.599);
 }
 
 .price-range{
-  margin-top:-2.5rem;
+  margin-top:-2.3rem;
   background-color: rgba(29, 29, 29, 0.599);
   border-radius:5px;
-  width:505px;
-  height:40px;
+  width:500px;
+  height:36.5px;
   color:white;
-  margin-left:29.8%;
-  margin-bottom:1rem;
+  margin-left:35rem;
+  /* margin-bottom:2rem; */
   box-shadow: 0px 2px rgba(0, 0, 0, 0.267);
 }
 .custom-slider{
@@ -143,8 +139,7 @@ p{
   display:flex;
   justify-content:center;
   margin-left:31.8rem;
-  margin-top:-3.45rem;
-  margin-bottom:1rem;
+  margin-top:-2.25rem;
 }
 
 .add-product > .btn-primary {

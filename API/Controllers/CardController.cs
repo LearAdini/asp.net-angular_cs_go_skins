@@ -95,6 +95,35 @@ namespace API.Controllers
             return await _context.Cards.AnyAsync(x => x.UserId == id);
         }
 
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteCard(int id)
+        {
+            var card = await _cardRepository.GetCardByUserIdAsync(id);
+
+            if (card == null)
+            {
+                return NotFound();
+            }
+            var cardToDelete = new CardEntity(){ 
+                UserId = card.UserId,
+                FullName = card.FullName,
+                CardNumber = card.CardNumber,
+                CardDate = card.CardDate,
+                CardCVV = card.CardCVV,
+                IdNumber = card.IdNumber,
+            };
+            
+
+            _cardRepository.Delete(cardToDelete);
+
+            if (await _cardRepository.SaveAllAsync())
+            {
+                return Ok();
+            }
+
+            return BadRequest("Failed to delete card");
+        }
+
 
     }
 }

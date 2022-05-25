@@ -1,41 +1,6 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <!-- <script>
-    let keyPressCount = 0;
-    function getKeyPress() {
-      let doc = document.getElementById("cardDate");
-      doc.addEventListener("keypress", (event) => {
-        keyPressCount += 1;
-        if (keyPressCount == 1) {
-          setTimeout(() => {
-            doc.value += '/'
-          }, 1);
-        }
-      }, false);
-    }
-
-    function enableSubmit() {
-      let inputs = document.getElementsByClassName('req');
-      let btn = document.querySelector('input[type="submit"]');
-      let isValid = true;
-
-      for (var i = 0; i < inputs.length; i++) {
-        let changedInput = inputs[i];
-        if (changedInput.value.trim() === "" || changedInput.value === null) {
-          isValid = false;
-          break;
-        }
-      }
-      btn.disabled = !isValid;
-      if (isValid) {
-        btn.value = "Add Credit Card";
-      }
-    }
-  </script> -->
-
-
   <meta charset="utf-8">
   <title>DropShipping</title>
   <base href="/">
@@ -49,13 +14,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <script src="https://smtpjs.com/v3/smtp.js"> </script>
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
 </head>
-
 <body class="mat-typography">
   <app-root></app-root>
   <app-nav></app-nav>
   <router-outlet></router-outlet>
 </body>
-
 </html>

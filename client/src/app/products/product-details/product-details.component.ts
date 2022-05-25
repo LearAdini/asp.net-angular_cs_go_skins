@@ -15,65 +15,66 @@ import { ProductService } from '../../service/product.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product!: Product;
-  addedCart : any;
+  addedCart: any;
   products?: Product[];
-  user:User;
+  user: User;
   admin: boolean = false;
 
 
   constructor(
     private route: ActivatedRoute,
-     private cartService: CartService,
-     private productService: ProductService,
-     private accountService: AccountService,
-     private toastr:ToastrService,
-      private router: Router
-      ) {
-        // this.currentUser$ = this.accountService.currentUser$;
-        this.accountService.currentUser$.pipe(take(1)).subscribe(user => {
-          this.user = user as User;
-        });
+    private cartService: CartService,
+    private productService: ProductService,
+    private accountService: AccountService,
+    private toastr: ToastrService,
+    private router: Router
+  ) {
+    // this.currentUser$ = this.accountService.currentUser$;
+    this.accountService.currentUser$.pipe(take(1)).subscribe(user => {
+      this.user = user as User;
+    });
 
-        const routeParams = this.route.snapshot.paramMap;
-        const productIdFromRoute = Number(routeParams.get('productId'));
+    const routeParams = this.route.snapshot.paramMap;
+    const productIdFromRoute = Number(routeParams.get('productId'));
 
-        this.productService.getProduct(productIdFromRoute).subscribe(x=>{
-          this.product = x;
+    this.productService.getProduct(productIdFromRoute).subscribe(x => {
+      this.product = x;
 
-          setTimeout(() => {
-            render({
-              id: "#myPaypalButtons",
-              currency: "USD",
-              value: (this.product!.productPrice - (this.product!.productPrice * this.product!.productSale / 100)).toFixed(2).toString(),
+      if (!this.admin) {
+        setTimeout(() => {
+          render({
+            id: "#myPaypalButtons",
+            currency: "USD",
+            value: (this.product!.productPrice - (this.product!.productPrice * this.product!.productSale / 100)).toFixed(2).toString(),
 
-              onApprove: (details) => {
-                details = this.cartService.getItems();
-                alert('Success');
-              }
-            });
+            onApprove: (details) => {
+              details = this.cartService.getItems();
+              alert('Success');
+            }
           });
-        });
+        }, 500);
+      }
+    });
   }
 
   ngOnInit() {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    if(this.user.username == 'Admin')
-    {
+    if (this.user.username == 'Admin') {
       this.admin = true;
     }
   }
 
-  addToCart(item:Product) {
+  addToCart(item: Product) {
     this.cartService.addToCart(item);
-      this.addedCart = true;
-      setTimeout(() => {
-        this.addedCart = false;
-       },3000);
+    this.addedCart = true;
+    setTimeout(() => {
+      this.addedCart = false;
+    }, 3000);
   }
 
-  deleteProduct(){
-    if(confirm("Are you sure you want to delete product number: "+ this.product.productId + " ?")) {
-      this.productService.deleteProduct(this.product.productId).subscribe(()=>{
+  deleteProduct() {
+    if (confirm("Are you sure you want to delete product number: " + this.product.productId + " ?")) {
+      this.productService.deleteProduct(this.product.productId).subscribe(() => {
         this.toastr.info('Product deleted successfully');
         this.router.navigateByUrl('/products');
       }

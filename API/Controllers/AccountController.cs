@@ -4,11 +4,9 @@ using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Interfaces;
-using System.Net;
-using System.Net.Mail;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
+
 
 namespace API.Controllers
 {
@@ -30,7 +28,7 @@ namespace API.Controllers
         }
 
 
-        [HttpPost("register")] //api/account/register
+        [HttpPost("register")]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
             using var hmac = new HMACSHA512();
@@ -83,11 +81,8 @@ namespace API.Controllers
             {
                 return new UserDto
                 {
-                    // Id = 99,
                     Username = "Admin",
-                    Token = _tokenService.CreateToken(user),
-                    FirstName = "Admin",
-                    LastName = "Admin",
+                    Token = _tokenService.CreateToken(user)
                 };
             }
 
@@ -102,8 +97,7 @@ namespace API.Controllers
                 Username = user.UserName,
                 Token = _tokenService.CreateToken(user),
                 FirstName = user.FirstName,
-                LastName = user.LastName,
-                // PhotoUrl = user.Photos?.FirstOrDefault(x=> x.IsMain)?.Url,
+                LastName = user.LastName
             };
         }
 

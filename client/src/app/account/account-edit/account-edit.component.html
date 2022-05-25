@@ -20,13 +20,15 @@
               value="{{card?.cardDate}}"><br>
             <div id="title">CVV:</div> {{card?.cardCVV}} <br>
             <button id="edit" (click)="editCardFunc()">edit card</button>
+            <br>
+            <button class="btn btn-danger" (click)="deleteCard()"><i class="fa fa-trash"></i> Remove Card</button>
           </div>
         </div>
       </div>
       <br>
 
       <div *ngIf="member">
-        <form #editForm="ngForm" (ngSubmit)="updateMember()" *ngIf="edit == true" id="editForm" class="form-inline">
+        <form #editForm="ngForm" (ngSubmit)="updateMember()" *ngIf="edit" id="editForm" class="form-inline">
           <label for="country">Country:&nbsp;</label>
           <input [(ngModel)]="member.country" name="country" class="form-control">
 
@@ -66,6 +68,7 @@
           </div>
         </form>
       </div>
+
     </ngx-tab>
     <ngx-tab tabTitle="Change Password" [bypassDOM]="true">
       <ng-template>
@@ -88,7 +91,6 @@
           <div class="reset-password">
             <input type="password" [(ngModel)]="member.password" #pass placeholder="Password" name="password"
               class="form-control mb-2" autocomplete="off">
-
             <input type="password" class="form-control" #checkPass placeholder="Confirm Password" name="confirmPassword">
             <br>
             <div class="card-footer">

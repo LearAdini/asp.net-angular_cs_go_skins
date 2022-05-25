@@ -1,0 +1,29 @@
+<br>
+<div class="wrapper">
+  <ngx-tabset customNavClass="nav-test-class" customTabsClass="container">
+    <ngx-tab tabTitle="All Users">
+      <div class="wrap">
+        <div *ngFor="let user of users">
+          UserId: {{user.id}} <br>
+          UserName: {{user.username}} <br>
+          First Name: {{user.firstName}} <br>
+          Last Name: {{user.lastName}} <br>
+          Email: {{user.email}} <br>
+          <button class="btn btn-danger mb-2 mt-1" style="border-radius: 5px" (click)="deleteUser(user)">
+            <i class="fa fa-trash"></i></button>
+          <br>
+          <hr class="dropdown-divider">
+        </div>
+        </div>
+    </ngx-tab>
+    <ngx-tab tabTitle="All Orders">
+      <div class="wrap" *ngFor="let order of orders">
+        <br>
+        Order Id: {{order.orderId}} | User Id: {{order.userId}} | {{order.description}}<button
+          class="btn btn-danger" style="border-radius: 5px; width:30px;height:30px; padding:5px; padding-top:2px; position: relative; margin-left:80%; margin-top:-42.5px;"
+          (click)="deleteOrder(order)"><i class="fa fa-trash"></i></button>
+      </div>
+    </ngx-tab>
+  </ngx-tabset>
+  <br>
+</div>

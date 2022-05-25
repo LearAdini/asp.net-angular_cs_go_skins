@@ -13,7 +13,7 @@ namespace API.DTOs
         public string Country { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         public ICollection<PhotoDto> Photos { get; set; }
 
