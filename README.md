@@ -2,23 +2,24 @@
 
 This is a <a target="_blank" href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">Counter-strike:Global Offensive</a> skins web store made with Angular framework.
 
-You can register as a new user and login to view all products.
+### Instructions
 
-You can filter all products by minimum item price to maximum price and you can also find an item by searching its name.
+Register as a new user or login to view all products.
 
-As a new user you can add each product to your cart and checkout via PayPal or by the store checkout.
+***User*** can make an order, add a credit card, edit personal info, edit credit card info, change password and delete credit card.
 
-A user can edit all his contact info including his credit card info in the "My Profile" Tab.
+***Admin*** can add a new product, edit any product, delete any product, delete any user, delete any order.
 
-Password reset will be avilable only after the user inserted the right code. The random code will be sent to the user email address or scan the QR code to recive the code, only then he would be able to reset his password.
+You can filter all products by minimum price to maximum price, and search an item by its name.
 
-A user can view all his orders.
+As a user you can add many product to your cart.
 
-All CRUD operations are allowed while logged in as an admin.
+You can pay for all items in cart via PayPal payment or by 'checkout'. (בבקשה לבצע בדיקה גם על checkout)
 
+As a user you can edit all your contact info including credit card info in the "My Profile" Tab or delete your credit card.
 
+Password reset will be available only after the user inserted the right code. The random code will be sent to the user email address or scan the QR code to recive the code, only then you would be able to change password.
 
-https://drop-shipping-angular.herokuapp.com
  ### *Technologies Used:*
 
 <table>
@@ -41,41 +42,41 @@ https://drop-shipping-angular.herokuapp.com
 	</tr>
   	<tr>
 		<td>Miscellaneous</td>
-		<td>PayPal Payments, Social Login</td>
+		<td>PayPal Payments</td>
 	</tr>
 </tbody>
 </table>
 
 # Products Page
 
-Products page is only accessible when beeing logged in.
-
-You can buy each product individually or add it to your cart via PayPal payments.
-
-
 ![fp0](https://user-images.githubusercontent.com/80118008/168890559-cbe5d079-0b7e-4599-8677-7cc64d147961.PNG)
 
 
 ![fp1](https://user-images.githubusercontent.com/80118008/168890570-41998b33-053f-4deb-8b74-f528d8d5abf3.PNG)
-The "Similar Products" will display random products each refresh or when redirecting to a new product.
+"Similar Products" will display random products each refresh or when redirecting to a new product.
 
-
+#
 
 You can remove an item from your cart and the total price will be updated accordingly.
-
 
 ![fp2](https://user-images.githubusercontent.com/80118008/168890947-53f3bbc5-d658-4c74-9f34-f81b32b5ff63.PNG)
 
 # My Profile
 
 
-You can edit all your contact info including credit card info in.
+You can edit all your contact info including credit card info (only if you have added a card to your account).
 
-![fp4](https://user-images.githubusercontent.com/80118008/168891029-a3e4ce1a-d70c-43ba-ad6c-e3859dec70db.PNG)
+![_01](https://user-images.githubusercontent.com/80118008/170431200-84a24503-a7b7-444e-a0da-1993ef3de569.PNG)
+#
+![_04](https://user-images.githubusercontent.com/80118008/170431402-488f17c3-82a9-4325-ae6b-7c5d9fec406b.PNG)
 
-![fp5](https://user-images.githubusercontent.com/80118008/168891139-15d3aed5-9434-4d4b-a206-4536686ff825.PNG)
 
-![fp6](https://user-images.githubusercontent.com/80118008/168891146-587f7790-ff97-4b06-9c76-52490f9c03b6.PNG)
+***If you added a card to your account, you can edit info or delete the card from your account.***
+
+![_02](https://user-images.githubusercontent.com/80118008/170431300-62bf4c86-46da-4332-9d17-64f823be8f9b.PNG)
+#
+![_03](https://user-images.githubusercontent.com/80118008/170431362-b5fc225e-d829-4a21-afd0-b787e76cd39f.PNG)
+
 
 
 ### Password Reset
