@@ -17,6 +17,4 @@ export class AccountOrdersComponent implements OnInit {
       this.orders = x;
     });
   }
-
-
 }

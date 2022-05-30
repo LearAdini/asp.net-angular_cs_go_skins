@@ -27,8 +27,6 @@ export class CheckoutComponent implements OnInit {
   member!: Member;
   card!: Card;
 
-
-
   edit: boolean = false;
   next: boolean = false;
   payed: boolean = false;

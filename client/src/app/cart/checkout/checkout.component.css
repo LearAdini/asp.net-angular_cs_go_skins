@@ -68,8 +68,6 @@ margin:5px;
   color: black;
 }
 
-
-
 .add-card {
   background-color: rgb(19, 19, 19);
   transition: transform 0.2s;
@@ -110,22 +108,6 @@ margin:5px;
   width: 100%;
   text-align: center;
   font-family: 'Fredoka', sans-serif;
-}
-
-.form-container .field-container:first-of-type {
-  grid-area: name;
-}
-
-.form-container .field-container:nth-of-type(2) {
-  grid-area: number;
-}
-
-.form-container .field-container:nth-of-type(3) {
-  grid-area: expiration;
-}
-
-.form-container .field-container:nth-of-type(4) {
-  grid-area: security;
 }
 
 .field-container input {
@@ -190,6 +172,16 @@ ngx-payment-card{
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.form-container .field-container:first-of-type {grid-area: name;}
+
+.form-container .field-container:nth-of-type(2) {grid-area: number;}
+
+.form-container .field-container:nth-of-type(3) {grid-area: expiration;}
+
+.form-container .field-container:nth-of-type(4) {grid-area: security;}
+
+
 
 @media (max-width:1000px){
 .wrapper{

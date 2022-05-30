@@ -38,14 +38,9 @@
   margin-left:4.3%;
   margin-top: -70px;
 }
-.two{
-  margin-left:8%;
-}
-.three{
-  margin-left:16%;
-}
+.two{margin-left:8%;}
 
-
+.three{margin-left:16%;}
 
 #step {
   margin-left: 40px;
@@ -59,8 +54,7 @@
   transform: scale(1.1);
 }
 
-p,
-h5 {
+p,h5 {
   animation: steps-anim;
   animation-duration: 2s;
   position: relative;
@@ -119,9 +113,7 @@ h5 {
 
 }
 
-.btn-warning:hover {
-  transform: scale(1.035);
-}
+.btn-warning:hover {transform: scale(1.035);}
 
 
 @keyframes fade-left {

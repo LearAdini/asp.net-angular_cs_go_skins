@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Product } from '../models/products';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from '../service/cart.service';
 import { render } from 'creditcardpayments/creditCardPayments';
 import { ToastrService } from 'ngx-toastr';
@@ -10,21 +9,21 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  items:any;
-
-  // item: Product[] = [];
+  items: any;
   totalPrice?: any;
 
-  constructor(private cartService: CartService,private toastr: ToastrService) {
-
-   }
+  constructor(private cartService: CartService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.items = this.cartService.getItems();
+    this.items.forEach(element => {
+      const value = localStorage.getItem(element.productName);
+      if (value) {
+        element = value;
+      }
+    })
     this.totalPrice = this.cartService.getTotalPrice();
     this.payPalButton();
-    // this.cartService.getCartData();
-    // this.cartService.getCartData();
   }
 
   removeItem(index: number) {
@@ -37,16 +36,14 @@ export class CartComponent implements OnInit {
   }
 
   payPalButton() {
-
     setTimeout(() => {
       render({
         id: "#myPaypalButtons",
         currency: "USD",
         value: this.cartService.getTotalPrice(),
 
-
         onApprove: () => {
-          if(this.totalPrice == 0) {
+          if (this.totalPrice == 0) {
             this.toastr.error('Your cart is empty');
           }
           this.toastr.success('Payment Successful');
@@ -54,8 +51,8 @@ export class CartComponent implements OnInit {
       });
     }, 5);
 
-    if(this.totalPrice == 0) {
+    if (this.totalPrice == 0) {
       this.toastr.error('Your cart is empty');
+    }
   }
-}
 }

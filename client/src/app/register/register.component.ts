@@ -57,7 +57,6 @@ export class RegisterComponent implements OnInit {
           if (Array.isArray(error)) {
             this.validationErrors = error;
           }
-
         }
       )
     }
@@ -75,5 +74,4 @@ export class RegisterComponent implements OnInit {
       return controlValue === controlToMatchValue ? null : { isMatching: true };
     }
   }
-
 }

@@ -1,102 +1,55 @@
-
-
-
-  <h2 class="text-center text-primary mt-5">Register</h2>
-  <br>
+<h2 class="text-center text-primary mt-5">Register</h2>
+<br>
 
 <form class="mt-5" [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
-<div class="form-group">
-  <input
-  type="text"
-  class="form-control"
-  formControlName="username"
-  placeholder="UserName"
-  [class.is-invalid]="registerForm.get('username')?.errors && registerForm.get('username')?.touched">
-<div class="invalid-feedback" style="font-size:15px;">Please enter a username</div>
-</div>
-<div class="form-group">
-<input
-type="password"
-class="form-control"
-formControlName="password"
-placeholder="Password"
-[class.is-invalid]="registerForm.get('password')?.errors && registerForm.get('password')?.touched">
-<div class="invalid-feedback" style="font-size:15px;">Please enter a password</div>
-<div *ngIf="registerForm.get('password')?.hasError('minLength')" class="invalid-feedback" style="font-size:15px;">Please enter atleast 6 charchters</div>
-</div>
-<div class="form-group">
-<input
-type="password"
-class="form-control"
-formControlName="confirmPassword"
-placeholder="Confirm Password"
-[class.is-invalid]="registerForm.get('confirmPassword')?.errors && registerForm.get('confirmPassword')?.touched">
-<div class="invalid-feedback" style="font-size:15px;">Please confirm your password</div>
-</div>
-<div class="form-group">
-<input
-type="text"
-class="form-control"
-formControlName="firstName"
-placeholder="First Name"
-autocomplete="off"
-[class.is-invalid]="registerForm.get('firstName')?.errors && registerForm.get('firstName')?.touched">
-<div class="invalid-feedback" style="font-size:15px;">Please enter your first name</div>
-</div>
-<div class="form-group">
-  <input
-  type="text"
-  class="form-control"
-  formControlName="lastName"
-  placeholder="Last Name"
-  autocomplete="off"
-  [class.is-invalid]="registerForm.get('lastName')?.errors && registerForm.get('lastName')?.touched">
-  <div class="invalid-feedback" style="font-size:15px;">Please enter your last name</div>
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="username" placeholder="UserName"
+      [class.is-invalid]="registerForm.get('username')?.errors && registerForm.get('username')?.touched">
+    <div class="invalid-feedback" style="font-size:15px;">Please enter a username</div>
   </div>
-<div class="form-group">
-  <input
-  type="email"
-  class="form-control"
-  formControlName="email"
-  placeholder="Email"
-  autocomplete="off"
-  [class.is-invalid]="registerForm.get('email')?.errors && registerForm.get('email')?.touched">
-  <div class="invalid-feedback" style="font-size:15px;">Please enter a valid email</div>
+  <div class="form-group">
+    <input type="password" class="form-control" formControlName="password" placeholder="Password"
+      [class.is-invalid]="registerForm.get('password')?.errors && registerForm.get('password')?.touched">
+    <div class="invalid-feedback" style="font-size:15px;">Please enter a password</div>
+    <div *ngIf="registerForm.get('password')?.hasError('minLength')" class="invalid-feedback" style="font-size:15px;">
+      Please enter atleast 6 charchters</div>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password"
+      [class.is-invalid]="registerForm.get('confirmPassword')?.errors && registerForm.get('confirmPassword')?.touched">
+    <div class="invalid-feedback" style="font-size:15px;">Please confirm your password</div>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="firstName" placeholder="First Name" autocomplete="off"
+      [class.is-invalid]="registerForm.get('firstName')?.errors && registerForm.get('firstName')?.touched">
+    <div class="invalid-feedback" style="font-size:15px;">Please enter your first name</div>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name" autocomplete="off"
+      [class.is-invalid]="registerForm.get('lastName')?.errors && registerForm.get('lastName')?.touched">
+    <div class="invalid-feedback" style="font-size:15px;">Please enter your last name</div>
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-control" formControlName="email" placeholder="Email" autocomplete="off"
+      [class.is-invalid]="registerForm.get('email')?.errors && registerForm.get('email')?.touched">
+    <div class="invalid-feedback" style="font-size:15px;">Please enter a valid email</div>
   </div>
 
   <app-date-input formControlName="age" label="Date Of Birth" [maxDate]="maxDate"></app-date-input>
   <div class="form-group">
-      <input
-      type="text"
-      class="form-control"
-      formControlName="country"
-      placeholder="Country"
-      autocomplete="off">
+    <input type="text" class="form-control" formControlName="country" placeholder="Country" autocomplete="off">
   </div>
   <div class="form-group">
-      <input
-      type="text"
-      class="form-control"
-      formControlName="city"
-      placeholder="City">
+    <input type="text" class="form-control" formControlName="city" placeholder="City">
   </div>
 
   <div class="form-group">
-    <input
-    type="text"
-    class="form-control"
-    formControlName="address"
-    placeholder="Home Address">
-</div>
+    <input type="text" class="form-control" formControlName="address" placeholder="Home Address">
+  </div>
 
-<div class="form-group">
-  <input
-  type="tel"
-  class="form-control"
-  formControlName="phoneNumber"
-  placeholder="0000000000"
-  maxlength="10">
-</div>
+  <div class="form-group">
+    <input type="tel" class="form-control" formControlName="phoneNumber" placeholder="0000000000" maxlength="10">
+  </div>
   <div class="row mt-2" *ngIf="validationErrors.length">
     <ul class="text-danger">
       <li *ngFor="let error of validationErrors">{{error}}</li>
@@ -105,6 +58,5 @@ autocomplete="off"
 
   <div class="form-group text-center">
     <button [disabled]="registerForm.invalid" class="btn btn-success mt-3" type="submit">Register</button>
-    </div>
+  </div>
 </form>
-<!-- <img class="img-cover" src="../assets/y-smoke.png"> -->

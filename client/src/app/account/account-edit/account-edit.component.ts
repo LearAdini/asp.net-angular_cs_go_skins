@@ -115,7 +115,6 @@ export class AccountEditComponent implements OnInit {
     });
   }
 
-
   sendEmail() {
     {
       if (this.emailEdit.nativeElement.value != this.member.email) {
@@ -134,6 +133,7 @@ export class AccountEditComponent implements OnInit {
     }
     this.inputCode = true;
     this.toastr.info("Check spam mail for code, or scan the QR for code");
+    // console.log(this.code); You can console log the code. It will be used to reset password.
   }
 
   codeCheck() {
@@ -171,6 +171,7 @@ export class AccountEditComponent implements OnInit {
     this.creditService.deleteCard(this.card.userId as number).subscribe(() => {
       this.toastr.info("Deleted your card successfully");
       this.editCard = false;
+      this.cardForm.reset();
     });
 }
   generateCode(length: number) {

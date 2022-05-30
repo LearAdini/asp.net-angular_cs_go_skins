@@ -4,8 +4,7 @@
 
   <div class="cart-item" *ngFor="let item of items let i = index">
     <span>{{item.productName}}</span>
-    <span style="color:crimson;">&nbsp; Price: ${{ (item.productPrice - (item.productPrice * item.productSale /
-      100)).toFixed(2)}}</span>
+    <span style="color:crimson;">&nbsp; Price: ${{ (item.productPrice - (item.productPrice * item.productSale /100)).toFixed(2)}}</span>
     <button class="remove" (click)="removeItem(i)"> <i class="fa fa-trash"></i></button><br>
   </div>
   <br>

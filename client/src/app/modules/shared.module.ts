@@ -52,4 +52,5 @@ import { PipesModule } from "./pipe.module";
     PipesModule
   ]
 })
+
 export class SharedModule { }

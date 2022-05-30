@@ -20,7 +20,7 @@ export class ProductsEditComponent implements OnInit {
     }
   }
 
-  constructor(  private productService: ProductService,private route: ActivatedRoute, private router:Router, private toastr: ToastrService) {
+  constructor(private productService: ProductService,private route: ActivatedRoute, private router:Router, private toastr: ToastrService) {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
     this.productService.getProduct(productIdFromRoute).subscribe(x=>{
@@ -28,8 +28,7 @@ export class ProductsEditComponent implements OnInit {
     });
    }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   updateProduct(){
     this.productService.updateProduct(this.product).subscribe(()=>{

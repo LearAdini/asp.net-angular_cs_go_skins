@@ -43,7 +43,8 @@ export class AdminPanelComponent implements OnInit {
   getAllUsers() {
     this.membersService.getMembers().subscribe(x => {
       this.users = x;
-       //remove admin from being editable/deletable.
+
+       //remove superuser from being editable/deletable.
       for (const user of this.users) {
         if (user.username == 'Admin') {
           this.users.splice(this.users.indexOf(user), 1);

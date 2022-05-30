@@ -10,5 +10,3 @@ export interface Member {
   lastName:      string;
   email:      string;
 }
-
-

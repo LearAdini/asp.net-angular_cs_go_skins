@@ -79,9 +79,7 @@
   font-family: 'Poiret One', cursive !important;
   font-size: 15px;
 }
-.edit-product,.price-tab,.details,.description{
-  margin-left:5px;
-}
+.edit-product,.price-tab,.details,.description{ margin-left:5px;}
 
 h4{
   font-family: 'Poiret One', cursive !important;
@@ -142,6 +140,7 @@ h4{
     opacity: 0;
   }
 }
+
 
 
 @media  (max-width: 1558px) {

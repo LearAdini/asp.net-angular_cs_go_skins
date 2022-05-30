@@ -11,10 +11,13 @@ export class CartService {
   [x: string]: any;
   product!: Product;
   baseUrl = environment.apiUrl;
-  private currentItems$ = new ReplaySubject<Product | null>();
+  private currentItems$ = new ReplaySubject<Product | null>(100);
   currentItem$ = this.currentItems$.asObservable();
 
-  constructor() { }
+  constructor()
+  {
+
+   }
 
   addToCart(product: Product) {
     this.setCurrentItems(product);
@@ -22,10 +25,10 @@ export class CartService {
   }
 
   setCurrentItems(product: Product) {
-    Object.values(product).forEach(val => {
-      localStorage.setItem('items', JSON.stringify(val));
-      this.currentItems$.next(val);
-    });
+    // Object.values(product).forEach(val => {
+      localStorage.setItem(product.productName, JSON.stringify(product));
+      this.currentItems$.next(product);
+    // });
   }
 
   getTotalPrice() {
@@ -48,8 +51,9 @@ export class CartService {
 
   getCartData() {
     Object.values(this.items).forEach(val => {
-      const itemFromLS: any = localStorage.getItem(val.productName);
-      const item = JSON.parse(itemFromLS);
+      localStorage.getItem(val.productName);
+      console.log(val.productName);
+      // this.items.push(val);
     });
 
   }

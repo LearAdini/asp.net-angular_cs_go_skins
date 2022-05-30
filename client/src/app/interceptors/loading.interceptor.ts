@@ -1,11 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
+import {HttpRequest,HttpHandler,HttpEvent,HttpInterceptor} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { delay, finalize } from 'rxjs/operators';
 import { BusyService } from '../service/busy.service';

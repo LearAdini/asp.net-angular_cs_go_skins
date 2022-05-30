@@ -49,14 +49,16 @@
 
 #send-email{
   border-radius: 0px 3px 3px 0px;
-  height:37.5px;
+  height:36px;
   margin-left:-42px;
+  margin-top:1px;
 }
 
 input{
 	box-shadow: none !important;
   flex-grow:2;
 }
+
 
 #passw{
   background-color:transparent;

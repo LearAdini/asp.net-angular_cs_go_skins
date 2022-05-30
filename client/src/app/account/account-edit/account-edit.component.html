@@ -1,8 +1,7 @@
 <br><br>
-<div class="wrapper">
+<div class="wrapper" *ngIf="member">
   <ngx-tabset customNavClass="nav-test-class" customTabsClass="container">
     <ngx-tab tabTitle="Edit Info">
-      <div *ngIf="member">
         <br>
         <div class="user">
           <div id="title"> First Name:</div> {{member.firstName}} <div id="title">Last Name:</div> {{member.lastName}} <br>
@@ -21,13 +20,15 @@
             <div id="title">CVV:</div> {{card?.cardCVV}} <br>
             <button id="edit" (click)="editCardFunc()">edit card</button>
             <br>
-            <button class="btn btn-danger" (click)="deleteCard()"><i class="fa fa-trash"></i> Remove Card</button>
+            <button class="btn btn-danger ml-2" (click)="deleteCard()"><i class="fa fa-trash"></i> Remove Card</button>
+            <br>
           </div>
+          <br>
         </div>
-      </div>
+
       <br>
 
-      <div *ngIf="member">
+
         <form #editForm="ngForm" (ngSubmit)="updateMember()" *ngIf="edit" id="editForm" class="form-inline">
           <label for="country">Country:&nbsp;</label>
           <input [(ngModel)]="member.country" name="country" class="form-control">
@@ -47,18 +48,18 @@
           </div>
         </form>
         <form *ngIf="editCard" #cardForm="ngForm" (ngSubmit)="updateCard()" id="cardForm" class="form-inline">
-          <label for="country">Card Number:&nbsp;</label>
+          <label for="cardNumber">Card Number:&nbsp;</label>
           <input type="password" [(ngModel)]="card.cardNumber" name="cardNumber" class="form-control" oninput="javascript: if (this.value.length > this.maxLength)
           this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="16" onkeyup="enableSubmit()">
 
-          <label for="city">&nbsp;Card Date:&nbsp;</label>
+          <label for="cardDate">&nbsp;Card Date:&nbsp;</label>
           <input type="text" [(ngModel)]="card.cardDate" id="cardDate" name="cardDate" class="form-control" minlength="1" maxlength="5" oninput="getKeyPress()" onkeyup="enableSubmit()">
 
-          <label for="address">&nbsp;Card CVV:&nbsp;</label>
+          <label for="cardCVV">&nbsp;Card CVV:&nbsp;</label>
           <input type="text" [(ngModel)]="card.cardCVV" name="cardCVV" class="form-control" oninput="javascript: if (this.value.length > this.maxLength)
           this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="3" onkeyup="enableSubmit()">
 
-          <label for="phoneNumber">&nbsp;Holder Id:&nbsp;</label>
+          <label for="idNumber">&nbsp;Holder Id:&nbsp;</label>
           <input [(ngModel)]="card.idNumber" name="idNumber" class="form-control" oninput="javascript: if (this.value.length > this.maxLength)
           this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="9" onkeyup="enableSubmit()">
 
@@ -67,24 +68,22 @@
             <button form="cardForm" type="submit" class="btn btn-success btn-block">Save Changes</button>
           </div>
         </form>
-      </div>
-
     </ngx-tab>
-    <ngx-tab tabTitle="Change Password" [bypassDOM]="true">
-      <ng-template>
-      <div *ngIf="member">
+
+    <ngx-tab tabTitle="Change Password">
         <button #passBtn id="edit" class="pb-3" (click)="editPassword()">change password</button>
-        <div *ngIf="resetPassword" class="edit-password pb-3">
-          <input type="email" placeholder="{{member.email}}" name="emailEdit" #emailEdit class="form-control"
-            autocomplete="off">
+        <div *ngIf="resetPassword"class="edit-password pb-3">
+          <input type="email" placeholder="{{member.email}}" name="emailEdit" #emailEdit class="form-control" autocomplete="off">
           <button class="btn btn-primary" id="send-email" (click)="sendEmail()"><i class="fa fa-paper-plane"></i></button>
         </div>
 
         <div *ngIf="inputCode" class="edit-password mb-1">
+          <label for="codeEdit">Code: </label><br><br>
           <input type="text" autocomplete="off" name="codeEdit" #codeEdit class="form-control" placeholder="code">
           <button class="btn btn-primary" id="send-email" (click)="codeCheck()"><i class="fa fa-paper-plane"></i></button>
           <br>
         </div>
+
         <qrcode *ngIf="inputCode" [qrdata]="'Your code is: '+ code" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
 
         <form #resetForm="ngForm" (ngSubmit)="updatePassword()" *ngIf="completeReset" id="editForm" class="form-inline">
@@ -98,11 +97,11 @@
             </div>
           </div>
         </form>
-      </div>
-      </ng-template>
     </ngx-tab>
+
     <ngx-tab tabTitle="My Orders">
       <app-account-orders></app-account-orders>
     </ngx-tab>
+
   </ngx-tabset>
   <br>

@@ -23,4 +23,5 @@ import { AdminPanelComponent } from '../admin/admin-panel/admin-panel.component'
     SharedModule
   ]
 })
+
 export class AdminModule { }

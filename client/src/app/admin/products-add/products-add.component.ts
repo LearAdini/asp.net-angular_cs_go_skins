@@ -1,7 +1,6 @@
-import { Component, HostListener, OnInit, Self, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NgControl, NgForm, Validators } from '@angular/forms';
+import { Component, HostListener, OnInit} from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { Product } from 'src/app/models/products';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
@@ -18,9 +17,7 @@ export class ProductsAddComponent implements OnInit {
       $event.returnValue = true;
     }
   }
-  constructor(private productService: ProductService,private toastr: ToastrService,private fb: FormBuilder) {
-
-   }
+  constructor(private productService: ProductService,private toastr: ToastrService,private fb: FormBuilder) {}
 
   ngOnInit() {
     this.initializeForm();
@@ -37,10 +34,8 @@ export class ProductsAddComponent implements OnInit {
 
   addProduct(){
     this.productService.addProduct(this.addForm.value).subscribe(()=>{
-      // this.product = x
       this.toastr.success('Product added successfully');
       this.addForm.reset();
     });
   }
-
 }

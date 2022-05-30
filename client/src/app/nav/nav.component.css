@@ -28,13 +28,9 @@ nav {
   text-shadow: 1px 3px #424242;
 }
 
-.navbar-brand:hover {
-  color: rgb(196, 1, 214);
-}
+.navbar-brand:hover {color: rgb(196, 1, 214);}
 
-.nav-link {
-  font-size: 17px;
-}
+.nav-link {font-size: 17px;}
 
 .checkout::before {
   position: absolute;
@@ -58,9 +54,7 @@ nav {
   transform: scale(.9);
 
 }
-.fa-user:hover::before {
-  transform: scale(1.1);
-}
+.fa-user:hover::before {transform: scale(1.1);}
 
 .fa-user:hover{
   color: #ffee10;
@@ -75,19 +69,11 @@ nav {
   transition-duration: 0.3s;
 }
 
-.nav-link.active {
-  color: rgb(148, 148, 148);
-}
+.nav-link.active {color: rgb(148, 148, 148);}
 
-.nav-link,
-.nav-item {
-  color: white;
-}
+.nav-link,.nav-item {color: white;}
 
-#dropdown-item-logout:hover,#dropdown-item-logout-admin:hover{
-  color: red;
-}
-
+#dropdown-item-logout:hover,#dropdown-item-logout-admin:hover{color: red;}
 
 #dropdown-item-logout-admin,
 .dropdown-toggle,
@@ -96,9 +82,7 @@ nav {
   cursor: pointer;
 }
 
-.dropdown{
-  margin-bottom:18px;
-}
+.dropdown{margin-bottom:18px;}
 
 .dropdown-item:hover {
 background-color: transparent;
@@ -114,9 +98,7 @@ color:white;
   margin-top:25px;
 }
 
-.btn.btn-outline-success:disabled {
-  background-color: rgb(19, 19, 19)
-}
+.btn.btn-outline-success:disabled {background-color: rgb(19, 19, 19)}
 
 .btn.btn-outline-success {
   background-color: rgb(5, 5, 5);
@@ -176,9 +158,7 @@ span {
   margin-left: 185px;
 }
 
-.user-input {
-  margin-right: 140px;
-}
+.user-input {margin-right: 140px;}
 
 
 #register {
@@ -197,7 +177,6 @@ span {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-
   max-height: 0;
   display: block;
   overflow: hidden;
@@ -208,6 +187,7 @@ span {
   max-height: 300px;
   opacity: 1;
 }
+
 
 
 @media (max-width:1800px) {
@@ -221,7 +201,6 @@ span {
     margin-left: 70%;
   }
 }
-
 
 @media (max-width:840px) {
   .checkout {

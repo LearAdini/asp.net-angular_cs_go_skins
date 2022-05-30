@@ -6,5 +6,3 @@ export interface Card {
   cardCVV :      number;
   idNumber :      number;
 }
-
-

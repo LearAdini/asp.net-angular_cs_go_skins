@@ -19,4 +19,5 @@ import { RandomOrderPipe } from '../pipes/random-order.pipe';
     RandomOrderPipe
   ]
 })
+
 export class PipesModule { }

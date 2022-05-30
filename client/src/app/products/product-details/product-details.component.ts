@@ -20,7 +20,6 @@ export class ProductDetailsComponent implements OnInit {
   user: User;
   admin: boolean = false;
 
-
   constructor(
     private route: ActivatedRoute,
     private cartService: CartService,
@@ -29,7 +28,6 @@ export class ProductDetailsComponent implements OnInit {
     private toastr: ToastrService,
     private router: Router
   ) {
-    // this.currentUser$ = this.accountService.currentUser$;
     this.accountService.currentUser$.pipe(take(1)).subscribe(user => {
       this.user = user as User;
     });
@@ -40,25 +38,22 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.getProduct(productIdFromRoute).subscribe(x => {
       this.product = x;
 
-      if (!this.admin) {
-        setTimeout(() => {
-          render({
-            id: "#myPaypalButtons",
-            currency: "USD",
-            value: (this.product!.productPrice - (this.product!.productPrice * this.product!.productSale / 100)).toFixed(2).toString(),
+      setTimeout(() => {
+        render({
+          id: "#myPaypalButtons",
+          currency: "USD",
+          value: (this.product!.productPrice - (this.product!.productPrice * this.product!.productSale / 100)).toFixed(2).toString(),
 
-            onApprove: (details) => {
-              details = this.cartService.getItems();
-              alert('Success');
-            }
-          });
-        }, 500);
-      }
+          onApprove: (details) => {
+            details = this.cartService.getItems();
+            alert('Success');
+          }
+        });
+      });
     });
   }
 
   ngOnInit() {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
     if (this.user.username == 'Admin') {
       this.admin = true;
     }

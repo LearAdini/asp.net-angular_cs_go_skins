@@ -5,10 +5,7 @@ input::-webkit-inner-spin-button {
 }
 
 
-input[type=number] {
-  -moz-appearance: textfield;
-
-}
+input[type=number] {-moz-appearance: textfield;}
 
 h2{
   font-size:110px !important;
@@ -42,16 +39,10 @@ input{
   margin-top:-200px;
 }
 
-.btn-success:hover {
-transform: scale(1.05);
-}
-.form-group{
-  margin-top:5px;
-}
-.invalid-feedback{
- text-align: center;
-}
+.btn-success:hover {transform: scale(1.05);}
 
-.text-danger{
-  text-align: center;
-}
+.form-group{margin-top:5px;}
+
+.invalid-feedback{text-align: center;}
+
+.text-danger{text-align: center;}
