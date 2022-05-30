@@ -1,31 +1,6 @@
 # Final Project CS:GO Skins SPA
-
 This is a <a target="_blank" href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">Counter-strike:Global Offensive</a> skins web store made with Angular framework.
-
-## Instructions
-Register as a new user or login to view all products.
-
-You can filter all products by minimum price to maximum price, and search an item by its name.
-
-As a user you can add as many products that you want to your cart.
-
-You can pay for all items in cart via PayPal payment or by 'checkout'. (בבקשה לבצע בדיקה גם על checkout)
-
-As a user you can edit all your contact info including credit card info in the "My Profile" Tab or delete your credit card.
-
-Password reset will be available only after the user inserted the right code. The random code will be sent to the user email address or scan the QR code to recive the code, only then you would be able to change password.
-
-### ***User***
-
-can make an order, add a credit card, edit personal info, edit credit card info, change password and delete credit card.
-
-### ***Admin*** 
-
-can add a new product, edit any product, delete any product, delete any user, delete any order.
-
-
-
- ### *Technologies Used:*
+### *Technologies Used:*
 
 <table>
 <tbody>
@@ -51,6 +26,30 @@ can add a new product, edit any product, delete any product, delete any user, de
 	</tr>
 </tbody>
 </table>
+
+
+## Instructions
+Register as a new user or login to view all products.
+
+You can filter all products by minimum price to maximum price, and search an item by its name.
+
+As a user you can add as many products that you want to your cart.
+
+You can pay for all items in cart via PayPal payment or by 'checkout'. (בבקשה לבצע בדיקה גם על checkout)
+
+As a user you can edit all your contact info including credit card info in the "My Profile" Tab or delete your credit card.
+
+Password reset will be available only after the user inserted the right code. The random code will be sent to the user email address or scan the QR code to recive the code, only then you would be able to change password.
+
+### ***User***
+
+can make an order, add a credit card, edit personal info, edit credit card info, change password and delete credit card.
+
+### ***Admin*** 
+
+can add a new product, edit any product, delete any product, delete any user, delete any order.
+
+
 
 # Products Page
 
