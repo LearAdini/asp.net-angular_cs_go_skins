@@ -59,7 +59,7 @@ namespace API
             policy
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .WithOrigins("http://localhost:4200"));
+            .WithOrigins("https://csgo-skins-angular-client.herokuapp.com"));
 
             app.UseAuthentication();
             
