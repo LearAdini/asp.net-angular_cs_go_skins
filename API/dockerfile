@@ -9,5 +9,3 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "API.dll"]
-
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet API.dll
