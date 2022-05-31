@@ -29,6 +29,20 @@ This is a <a target="_blank" href="https://store.steampowered.com/app/730/Counte
 
 
 ## Instructions
+
+Make sure you have PostgreSQL and PgAdmin4.
+
+In PgAdmin4 make a new database called preferably csskins (update DefaultConnection if database name is not csskins).
+
+Inside the API folder go to `appsettings.json` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
+
+First if you run the project on vscode you should open two terminals, cd into API and into client.
+
+When in the client folder please run `npm install` to install all projects dependent packages.
+
+After all installed run `ng serve` inside the client folder and now open up the second terminal where API is open and run `dotnet watch run`
+
+#
 Register as a new user or login to view all products.
 
 You can filter all products by minimum price to maximum price, and search an item by its name.
