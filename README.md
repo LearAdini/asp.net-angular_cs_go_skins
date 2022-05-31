@@ -40,7 +40,9 @@ First if you run the project on vscode you should open two terminals, cd into AP
 
 When in the client folder please run `npm install` to install all projects dependent packages.
 
-After all installed run `ng serve` inside the client folder and now open up the second terminal where API is open and run `dotnet watch run`
+After all installed run `ng serve` inside the client folder and now open up the second terminal where API is open and run `dotnet watch run`.
+
+Now you can navigate to `http://localhost:4200`.
 
 #
 Register as a new user or login to view all products.
