@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorsComponent implements OnInit {
 
-  baseURL = "https://csgo-skins-angular.herokuapp.com/api/";
+  baseURL = "https://localhost:5001/api/";
   validationErrors: string[] = [];
 
   constructor(private http: HttpClient) { }
