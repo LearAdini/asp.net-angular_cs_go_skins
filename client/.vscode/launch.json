@@ -7,7 +7,7 @@
       "type": "pwa-chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "https://csgo-skins-angular-client.herokuapp.com"
+      "url": "https://csgo-skins-angular-client.herokuapp.com/"
     },
     {
       "name": "ng test",
