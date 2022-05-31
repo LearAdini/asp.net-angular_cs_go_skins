@@ -1,26 +1,6 @@
 # Final Project CS:GO Skins SPA
-
 This is a <a target="_blank" href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/">Counter-strike:Global Offensive</a> skins web store made with Angular framework.
-
-### Instructions
-
-Register as a new user or login to view all products.
-
-***User*** can make an order, add a credit card, edit personal info, edit credit card info, change password and delete credit card.
-
-***Admin*** can add a new product, edit any product, delete any product, delete any user, delete any order.
-
-You can filter all products by minimum price to maximum price, and search an item by its name.
-
-As a user you can add many product to your cart.
-
-You can pay for all items in cart via PayPal payment or by 'checkout'. (בבקשה לבצע בדיקה גם על checkout)
-
-As a user you can edit all your contact info including credit card info in the "My Profile" Tab or delete your credit card.
-
-Password reset will be available only after the user inserted the right code. The random code will be sent to the user email address or scan the QR code to recive the code, only then you would be able to change password.
-
- ### *Technologies Used:*
+### *Technologies Used:*
 
 <table>
 <tbody>
@@ -46,6 +26,44 @@ Password reset will be available only after the user inserted the right code. Th
 	</tr>
 </tbody>
 </table>
+
+
+## Instructions
+
+Make sure you have PostgreSQL and PgAdmin4.
+
+In PgAdmin4 make a new database called preferably csskins (update DefaultConnection if database name is not csskins).
+
+Inside the API folder go to `appsettings.json` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
+
+First if you run the project on vscode you should open two terminals, cd into API and into client.
+
+When in the client folder please run `npm install` to install all projects dependent packages.
+
+After all installed run `ng serve` inside the client folder and now open up the second terminal where API is open and run `dotnet watch run`
+
+#
+Register as a new user or login to view all products.
+
+You can filter all products by minimum price to maximum price, and search an item by its name.
+
+As a user you can add as many products that you want to your cart.
+
+You can pay for all items in cart via PayPal payment or by 'checkout'. (בבקשה לבצע בדיקה גם על checkout)
+
+As a user you can edit all your contact info including credit card info in the "My Profile" Tab or delete your credit card.
+
+Password reset will be available only after the user inserted the right code. The random code will be sent to the user email address or scan the QR code to recive the code, only then you would be able to change password.
+
+### ***User***
+
+can make an order, add a credit card, edit personal info, edit credit card info, change password and delete credit card.
+
+### ***Admin*** 
+
+can add a new product, edit any product, delete any product, delete any user, delete any order.
+
+
 
 # Products Page
 
@@ -96,15 +114,14 @@ The admin user is allowed to add an new product into Products table in the datab
 
 Can easily edit any product by clicking "Edit Product" and you will be prompted to the admin product edit page.
 
+If you click on a product it will not direct you to the normal product page, it will display the product but with an edit or delete product buttons.
+
 ![fpa0](https://user-images.githubusercontent.com/80118008/168891375-f8898e31-f3e4-4c68-8c64-d3d3276dc6d3.PNG)
 
 ![fpa2](https://user-images.githubusercontent.com/80118008/168891585-71dc8be8-c2f5-4a82-9808-8babe48c5043.PNG)
 
-As an admin if you click on one of the products dispalyed it will not direct you to the normal product page,
-
-it will display the product but with an edit or delete product buttons.
 ![fpa1](https://user-images.githubusercontent.com/80118008/168891735-dcb4905d-5a13-4d82-a7ea-403ad1a6744b.PNG)
 
-Adding a new product
+## Adding a new product
 ![fpa3](https://user-images.githubusercontent.com/80118008/168891798-4de03274-f842-4b5e-86da-c1fbe378f78f.PNG)
 ![fpa4](https://user-images.githubusercontent.com/80118008/168891822-c0f7b96d-74ae-43e2-a1de-6fb14988cabc.PNG)
