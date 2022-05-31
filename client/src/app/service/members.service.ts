@@ -21,11 +21,11 @@ export class MembersService {
     if (member) {
       return of(member);
     }
-    return this.http.get<Member>(`${this.baseUrl}users/${username}`)
+    return this.http.get<Member>(`${this.baseUrl}/users/${username}`)
   }
 
   getMembers(): Observable<Member[]> {
-    return this.http.get<Member[]>(this.baseUrl + 'users').pipe(
+    return this.http.get<Member[]>(this.baseUrl + '/users').pipe(
       tap(members => {
         this.members = members;
       })
@@ -33,15 +33,15 @@ export class MembersService {
   }
 
   updateMember(user: Member) {
-    return this.http.put(`${this.baseUrl}users`, user);
+    return this.http.put(`${this.baseUrl}/users`, user);
   }
 
 
   deleteMember(id: number) {
-    return this.http.delete(`${this.baseUrl}users/${id}`);
+    return this.http.delete(`${this.baseUrl}/users/${id}`);
   }
 
   sendEmail(email: string) {
-    return this.http.post<string>(this.baseUrl +'users/sendmail/', email);
+    return this.http.post<string>(this.baseUrl +'/users/sendmail/', email);
   }
 }

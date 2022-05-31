@@ -23,15 +23,15 @@ export class ProductService {
 
 
   getProducts(){
-    return this.http.get<Product[]>(`${this.baseUrl}products`)
+    return this.http.get<Product[]>(`${this.baseUrl}/products`)
   }
 
   getProduct(id: number) {
-    return this.http.get<Product>(`${this.baseUrl}products/${id}`)
+    return this.http.get<Product>(`${this.baseUrl}/products/${id}`)
   }
 
   updateProduct(product:Product){
-    return this.http.put(`${this.baseUrl}products`, product).pipe(
+    return this.http.put(`${this.baseUrl}/products`, product).pipe(
       tap(_ => {
         const index = this.products.findIndex(x => x.productId === product.productId);
         this.products[index] = product;
@@ -40,7 +40,7 @@ export class ProductService {
   }
 
   addProduct(model: any) {
-    return this.http.post<Product>(`${this.baseUrl}products`, model)
+    return this.http.post<Product>(`${this.baseUrl}/products`, model)
       .pipe(
         map((product: Product) => {
           return product;
@@ -49,15 +49,6 @@ export class ProductService {
   }
 
   deleteProduct(id: number) {
-    return this.http.delete(`${this.baseUrl}products/${id}`);
-  }
-
-  getMarketplace(url: string){
-    let headers = new HttpHeaders();
-      headers.append('Content-Type', 'application/json');
-      headers.append('Accept', 'application/json');
-      // headerss.append('Access-Control-Allow-Origin', '*');
-      headers.append('Access-Control-Allow-Headers', 'Content-Type');
-    return this.http.get(url, { headers });
+    return this.http.delete(`${this.baseUrl}/products/${id}`);
   }
 }

@@ -24,7 +24,7 @@ export class CreditService {
   }
 
   getCard(card: number): Observable<Card> {
-    return this.http.get<Card>(`${this.baseUrl}card/getcard/${card}`)
+    return this.http.get<Card>(`${this.baseUrl}/card/getcard/${card}`)
   }
 
   removeCurrentCard() {
@@ -33,7 +33,7 @@ export class CreditService {
   }
 
   addCreditCard(card: Card) {
-    return this.http.post<Card>(this.baseUrl + 'card/addcard', card)
+    return this.http.post<Card>(this.baseUrl + '/card/addcard', card)
       .pipe(
         map((response: Card) => {
           const credit = response;
@@ -44,7 +44,7 @@ export class CreditService {
   }
 
   updateCard(card: Card) {
-    return this.http.put(`${this.baseUrl}card`, card).pipe(
+    return this.http.put(`${this.baseUrl}/card`, card).pipe(
       tap(_ => {
         const index = this.cards.findIndex(x => x.userId === card.userId);
         this.cards[index] = card;
@@ -53,7 +53,7 @@ export class CreditService {
   }
 
   deleteCard(id: number) {
-    return this.http.delete(`${this.baseUrl}card/${id}`);
+    return this.http.delete(`${this.baseUrl}/card/${id}`);
   }
 
 }
