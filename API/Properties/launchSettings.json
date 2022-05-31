@@ -22,7 +22,7 @@
       "dotnetRunMessages": "true",
       "launchBrowser": false,
       "launchUrl": "api",
-      "applicationUrl": "https://localhost:5001",
+      "applicationUrl": "https://csgo-skins-angular.herokuapp.com",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
