@@ -10,4 +10,4 @@ WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "API.dll"]
 
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet HerokuApp.dll
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet API.dll
