@@ -14,10 +14,7 @@ export class CartService {
   private currentItems$ = new ReplaySubject<Product | null>(100);
   currentItem$ = this.currentItems$.asObservable();
 
-  constructor()
-  {
-
-   }
+  constructor(){}
 
   addToCart(product: Product) {
     this.setCurrentItems(product);
@@ -53,7 +50,6 @@ export class CartService {
     Object.values(this.items).forEach(val => {
       localStorage.getItem(val.productName);
       console.log(val.productName);
-      // this.items.push(val);
     });
 
   }

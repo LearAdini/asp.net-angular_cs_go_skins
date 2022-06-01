@@ -1,4 +1,4 @@
-import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { Injectable } from '@angular/core';
 
 @Injectable({

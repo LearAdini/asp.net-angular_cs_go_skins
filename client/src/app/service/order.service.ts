@@ -13,18 +13,18 @@ export class OrderService {
   constructor(private http: HttpClient) { }
 
   addOrder(order: any) {
-    return this.http.post<any>(this.baseUrl + '/order/addorder/', order);
+    return this.http.post<any>(this.baseUrl + 'order/addorder/', order);
   }
 
   deleteOrder(orderId: number) {
-    return this.http.delete(`${this.baseUrl}/order/deleteorder/${orderId}`);
+    return this.http.delete(`${this.baseUrl}order/deleteorder/${orderId}`);
   }
 
   getOrders() {
-    return this.http.get<Order[]>(this.baseUrl + `/order/getorders`);
+    return this.http.get<Order[]>(this.baseUrl + `order/getorders`);
   }
 
   getAllOrders(){
-    return this.http.get<Order[]>(this.baseUrl + `/order/getallorders`);
+    return this.http.get<Order[]>(this.baseUrl + `order/getallorders`);
   }
 }
