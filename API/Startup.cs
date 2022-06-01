@@ -59,7 +59,7 @@ namespace API
             policy
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .WithOrigins("https://localhost:4200"));
+            .WithOrigins("http://localhost:4200"));
 
             app.UseAuthentication();
             
