@@ -17,6 +17,7 @@
   text-decoration: underline;
   display:inline;
   font: bold 100% "Lucida Sans Unicode",sans-serif;
+  margin:0;
 }
 
 .checkout{
@@ -110,20 +111,20 @@ margin:5px;
   font-family: 'Fredoka', sans-serif;
 }
 
-.field-container input {
+/* .field-container input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align:right;
   color:black;
   font-family: 'Fredoka', sans-serif;
-}
-
+} */
+/*
 .field-container label {
   color:black;
   font-size: 18px;
   float:left;
   font-family: 'Fredoka', sans-serif;
-}
+} */
 
 .field-container {
   position: relative;
@@ -133,8 +134,7 @@ label {
   text-align: center;
   font-size: 13px;
   margin-top: 15px;
-  width:170px;
-  margin-left:15%;
+
 }
 
 input {
@@ -151,11 +151,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input{
-	box-shadow: none !important;
-  flex-grow:2;
-  cursor:default;
-}
 
 #passw{
   background-color:transparent;

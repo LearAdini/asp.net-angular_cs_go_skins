@@ -1,0 +1,317 @@
+
+    [
+        {
+            "Id": 1,
+            "ProductName": "AK 47 Neon Revolution",
+            "ProductPrice": 100,
+            "ProductDescription":"AK-47 | Neon Revolution was added to the game on August 18, 2016, as part of The Gamma 2 Collection, which was released alongside the “Double Exposure” update. The skin was created by Coridium and Gamersbook.",
+            "ImageUrl":"https://cs.money/img/main/slider-items/cs/5.png",
+            "ProductSale":52
+          },
+          {
+            "Id": 2,
+            "ProductName": "USP-S Kill Confirmed",
+            "ProductPrice": 38,
+            "ProductDescription": "USP-S | Kill Confirmed was added to the game on September 17, 2015, as part of The Shadow Collection, which was released alongside the “Shadow Boxing” update. The skin was created by Tuna Melt.",
+            "ImageUrl": "https://cs.money/img/main/slider-items/cs/11.png",
+            "ProductSale":67
+          },
+          {
+        
+            "Id":3,
+            "ProductName": "AK 47 Neon RIder",
+            "ProductPrice": 149,
+            "ProductDescription": "AK-47 | Neon Rider was added to the game on August 2, 2018, as part of The Horizon Collection, which was released alongside “A New Horizon” update. The skin was created by Puffin (•⌔• ), SIR, and Medic!",
+            "ImageUrl": "https://cs.money/img/main/slider-items/cs/3.png",
+            "ProductSale": 45
+          },
+          {
+            "Id":4,
+            "ProductName": "M4A4 Asiimov",
+            "ProductPrice": 320,
+            "ProductDescription":"M4A4 | Asiimov was added to the game on December 18, 2013, as part of The Winter Offensive Collection, which was released alongside the “Winter Offensive” update. The skin was created by Coridium.",
+            "ImageUrl":"https://cs.money/img/main/slider-items/cs/15.png",
+            "ProductSale":66
+          },
+          {
+            "Id":5,
+            "ProductName": "AK 47 Redline",
+            "ProductPrice": 25,
+            "ProductDescription":"AK-47 | Redline was added to the game on February 20, 2014, as part of The Phoenix Collection, which was released alongside the start of Operation Phoenix. The skin was created by EmKay.",
+            "ImageUrl": "https://cs.money/img/main/slider-items/cs/1.png",
+            "ProductSale":55
+          },
+          {
+            "Id":6,
+            "ProductName": "MAC-10 Last Dive",
+            "ProductPrice": 45,
+            "ProductDescription":"MAC-10 | Last Dive was added to the game on March 15, 2017, as part of The Spectrum Collection, which was released alongside the “Take a trip to the Canals” update. The skin was created by mara_der.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0vL3fDxBvYyJgIiOqPv1IK_ukmJH7fp9g-7J4bP5iUazrl04Y2nwLdedcQU2ZQmDqAS8x7jmhpW775WYwXE2siF043vcn0ew1UtFcKUx0lwt2tGi/360fx360f.png",
+            "ProductSale":38
+          },
+          {
+            "Id":7,
+            "ProductName": "AK 47 Bloodsport",
+            "ProductPrice": 150,
+            "ProductDescription":"AK-47 | Bloodsport was added to the game on March 15, 2017, as part of The Spectrum Collection, which was released alongside the “Take a trip to the Canals” update. The skin was created by SLIMEface.",
+            "ImageUrl": "https://cs.money/img/main/slider-items/cs/9.png",
+            "ProductSale":47
+          },
+          {
+            "Id":8,
+            "ProductName": "AWP Asiimov",
+            "ProductPrice": 550,
+            "ProductDescription":"AWP | Asiimov was added to the game on February 20, 2014, as part of The Phoenix Collection, which was released alongside the start of Operation Phoenix. The skin was created by Coridium.",
+            "ImageUrl": "https://cs.money/img/main/slider-items/cs/10.png",
+            "ProductSale":17
+          },
+          {
+            "Id":9,
+            "ProductName": "AK 47 Asiimov",
+            "ProductPrice": 45,
+            "ProductDescription":"With its stylish, compact design and generous capacity, the Cruzer Blade USB Flash Drive makes it easy to back up, transfer, and share your files.",
+            "ImageUrl": "https://cs.money/img/main/slider-items/cs/2.png",
+            "ProductSale":44
+          },
+          {
+            "Id":10,
+            "ProductName": "AWP Neo-Noir",
+            "ProductPrice": 24,
+            "ProductDescription":"AWP | Neo-Noir was added to the game on December 7, 2018, as part of The Danger Zone Collection, which was released along side the “Welcome to the Danger Zone” update. The skin was created by donschi and Blazer.",
+            "ImageUrl": "https://cs.money/img/main/slider-items/cs/8.png",
+            "ProductSale":53
+          },
+          {
+            "Id":11,
+            "ProductName": "Butterfly Knife Doppler Sapphire",
+            "ProductPrice": 37000,
+            "ProductDescription":"The blade of the knife is painted with metallic paints and adorned with a pattern of translucent wavy lines resembling smoke. The color scheme of the skin includes various shades of blue creating gradient transitions. The design of the skin resembles the texture of the sapphire. The handle is unpainted and complemented with dark blue inserts.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq4GGqOT1I6vZn3lU18hwmOvN8IXvjVCLqSwwOj6rYJiRdg42NAuE-lW5kri5hpbuvM7AzHtmsnMh4imPzUa3gB4aaOw9hfCeVxzAUJ5TOTzr",
+            "ProductSale":10
+          },
+          {
+            "Id":12,
+            "ProductName": "MP5-SD Autumn Twilly",
+            "ProductPrice": 35,
+            "ProductDescription":"MP5-SD | Autumn Twilly was added to the game on September 22, 2021, as part of The 2021 Train Collection, which was released alongside the start of Operation Riptide.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6rwOANf2-r3ZS9D5dK3hoODnuPxMK_ummJW4NFOhujT8om70Va18xA-amzzIdCVIAA5NF7Q8lG7wb26gMftv53OnHFh7nFwtyrcygv3308CfVhDYA/360fx360f.png",
+            "ProductSale":70
+          },
+          {
+            "Id":13,
+            "ProductName": "CZ75-Auto Eco StatTrack",
+            "ProductPrice": 65,
+            "ProductDescription":"CZ75-Auto | Eco was added to the game on August 3, 2018, as part of The Horizon Collection, which was released alongside “A New Horizon” update. The skin was created by LoveCroissant.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotaDyfgZf0Ob3cicVueOzl4-0m_7zO6_ummpD78A_27DA9Nv30QXgqhBrYmD1LNOScVdtZVCC-1C8k-e5gcW0vZzPmnVlvT5iuygukIAtmQ/360fx360f.png",
+            "ProductSale":44
+          },
+          {
+            "Id":14,
+            "ProductName": "Glock-18 Sacrifice",
+            "ProductPrice": 26,
+            "ProductDescription":"Glock-18 | Sacrifice was added to the game on October 18, 2019, as part of The CS20 Collection, which was released alongside the “Cache and Release” update. The skin was created by MultiH and S1lent.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJnIWZmMj4OrzZglRd6dd2j6eW99zz3Q3j_hBrNmmhdYXGJwc4aFyD_la3xOvthZe0uMuazHQwuSYl-z-DyKtTZWhf/360fx360f.png",
+            "ProductSale":58
+          },
+          {
+            "Id":15,
+            "ProductName": "Sawed-Off Amber Fade",
+            "ProductPrice": 205,
+            "ProductDescription":"Sawed-Off | Amber Fade was added to the game on November 27, 2013, as part of The Train Collection, which was released alongside the “Out with the old, in with the new” update.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbuyLgNv1fX3cDx96t2ykb-GkuP1P7fYlVRd4cJ5ntbN9J7yjRq1qkRoYmHxJICcdwVrNVyC_Va-xrq718W0uZSbm3M26Cdws3mOlkTln1gSOcynOW1P/360fx360f.png",
+            "ProductSale":46
+          },
+          {
+            "Id":16,
+            "ProductName": "Karambit Crimson Web",
+            "ProductPrice": 7500,
+            "ProductDescription":"Karambit | Crimson Web (Kara CW) was added to the game on August 14, 2013, alongside The Arms Deal update. The skin is available in 11 cases released in 2013-2015.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJnJm0gPL2IITck29Y_chOhujT8om7iwLn_Ec4NWrwdoDDIFNtZlHT-QW6xOzmgZ_t6pTNznUyvnQg7Crclwv330__CL9_dg/360fx360f.png",
+            "ProductSale":33
+          },
+          {
+            "Id":17,
+            "ProductName": "Specialist Gloves Field Agent",
+            "ProductPrice": 1500,
+            "ProductDescription":"Specialist Gloves | Field Agent were added to the game on December 3, 2020. The gloves are available in the Operation Broken Fang Case.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDL3Tn1Rc7cF4n-T--Y3nj1H68kY_ZG-gcNWRcg89NwrXq1nvweq6gJLqtZqamHJgvyggsyrdzRCwhAYMMLJ0FRJxuw/360fx360f.png",
+            "ProductSale":42
+          },
+          {
+            "Id":18,
+            "ProductName": "AK 47 The Empress",
+            "ProductPrice": 796,
+            "ProductDescription":"AK-47 | The Empress was added to the game on September 14, 2017, as part of The Spectrum 2 Collection, which was released along side the “China, are you ready?” update. The skin was created by OniLolz, Zaphk, and 2Minds.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV09m7hJKOhOTLP7LWnn8f7p0gjrnDpdvxi1Xn80JqYGygLI_DdQJsMgyC_AO4xb_p0ce66ZXImmwj5Hei5N5mVw",
+            "ProductSale":38
+          },
+          {
+            "Id":19,
+            "ProductName": "Bayonet Doppler Ruby",
+            "ProductPrice": 8000,
+            "ProductDescription":"The blade of the knife is painted with metallic paints and adorned with a pattern of translucent wavy lines resembling smoke. The color scheme of the skin includes various shades of red creating gradient transitions. The design of the skin resembles the texture of the ruby. The guard and the handle remain unpainted.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLu8JAllx8zJfAJQ-d6vq42KhfX4NrLLk29u5Mx2gv2P9o6njA3mrxVrNm2iItXAdAY7ZFuEq1e2wri-gsTousjBn3Nqs3Fw5GGdwUIbpPL9uQ",
+            "ProductSale":28
+          },
+          {
+            "Id":20,
+            "ProductName": "M4A1-S Player Two",
+            "ProductPrice": 529,
+            "ProductDescription":"M4A1-S | Player Two was added to the game on March 31, 2020, as part of The Prisma 2 Collection, which was released along side the “Clearing Out the Cobwebs” update. The skin was created by kadzor.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITShWxeupUl0tbN_Iv9nGu4qgE7Nnf1IYWUcAQ7MgnS-FW6wOi705Lo75uYmHNh6SZ3tiqMmh210xkZb-Rvm7XAHs3vPuvv",
+            "ProductSale":25
+          },
+          {
+            "Id":21,
+            "ProductName": "Glock-18 Bullet Queen",
+            "ProductPrice": 250,
+            "ProductDescription":"Glock-18 | Bullet Queen was added to the game on March 31, 2020, as part of The Prisma 2 Collection, which was released along side the Clearing Out the Cobwebs update. The skin was created by 2Minds.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79fnzL-cluX5MrLVk2Vu5Mx2gv3--Y3nj1H6r0plMm-lcNSRIQc6Z1GE-1e6wObt1JG46cmbmHo37yAn4HjfmUTmhAYMMLKVxXRrDQ",
+            "ProductSale":38
+          },
+          {
+            "Id":22,
+            "ProductName": "Specialist Gloves Marble Fade",
+            "ProductPrice": 12000,
+            "ProductDescription":"Specialist Gloves | Marble Fade were added to the game on December 3, 2020. The gloves are available in the Operation Broken Fang Case.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAQ1h3LAVbv6mxFABs3OXNYgJR_Nm1nYGHnuTgDLbQhGld7fp3i-3EyoD8j1yglB89IT6mOoWSJ1Q_ZVvT_ATrlbi6g8O_uJuazXRiuSR25HeIzh2w1E0db7c7haOACQLJVTTvRq8",
+            "ProductSale":10
+          },
+          {
+            "Id":23,
+            "ProductName": "M4A4 Howl",
+            "ProductPrice": 9600,
+            "ProductDescription":"M4A4 | Howl was added to the game on May 1, 2014, as part of The Huntsman Collection, which was released alongside the “Hunt Begins” update.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwT09S5g4yCmfDLP7LWnn8f65Mli7DH9tXziQTgqUY4YmmnINSUJwQ-YVnT_wS7yOzngMW07ZrOmmwj5HeObpQQtA",
+            "ProductSale":25
+          },
+          {
+            "Id":24,
+            "ProductName": "AUG Akihabara",
+            "ProductPrice": 8500,
+            "ProductDescription":"AUG | Akihabara was added to the game on May 26, 2015, as part of The Rising Sun Collection, which was released alongside the start of Operation Bloodhound.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLGeDBH092jk7-HnvD8J_XXxj8IuJIkib-VoNSi2VGx_UQ-Yzv3I4SQcVA7aAvS_FC6wru51pK1ot2XnmtK7ev7",
+            "ProductSale":14
+          },
+          {
+            "Id":25,
+            "ProductName": "AWP Gungnir",
+            "ProductPrice": 13200,
+            "ProductDescription":"AWP | Gungnir was added to the game on November 18, 2019, as part of The Norse Collection, which was released alongside the start of Operation Shattered Web.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABz7PLfYQJF-dKxmomZqPv9NLPFqWdQ-sJ0xO-ZpY-n0AHt_0M6ZGygd9eQegE9YAzYrwDqx7y7jcTpvc7IwSdgsnI8pSGKcZwC8Qk",
+            "ProductSale":5
+          },
+          {
+            "Id":26,
+            "ProductName": "Glock-18 Moonrise",
+            "ProductPrice": 7,
+            "ProductDescription":"Glock-18 | Moonrise was added to the game on February 15, 2018, as part of The Clutch Collection, which was released alongside the “Welcome to the Clutch” update. The skin was created by Mals1 and MGBazz.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0vL3djFN79eJxdi0guX2MrXum2Re5vp3j__E57P5gVO8v109Y2vxI9Cdc1M6ZQyCq1e2kLy90JO1ucnNy3U3vCJ07CnUn0HmiBEYcKUx0m01ug-1",
+            "ProductSale":40
+          },
+          {
+            "Id":27,
+            "ProductName": "MP9 Wild Lily",
+            "ProductPrice": 980,
+            "ProductDescription":"MP9 | Wild Lily was added to the game on November 18, 2019, as part of The St. Marc Collection, which was released alongside the start of Operation Shattered Web.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FAR17P7YKAJL_9C3moS0kfv7IbrdqWdY781lteXA54vwxlDsrUVvYG2iJo-Vd1Q_ZV6ErlO_wem6gJ--vJvBmyYxuSMhs3vUzEGpwUYbWcvqfhg",
+            "ProductSale":25
+          },
+          {
+            "Id":28,
+            "ProductName": "M4A1-S Blue Phosphor",
+            "ProductPrice": 456,
+            "ProductDescription":"M4A1-S | Blue Phosphor was added to the game on December 3, 2020, as part of The Control Collection, which was released alongside the start of Operation Broken Fang.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO3mb-Gw_alIITTmn5U-8h-gez--YXygECLpxIuNDztJobGcQ9tNV7Z_1m5kri60ZC1tcvInHM26HIi4CnZy0awgh0ZbuM7g-veFwtFvUBonA",
+            "ProductSale":13
+          },
+          {
+            "Id":29,
+            "ProductName": "AK 47 Case Hardened",
+            "ProductPrice": 565,
+            "ProductDescription":"AK-47 | Case Hardened was added to the game on August 13, 2013, as part of The Arms Deal Collection, which was released alongside “The Arms Deal” update.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhhwszHeDFH6OO6nYeDg7mtYbiJkjoDvcAlj7yVotmtjAfjrkpoZW36IoaWclM3MFnY8lK9k-vnm9bi67lSw9Es",
+            "ProductSale":15
+          },
+          {
+            "Id":30,
+            "ProductName": "P250 See Ya Later",
+            "ProductPrice": 37,
+            "ProductDescription":"P250 | See Ya Later was added to the game on September 14, 2017, as part of The Spectrum 2 Collection, which was released alongside the “China, are you ready?” update. The skin was created by ClegFX, wewantrox, and dannytrejo4.0.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhjxszYI2gS09-vloWZlOX7MITdn2xZ_Isi07_F8N3x3Qfj8kQ6a2H0IdKXdgRqYA2C-VLqxLznhMLv6Z-bm3o2pGB8sr9Yt3dq",
+            "ProductSale":5
+          },
+          {
+            "Id":31,
+            "ProductName": "Driver Gloves Imperial Plaid",
+            "ProductPrice": 2611,
+            "ProductDescription":"Driver Gloves | Imperial Plaid were added to the game on February 15, 2018. The gloves are available in The Clutch Case.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DAX1R3LjtQurWzLhRfwP_BcjZ9_NC3nYS0h-LmI7fUqWdY781lxLmSpNn33wKwqhU6MWHwLdOVcVc3NF3U-QXtwbrr1JXt7sjOyHRquCI8pSGK0RswUoI",
+            "ProductSale":17
+          },
+          {
+            "Id":32,
+            "ProductName": "Desert Eagle Fennec Fox",
+            "ProductPrice": 288,
+            "ProductDescription":"Desert Eagle | Fennec Fox was added to the game on September 22, 2021, as part of The 2021 Mirage Collection, which was released alongside the start of Operation Riptide. The skin was created by 2minds studio.",
+            "ImageUrl": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PTbTjlH7du6kb-Nkvn6NrjummJW4NFOhujT8om70QawqRc9ZGqmcNXGdFNsZ1jS-Ae_l-7tgZ7v7pzAyXRg7icj5XiMzgv3308Gn6NOEA",
+            "ProductSale":33
+          },
+          {
+            "Id":33,
+            "ProductName": "AWP Lightning Strike",
+            "ProductPrice": 859,
+            "ProductDescription":"AWP | Lightning Strike was added to the game on August 14, 2013, as part of The Arms Deal Collection, which was released alongside “The Arms Deal” update.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAZt7P_BdjVW4tW4k7-KgOfLP7LWnn8fu5In27GYod2l21Gx-xU5MGDzddCRdw83Y1DW-VS3wu291JS76Z7PnWwj5Hc0AjJzVA",
+            "ProductSale":20
+          },
+          {
+            "Id":34,
+            "ProductName": "Tec-9 Decimator",
+            "ProductPrice": 91,
+            "ProductDescription":"Tec-9 | Decimator was added to the game on November 18, 2019, as part of The Shattered Web Collection, which was released alongside the start of Operation Shattered Web.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhnwMzcdD4b09izl4mGluP7IYTdn2xZ_Pp9i_vG8MLz3Aft-xFuZm7yLdKXcVVvZVjR_FDrwufm1pXtuM_AmCM2vSAg43zVgVXp1l50fGvJ",
+            "ProductSale":17
+          },
+          {
+            "Id":35,
+            "ProductName": "MAC-10 Neon Rider",
+            "ProductPrice": 234,
+            "ProductDescription":"MAC-10 | Neon Rider was added to the game on April 15, 2015, as part of The Chroma 2 Collection, which was released alongside the “Chromatic Scale” update. The skin was created by Helenek and Puffin (•⌔• ).",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJmoWEmeX9N77DqWdY781lxOyQrIjw2ATmrkQ_YT2lcYbEcAJsNQqD_1fol7jnjJbp75nMmHI3vHI8pSGKtEQei0M",
+            "ProductSale":55
+          },
+          {
+            "Id":36,
+            "ProductName": "XM1014 Bone Machine",
+            "ProductPrice": 27,
+            "ProductDescription":"XM1014 | Bone Machine was added to the game on August 8, 2014, as a part of The Cache Collection, which was released alongside the “Cologne 2014” update.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07PLFTjNX79CzlZK0hPzhP7fCx1RJ5ZQh273--YXygED6_EJqNmHxLYDGcgFqYg3WrlTtyLjq05S8up3Mmntluihwty3al0bmgAYMMLKwoJ4rnA",
+            "ProductSale":8
+          },
+          {
+            "Id":37,
+            "ProductName": "FAMAS Valence",
+            "ProductPrice": 16,
+            "ProductDescription":"FAMAS | Valence was added to the game on February 17, 2016, as part of The Wildfire Collection, which was released alongside the start of Operation Wildfire. The skin was created by Coridium.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0uL3dzxP7c-Jl4-Fg_jhIYTdn2xZ_Isn3-2UpNn0igfgqkU6ZmmgLNeQcA84M13W-AC2wLq-gZS6up6bwXNqpGB8soOdR92B",
+            "ProductSale":13
+          },
+          {
+            "Id":38,
+            "ProductName": "P90 Cold Blooded",
+            "ProductPrice": 89,
+            "ProductDescription":"P90 | Cold Blooded was added to the game on November 8, 2013, as part of The Arms Deal 2 Collection, which was released alongside “The Arms Deal 2” update.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopuP1FAZt7ODEeClK6c6JhNnbqPv9NLPF2D4Ju8Qo2uqXo9Sg0Fey-xA_YWnxIYXBcFA6MFiCr1C_x-a61MLu78zXiSw00t3nOkI",
+            "ProductSale":31
+          },
+          {
+            "Id":39,
+            "ProductName": "UMP-45 Primal Saber",
+            "ProductPrice": 36,
+            "ProductDescription":"UMP-45 | Primal Saber was added to the game on April 27, 2016, as part of The Chroma 3 Collection, which was released alongside the “Trichromacy” update. The skin was created by Gamersbook, ClegFX and wewantrox.",
+            "ImageUrl": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo7e1f1Jf0Ob3ZDBSuImJhJKCmvb4ILrTk3lu5Mx2gv2Po9v3jVLt-hJoYG7wINKTdwI7YF6G_FTtxeznjZG9vc_LzHU3uCAm7GGdwUIwVIf-Gg",
+            "ProductSale":22
+          }
+
+    ]

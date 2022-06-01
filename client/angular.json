@@ -76,10 +76,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "client:build:production"
+              "browserTarget": "client:build:production",
+              "sslKey":"./ssl/server.key",
+              "sslCert":"./ssl/server.crt",
+              "ssl": true
             },
             "development": {
-              "browserTarget": "client:build:development"
+              "browserTarget": "client:build:development",
+              "sslKey":"./ssl/server.key",
+              "sslCert":"./ssl/server.crt",
+              "ssl": true
             }
           },
           "defaultConfiguration": "development"

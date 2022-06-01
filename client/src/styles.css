@@ -20,11 +20,13 @@ body{
 }
 
 .form-control{
-  color:rgb(187, 187, 187) !important;
+  color:rgb(176, 176, 176) !important;
   box-shadow: 0px 2px rgba(0, 0, 0, 0.267) !important;
+  box-shadow: none !important;
   background-color: rgba(29, 29, 29, 0.599) !important;
 }
-.form-control:focus{
+
+.form-control:focus,input:focus{
   box-shadow: none !important;
   background-color: rgba(29, 29, 29, 0.599) !important;
   color:rgb(255, 187, 0) !important;
@@ -32,5 +34,18 @@ body{
 
 .dropdown-item:focus{
   background-color: transparent  !important;
+}
+
+::placeholder {
+  color:rgb(176, 176, 176) !important;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color:rgb(176, 176, 176) !important;
+}
+
+::-ms-input-placeholder {
+  color:rgb(176, 176, 176) !important;
 }
 

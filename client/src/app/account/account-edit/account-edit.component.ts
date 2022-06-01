@@ -77,29 +77,17 @@ export class AccountEditComponent implements OnInit {
     });
   }
 
-  passFunc(){
-    if (this.passBtn.nativeElement.style.display === "none") {
-      this.passBtn.nativeElement.style.display = "block";
-      this.passBtn.nativeElement.style = "margin:0";
-    } else {
-      this.passBtn.nativeElement.style.display = "none";
-    }
-  }
 
   editFunc() {
     this.edit = !this.edit;
     this.editCard = false;
-    this.completeReset = false
-    this.resetPassword = false;
-    this.passFunc();
+    this.completeReset = false;
   }
 
   editCardFunc() {
     this.editCard = !this.editCard;
     this.edit = false;
-    this.resetPassword = false;
-    this.completeReset = false
-    this.passFunc();
+    this.completeReset = false;
   }
 
   editPassword() {
@@ -145,6 +133,7 @@ export class AccountEditComponent implements OnInit {
       this.completeReset = true;
     }
   }
+
 
   updatePassword() {
     if (this.pass.nativeElement.value != this.checkPass.nativeElement.value) {

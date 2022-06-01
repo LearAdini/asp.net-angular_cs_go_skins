@@ -314,3 +314,10 @@ C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5
 C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\CloudinaryDotNet.dll
 C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\Microsoft.Extensions.WebEncoders.dll
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\out\web.config
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\out\API.deps.json
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\out\API.runtimeconfig.json
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\out\appsettings.Development.json
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\out\appsettings.json
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\out\Data\ProductSeedData.json
+C:\Users\User\Documents\GitHub\New folder (4)\DropShippingSPA\API\bin\Debug\net5.0\out\Data\UserSeedData.json
