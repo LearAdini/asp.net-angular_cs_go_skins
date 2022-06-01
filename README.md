@@ -32,15 +32,17 @@ This is a <a target="_blank" href="https://store.steampowered.com/app/730/Counte
 
 Make sure you have PostgreSQL and PgAdmin4.
 
-In PgAdmin4 make a new database called preferably csskins (update DefaultConnection if database name is not csskins).
+In PgAdmin4 make a new database called preferably csskins. 
 
-Inside the API folder go to `appsettings.json` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
+Inside the API folder Update DefaultConnection in `appsettings.json.Development` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
 
-First if you run the project on vscode you should open two terminals, cd into API and into client.
+First you should open two terminals, cd into API on the first and into client on the second.
 
 When in the client folder please run `npm install` to install all projects dependent packages.
 
-After all installed run `ng serve` inside the client folder and now open up the second terminal where API is open and run `dotnet watch run`.
+After all packages installed run `ng serve` inside the client folder,
+
+and now open up the second terminal where API is open and run `dotnet watch run`.
 
 Now you can navigate to `http://localhost:4200`.
 
@@ -64,8 +66,6 @@ can make an order, add a credit card, edit personal info, edit credit card info,
 ### ***Admin*** 
 
 can add a new product, edit any product, delete any product, delete any user, delete any order.
-
-
 
 # Products Page
 
