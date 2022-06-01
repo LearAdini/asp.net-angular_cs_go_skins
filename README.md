@@ -36,11 +36,13 @@ In PgAdmin4 make a new database called preferably csskins.
 
 Inside the API folder Update DefaultConnection in `appsettings.json.Development` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
 
-First if you should open two terminals, cd into API on the first and into client on the second.
+First you should open two terminals, cd into API on the first and into client on the second.
 
 When in the client folder please run `npm install` to install all projects dependent packages.
 
-After all packages installed run `ng serve` inside the client folder, and now open up the second terminal where API is open and run `dotnet watch run`.
+After all packages installed run `ng serve` inside the client folder,
+
+and now open up the second terminal where API is open and run `dotnet watch run`.
 
 Now you can navigate to `http://localhost:4200`.
 
