@@ -34,7 +34,7 @@ Make sure you have PostgreSQL and PgAdmin4.
 
 In PgAdmin4 make a new database called preferably csskins. 
 
-Inside the API folder Update DefaultConnection in `appsettings.json` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
+Inside the API folder Update DefaultConnection in `appsettings.Development.json` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
 
 First you should open two terminals, cd into API on the first and into client on the second.
 
