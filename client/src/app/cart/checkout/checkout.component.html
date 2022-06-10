@@ -63,33 +63,33 @@
 
         <div class="form-container">
           <div class="field-container">
-            <label for="fullName">Full Name:</label>
+            <label for="fullName">Full Name:</label><br>
             <input class='req' id="fullName" maxlength="50" type="text" formControlName="fullName"
               onkeyup="enableSubmit()" required>
           </div>
 
           <div class="field-container">
-            <label for="cardNumber">Card Number:</label>
+            <label for="cardNumber">Card Number:</label><br>
             <input class='req' #iban id="cardNumber" type="number" formControlName="cardNumber" oninput="javascript: if (this.value.length > this.maxLength)
           this.value = this.value.slice(0, this.maxLength);" minlength="1" maxlength="16" onkeyup="enableSubmit()"
               required>
           </div>
 
           <div class="field-container">
-            <label for="cardDate">Valid (mm/yy):</label>
+            <label for="cardDate">Valid (mm/yy):</label><br>
             <input #cardDate class='req' id="cardDate" type="text" formControlName="cardDate" placeholder="/"
               minlength="5" maxlength="5" oninput="getKeyPress()" onkeyup="enableSubmit()" required>
           </div>
 
           <div class="field-container">
-            <label for="cardCVV">CVV:</label>
+            <label for="cardCVV">CVV:</label><br>
             <input class='req' id="cardCVV"  type="number" formControlName="cardCVV" oninput="javascript: if (this.value.length > this.maxLength)
         this.value = this.value.slice(0, this.maxLength);" minlength="3" maxlength="3" onkeyup="enableSubmit()" (focus)="ngxPaymentCard.flip(false)"
               required>
           </div>
 
           <div class="field-container">
-            <label for="idNumber">Id Number:</label>
+            <label for="idNumber">Id Number:</label><br>
             <input class='req' id="idNumber" formControlName="idNumber" type="number" oninput="javascript: if (this.value.length > this.maxLength)
         this.value = this.value.slice(0, this.maxLength);" maxlength="9" onkeyup="enableSubmit()" (focus)="ngxPaymentCard.flip(true)" required>
           </div>

@@ -138,10 +138,10 @@ label {
 }
 
 input {
-  margin-top: 3px;
+  margin-top: 5px;
   padding: 15px;
-  margin-right:35%;
   border-radius: 3px;
+  padding-right: 15px;
   border: 1px solid #dcdcdc;
 }
 

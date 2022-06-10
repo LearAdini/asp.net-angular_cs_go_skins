@@ -26,7 +26,7 @@ body{
   background-color: rgba(29, 29, 29, 0.599) !important;
 }
 
-.form-control:focus,input:focus{
+.form-control:focus{
   box-shadow: none !important;
   background-color: rgba(29, 29, 29, 0.599) !important;
   color:rgb(255, 187, 0) !important;
