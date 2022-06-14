@@ -46,7 +46,7 @@ namespace API.Controllers
             {
                 return NotFound();
             }
-            product.ProductId = productEntity.ProductId;
+            // product.ProductId = productEntity.ProductId;
             product.ProductName = productEntity.ProductName;
             product.ProductPrice = productEntity.ProductPrice;
             product.ProductSale = productEntity.ProductSale;
