@@ -30,24 +30,41 @@ This is a <a target="_blank" href="https://store.steampowered.com/app/730/Counte
 
 ## Instructions
 
-Make sure you have PostgreSQL and PgAdmin4.
+1) Make sure you have PostgreSQL and PgAdmin4.
 
-In PgAdmin4 make a new database called preferably csskins. 
+   In PgAdmin4 make a new database called preferably csskins. 
 
-Inside the API folder Update DefaultConnection in `appsettings.Development.json` and change the postgreSQL username and password accordingly to your postgreSQL credentials.
+2) Inside the `API` folder Update DefaultConnection in `appsettings.Development.json` and **change the postgreSQL username and password accordingly to your postgreSQL credentials !**.
 
 
-First you should open two terminals, cd into API on the first and into client on the second.
+3) Open two terminals, cd into API on the first terminal and cd client on the second.
 
-When in the client folder please run `npm install` to install all projects dependent packages.
+4) In the API folder run `dotnet watch run` and wait for the build to seed all information to pg.
 
-After all packages installed run `ng serve` inside the client folder,
+5) In the client folder please run `npm install` to install all projects dependent packages.
 
-and now open up the second terminal where API is open and run `dotnet watch run` (Products & Users will be seeded into the database after).
+6) After all packages are installed run `ng serve` inside the client folder,
 
-Now you can navigate to `http://localhost:4200`.
+7) Navigate to `http://localhost:4200`.
 
-#
+## In Case Of Error:
+
+![error](https://user-images.githubusercontent.com/80118008/178095875-413bf8a3-5de4-44e7-984f-80f92f8aae9f.png)
+
+
+
+***If you tried to login and you received the error: `ERR_CERT_AUTHORITY_INVALID`, Please follow this steps:***
+
+1) Navigate to: `https://localhost:5001/swagger`.
+
+2) Click on "Advanced" and then click on Procced to localhost (unsafe).
+
+![error2](https://user-images.githubusercontent.com/80118008/178095934-53b43717-8b48-46aa-8d46-db0f191f95ff.png)
+
+
+3) Now you can go back to the project's page and login.
+
+## Details
 Register as a new user or login to view all products.
 
 You can filter all products by minimum price to maximum price, and search an item by its name.
