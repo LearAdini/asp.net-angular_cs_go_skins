@@ -48,9 +48,9 @@ namespace API
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseKestrel();
-                    webBuilder.UseUrls();
-                    webBuilder.UseIISIntegration();
+                    // webBuilder.UseKestrel();
+                    // webBuilder.UseUrls();
+                    // webBuilder.UseIISIntegration();
                 });
     }
 }
