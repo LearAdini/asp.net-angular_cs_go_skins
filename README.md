@@ -5,15 +5,15 @@ This is a <a target="_blank" href="https://store.steampowered.com/app/730/Counte
 <table>
 <tbody>
 	<tr>
-		<td>Front-End</td>
-		<td>Angular, HTML5, CSS3, Bootstrap</td>
+		<td>Frontend</td>
+		<td>Angular, HTML, CSS</td>
 	</tr>
 	<tr>
-		<td>Back-End</td>
-		<td>ASP.NET Core</td>
+		<td>Backend</td>
+		<td>ASP.NET Core 5</td>
 	</tr>
   <tr>
-		<td>Object-Relational Mapping</td>
+		<td>ORM</td>
 		<td>Entity Framework Core</td>
 	</tr>
 	<tr>
@@ -22,7 +22,11 @@ This is a <a target="_blank" href="https://store.steampowered.com/app/730/Counte
 	</tr>
   	<tr>
 		<td>Miscellaneous</td>
-		<td>PayPal Payments</td>
+		<td>PayPal Payments, bootstrap, ngx, fas</td>
+	</tr>
+	  	<tr>
+		<td>dp</td>
+		<td>Repository Pattern, RESTful API</td>
 	</tr>
 </tbody>
 </table>
